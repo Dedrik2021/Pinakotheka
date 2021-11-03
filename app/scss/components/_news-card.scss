@@ -1,0 +1,62 @@
+.news-card {
+    display: flex;
+
+    &__img-wrapper {
+        height: 160px;
+        position: relative;
+        border-radius: 10px;
+        @include liner-gradient;
+        transition: box-shadow 0.4s;
+
+        &:hover {
+            box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        img {
+            border-radius: 10px;
+            max-width: 263px;
+            object-fit: cover;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 0 0 15px;
+    }
+
+    &__date {
+        font-weight: 400;
+        font-size: 14px;
+        color: $gray;
+        margin-bottom: 40px;
+        letter-spacing: 0;
+    }
+
+    &__title {
+        font-size: 18px;
+    }
+
+    &__link {
+        display: block;
+        font-family: $gilroy;
+        font-weight: 600;
+        letter-spacing: 0;
+        transition: color 0.4s;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom-color 0.4s, color 0.4s;
+
+        &:focus {
+            outline: transparent;
+            border-bottom-color: $black;
+        }
+
+        &:hover {
+            color: $red;
+        }
+
+        span {
+            @include line-clamp(4);
+        }
+    }
+}

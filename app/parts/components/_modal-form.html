@@ -1,0 +1,108 @@
+<form class="modal-form">
+    <div class="modal-form__top">
+        @@if(register === false) {
+            <div class="modal-form__wrapper">
+                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="customer">
+                <div class="auto-park__checkbox checkbox">
+                    <span></span>
+                </div>
+                <label class="modal-form__label" for="customer">Kunde</label>
+            </div>
+            <div class="modal-form__wrapper">
+                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="painter">
+                <div class="auto-park__checkbox checkbox">
+                    <span></span>
+                </div>
+                <label class="modal-form__label" for="painter">Maler</label>
+            </div>
+        }
+        
+        @@if(register === true) {
+            <div class="modal-form__wrapper">
+                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="modal-user">
+                <div class="auto-park__checkbox checkbox">
+                    <span></span>
+                </div>
+                <label class="modal-form__label" for="modal-user">Kunde</label>
+            </div>
+            <div class="modal-form__wrapper">
+                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="autor">
+                <div class="auto-park__checkbox checkbox">
+                    <span></span>
+                </div>
+                <label class="modal-form__label" for="autor">Autor</label>
+            </div>
+        }
+    </div>
+    
+    @@if(register === true) {
+        <label for="modal-name">
+            <span class="sr-only">Name</span>
+        </label>
+        <input class="modal-form__input" type="text" placeholder="Name" name="[modal]name" id="modal-name" required>
+
+        <label for="modal-tel">
+            <span class="sr-only">Telefon</span>
+        </label>
+        <input class="modal-form__input" type="tel" placeholder="Telefon" name="[modal]tel" id="modal-tel" required>
+
+    }
+    
+    @@if (enter === true) {
+        <label for="modal-email">
+            <span class="sr-only">Email</span>
+        </label>
+        <input class="modal-form__input" type="email" placeholder="Email" name="[modal]email" id="modal-email" required>
+
+        <label for="modal-password">
+            <span class="sr-only">Passwort</span>
+        </label>
+        <input class="modal-form__input" type="password" placeholder="Passwort" name="[modal]password" id="modal-password" required>
+    }
+
+    @@if(register === true) {
+        <label for="modal-email2">
+            <span class="sr-only">Email</span>
+        </label>
+        <input class="modal-form__input" type="email" placeholder="Email" name="[modal]email" id="modal-email2" required>
+
+        <label for="modal-password2">
+            <span class="sr-only">Passwort</span>
+        </label>
+        <input class="modal-form__input" type="password" placeholder="Passwort" name="[modal]password" id="modal-password2" required>
+        
+        <label for="modal-repassword">
+            <span class="sr-only">Passwort wiederholen</span>
+        </label>
+        <input class="modal-form__input" type="password" placeholder="Passwort wiederholen" name="[modal]password" id="modal-repassword" required>
+    }
+
+    <button class="modal-form__btn btn btn--red-hover" type="submit">@@btn</button>
+    <div class="modal-form__bottom">
+
+        @@if(register === false) {
+            <div class="modal-form__wrapper">
+                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="forgotten-password">
+                <div class="auto-park__checkbox checkbox">
+                    <span></span>
+                </div>
+                <label class="modal-form__label" for="forgotten-password">Passwort merken</label>
+            </div>
+            <a class="modal-form__link" href="#">Vergessen Passwort?</a>
+        }
+
+        @@if(register === true) {
+            <div class="modal-form__wrapper-box">
+                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="Agreement" required>
+                <div class="auto-park__checkbox checkbox">
+                    <span></span>
+                </div>
+                <label class="modal-form__label" for="Agreement">
+                    Ich stimme den <a href="#">Dienstordnungsvereinbarung</a> zu den Bedingungen und zu den in der <a href="#">Nutzungsvereinbarung</a> beschriebenen Zwecken zu
+                </label>
+            </div>
+        }
+        
+    </div>
+</form>
+<span class="modal__enter">Mit sozialen Netzwerken anmelden</span>

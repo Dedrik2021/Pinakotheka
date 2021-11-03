@@ -1,0 +1,296 @@
+.header {
+    padding: 35px 0;
+    position: relative;
+    background-color: $white;
+    width: 100%;
+    transition: padding 0.4s, box-shadow 0.4s;
+
+    &.sticky {
+        position: fixed;
+        padding: 20px;
+        z-index: 20;
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.menu__content,
+.menu__inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &__content {
+        margin-right: 50px;
+        max-width: 1150px;
+        width: 100%;
+    }
+
+    &__inner {
+        max-width: 630px;
+        width: 100%;
+        margin-right: 50px;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        position: relative;
+        right: 0;
+        background-color: $gray;
+        height: 50px;
+        border-radius: 30px;
+        padding: 10px;
+        max-width: 50px;
+        width: 100%;
+        background-color: transparent;
+        transition: background-color 0.6s, max-width 0.4s ease-in-out;
+
+        &.active {
+            max-width: 365px;
+            background-color: $red;
+        }
+
+        &:hover {
+            background-color: $red;
+
+            &>.menu__btn {
+
+                svg {
+                    fill: $white;
+                }
+            }
+        }
+    }
+
+    &__search {
+        max-width: 0;
+        width: 100%;
+        border-radius: 10px;
+        padding: 6px 10px 9px 15px;
+        opacity: 0;
+        font-size: 16px;
+        color: $black;
+        font-weight: 400;
+        position: relative;
+        visibility: hidden;
+        border: transparent;
+        background-color: $gray;
+        transition: max-width 1s ease, opacity 0.3s, visibility 0.3s, background-color 0.4s;
+
+        &::placeholder {
+            font-size: 14px;
+            color: $black;
+        }
+
+        &.active {
+            max-width: 305px;
+            opacity: 1;
+            visibility: visible;
+            background-color: $white;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        border-radius: 50px;
+        padding: 12px 15px;
+        right: 2px;
+        transform: translateY(-50%);
+
+        svg {
+            fill: $black;
+            transition: fill 0.4s;
+        }
+
+        &:hover,
+        &.active {
+
+            svg {
+                fill: $white;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        padding-bottom: 5px;
+
+        span {
+            border: 1px solid transparent;
+            display: block;
+            margin: 0 auto;
+            max-width: 50px;
+            margin-top: 5px;
+            transition: border 0.4s;
+        }
+
+        &:not(:last-child) {
+            margin-right: 65px;
+        }
+
+        &:focus,
+        &:hover {
+            outline-color: transparent;
+
+            span {
+                border-color: $red;
+            }
+
+            .menu-dropdown {
+                top: 35px;
+                opacity: 1;
+                visibility: visible;
+                padding: 15px 15px 20px;
+
+                &__item {
+
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        transition: border-bottom-color 0.4s, color 0.4s;
+
+        &:focus,
+        &:hover {
+            outline-color: transparent;
+        }
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 410px;
+        width: 100%;
+    }
+
+    &__enter-btn {
+        text-transform: uppercase;
+        color: $red;
+        padding: 10px 15px;
+        border-radius: 10px;
+        border-bottom: 2px solid transparent;
+        transition: background-color 0.4s, color 0.4s, border-radius 0.4s, border-bottom-color 0.4s;
+
+        &:focus {
+            outline-color: transparent;
+            border-radius: 10px;
+            border-bottom-color: $black;
+        }
+
+        &:hover {
+            border-radius: 10px;
+            color: $white;
+            background-color: $red;
+        }
+
+        &:active {
+            border-bottom-color: transparent;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    margin-right: 60px;
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 15px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                color: $black;
+                right: -14px;
+                width: 13px;
+                height: 1px;
+                top: 11px;
+                background-color: $black;
+                transform: rotate(-60deg);
+            }
+        }
+    }
+
+    &__btn {
+        font-weight: 400;
+        font-size: 14px;
+        color: $gray;
+        text-transform: uppercase;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color 0.4s;
+        margin-bottom: 5px;
+
+        &:hover,
+        &:focus {
+            outline-color: transparent;
+            border-bottom-color: $red;
+        }
+
+        &.active {
+            color: $black;
+            pointer-events: none;
+
+            &:focus {
+                border-bottom-color: transparent;
+            }
+        }
+    }
+}
+
+.menu-dropdown {
+    position: absolute;
+    padding: 0 15px;
+    top: 25px;
+    right: -50px;
+    background-color: $white;
+    z-index: 10;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.4s, visibility 0.4s, top 0.4s, padding 0.4s, right 0.4s;
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+            transition: margin-bottom 0.4s ease;
+        }
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 15px;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 3px;
+        transition: border-bottom-color 0.4s;
+
+        &:focus,
+        &:hover {
+            outline-color: transparent;
+            border-bottom-color: $red;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+<header class="header">
+    <div class="container">
+        <nav class="menu">
+            <div class="menu__content">
+                <div class="menu__inner">
+                    <a class="logo header__logo" href="/">
+                        <img src="images/content/logo.svg" alt="logo" width="180" height="50">
+                    </a> 
+                    <form class="menu__form">
+                        <label for="nav-search">
+                            <span class="sr-only">Suche</span>
+                        </label>
+                        <input class="menu__search" type="search" name="[nav]search" placeholder="Tippe um zu suchen" id="nav-search" required>
+                        <button class="menu__btn btn" type="submit">
+                            <span class="sr-only">Suche drücken</span>
+                            <svg width="16" height="16">
+                                <use xlink:href="images/sprite.svg#search-icon"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <ul class="menu__list">
+                    <li class="menu__item" tabindex="0">
+                        <a class="menu__link" href="#">Katalog</a>
+                        <span></span>
+                        <ul class="menu-dropdown">
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie1</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie2</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie3</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie4</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie5</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie6</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie7</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie8</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Autoren</a>
+                        <span></span>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Arbeitsplan</a>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu__box">
+                <ul class="buttons">
+                    <li class="buttons__item">
+                        <button class="buttons__btn btn active" type="button">De</button>
+                    </li>
+                    <li class="buttons__item">
+                        <button class="buttons__btn btn" type="button">En</button>
+                    </li>
+                </ul>
+                <button class="menu__enter-btn btn" type="button">Eingang</button>
+            </div>
+        </nav>
+    </div>
+</header>

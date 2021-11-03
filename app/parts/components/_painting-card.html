@@ -1,0 +1,44 @@
+<article class="painting-card" tabindex="0">
+    <a class="painting-card__img-link" href="#">
+        <div class="painting-card__img-wrapper">
+            <img src="@@image-url" alt="@@alt">
+        </div>
+    </a>
+    <h3 class="painting-card__title">
+        @@title
+    </h3>
+    <div class="painting-card__box">
+        <div class="painting-card__wrapper">
+            <a class="painting-card__author-link" href="#">
+                <span>@@name</span>
+            </a> 
+            <span class="painting-card__material">
+                @@material
+            </span>
+        </div>
+        <div class="painting-card__rating">
+            <div class="painting-card__stars"></div>
+            <span class="painting-card__price">
+                @@price
+                <span>€</span>
+            </span>
+        </div>
+        <div class="painting-card__buy">
+            <a class="painting-card__btn btn btn--universal btn--red-hover" href="#">
+                Kaufen
+            </a>
+            <a class="painting-card__btn painting-card__btn--share btn btn--red-hover" href="#">
+                <span class="sr-only">share</span>
+                <svg width="16" height="16">
+                    <use xlink:href="images/sprite.svg#share-icon"></use>
+                </svg>
+            </a>
+            <button class="painting-card__btn painting-card__btn--favorite btn btn--red-hover">
+                <span class="sr-only">added to favorite pick</span>
+                <svg width="20" height="17">
+                    <use xlink:href="images/sprite.svg#favorit-icon"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</article>

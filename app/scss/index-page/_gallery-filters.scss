@@ -1,0 +1,36 @@
+.gallery-filters {
+    display: flex;
+    margin-bottom: 55px;
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__btn {
+        color: $gray;
+        padding: 7px 16px;
+        border-bottom: 2px solid transparent;
+        transition: background-color 0.4s, color 0.4s, border-bottom-color 0.4s;
+
+        &.mixitup-control-active {
+            background-color: $white;
+            color: $black;
+            pointer-events: none;
+            border-bottom: none;
+        }
+
+        &:hover {
+            border-radius: 10px;
+            background-color: $red;
+            color: $white;
+        }
+
+        &:focus {
+            outline: transparent;
+            border-bottom-color: $red;
+        }
+    }
+}

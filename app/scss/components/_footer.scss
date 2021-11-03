@@ -1,0 +1,115 @@
+.footer {
+    background-color: $black;
+    padding: 45px 0 60px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__logo {
+        margin-bottom: 10px;
+    }
+
+    &__box-link,
+    &__copy {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.8;
+        color: $gray-100;
+        margin-bottom: 10px;
+    }
+
+    &__box-link {
+        border-bottom: 2px solid transparent;
+        transition: border-bottom-color 0.4s;
+
+        &:focus,
+        &:hover {
+            outline: transparent;
+            border-bottom-color: $gray-200;
+        }
+    }
+
+    &__list {
+        padding-top: 20px;
+        display: block;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin: 0 0 10px;
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        font-weight: 400;
+        color: $white;
+        line-height: 1.7;
+        border: 2px solid transparent;
+        transition: border-bottom-color 0.4s;
+
+        &:focus,
+        &:hover {
+            outline: transparent;
+            border-bottom-color: $white;
+        }
+    }
+
+    &__wrapper {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__tel {
+        color: $white;
+        display: inline-block;
+        border: 2px solid transparent;
+        margin-bottom: 30px;
+        transition: border-bottom-color 0.4s;
+
+        &:focus,
+        &:hover {
+            outline: transparent;
+            border-bottom-color: $white;
+        }
+    }
+
+    .social {
+
+        &__link {
+            width: 20px;
+            border-color: $gray-200;
+            background-color: transparent;
+
+            &:hover {
+                background-color: $red;
+            }
+
+            &--google {
+                background-size: 55%;
+            }
+
+            &--facebook {
+                background-size: 25%;
+            }
+
+            &--twitter {
+                background-size: 40%;
+            }
+
+            &--instagram {
+                background-size: 45%;
+            }
+        }
+    }
+}
