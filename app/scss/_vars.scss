@@ -46,3 +46,17 @@ $roboto: 'Roboto', sans-serif;
         }
     }
 }
+
+@mixin r($width) {
+    
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
+$screen-xxl: 1670px;
+$screen-xl: 1230px;
+$mobile-xl: 1050px;
+$mobile-lg: 992px;
+$mobile-md: 769px;
+$mobile-sm: 576px;

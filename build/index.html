@@ -13,24 +13,22 @@
     <header class="header">
     <div class="container">
         <nav class="menu">
-            <div class="menu__content">
-                <div class="menu__inner">
-                    <a class="logo header__logo" href="/">
-                        <img src="images/content/logo.svg" alt="logo" width="180" height="50">
-                    </a> 
-                    <form class="menu__form">
-                        <label for="nav-search">
-                            <span class="sr-only">Suche</span>
-                        </label>
-                        <input class="menu__search" type="search" name="[nav]search" placeholder="Tippe um zu suchen" id="nav-search" required>
-                        <button class="menu__btn btn" type="submit">
-                            <span class="sr-only">Suche drücken</span>
-                            <svg width="16" height="16">
-                                <use xlink:href="images/sprite.svg#search-icon"></use>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+            <a class="logo header__logo" href="/">
+                <img src="images/content/logo.svg" alt="logo" width="180" height="50">
+            </a> 
+            <div class="menu__inner">
+                <form class="menu__form">
+                    <label for="nav-search">
+                        <span class="sr-only">Suche</span>
+                    </label>
+                    <input class="menu__search" type="search" name="[nav]search" placeholder="Tippe um zu suchen" id="nav-search" required>
+                    <button class="menu__btn btn" type="submit">
+                        <span class="sr-only">Suche drücken</span>
+                        <svg width="16" height="16">
+                            <use xlink:href="images/sprite.svg#search-icon"></use>
+                        </svg>
+                    </button>
+                </form>
                 <ul class="menu__list">
                     <li class="menu__item" tabindex="0">
                         <a class="menu__link" href="#">Katalog</a>
@@ -90,14 +88,13 @@
 <main>
     <h1 class="sr-only">Unsere Dienstleistungen</h1>
     <div class="overlay"></div>
-    <div class="container">
-        <div class="modal">
-            <button class="modal__btn btn btn--close" type="button">
-                <span class="sr-only">Nah dran</span>
-                <span></span>
-            </button>
+    <div class="modal">
+        <button class="modal__btn btn btn--close" type="button">
+            <span class="sr-only">Nah dran</span>
+            <span></span>
+        </button>
 
-            <ul class="btns-tabs">
+        <ul class="btns-tabs">
     <li class="btns-tabs__item">
         <button class="btns-tabs__btn btn active" data-content="modal-form__item--enter" type="button">Eingang</button>
     </li>
@@ -106,10 +103,10 @@
     </li>
 </ul>
 
-            <ul class="modal-form__tabs">
-                <li class="modal-form__item modal-form__item--enter active">
-                    
-                    <form class="modal-form">
+        <ul class="modal-form__tabs">
+            <li class="modal-form__item modal-form__item--enter active">
+                
+                <form class="modal-form">
     <div class="modal-form__top">
         
             <div class="modal-form__wrapper">
@@ -167,7 +164,7 @@
 </form>
 <span class="modal__enter">Mit sozialen Netzwerken anmelden</span>
 
-                    <ul class="social">
+                <ul class="social">
     <li class="social__item">
         <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
             <span class="sr-only">Google</span>
@@ -190,10 +187,10 @@
     </li>
 </ul>
 
-                </li>
-                <li class="modal-form__item modal-form__item--register">
+            </li>
+            <li class="modal-form__item modal-form__item--register">
 
-                    <form class="modal-form">
+                <form class="modal-form">
     <div class="modal-form__top">
         
         
@@ -268,7 +265,7 @@
 </form>
 <span class="modal__enter">Mit sozialen Netzwerken anmelden</span>
 
-                    <ul class="social">
+                <ul class="social">
     <li class="social__item">
         <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
             <span class="sr-only">Google</span>
@@ -291,10 +288,9 @@
     </li>
 </ul>
 
-                </li>
-            </ul>
-        </div>   
-    </div>
+            </li>
+        </ul>
+    </div>   
     
     <section class="hero hero--parallax">
     <h2 class="sr-only">Unsere Autoren</h2>
@@ -1390,18 +1386,20 @@
     
     <div class="descr" style="background-image: url(images/content/descr-bg.jpg);">
     <div class="container">
-        <img class="descr__logo" src="images/content/logo-2.svg" alt="logo" width="340" height="95">
-    </div>
-    <div class="descr__text">
-        <p>
-            Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
-        </p>
-        <p>
-            Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
-        </p>
-        <p>
-            Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
-        </p>
+        <div class="descr__content">
+            <img class="descr__logo" src="images/content/logo-2.svg" alt="logo" width="340" height="95">
+            <div class="descr__text">
+                <p>
+                    Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                </p>
+                <p>
+                    Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                </p>
+                <p>
+                    Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                </p>
+            </div>
+        </div>
     </div>
 </div>
 

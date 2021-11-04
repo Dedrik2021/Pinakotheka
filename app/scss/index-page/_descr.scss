@@ -2,20 +2,38 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    display: flex;
     padding-bottom: 35px;
     margin-bottom: 175px;
+
+    &__content {
+        display: flex;
+    }
 
     &__text {
         position: relative;
         background-color: $red;
-        max-width: 1350px;
+        max-width: 1230px;
         padding: 50px 250px 50px 125px;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
         top: 120px;
 
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100vw;
+            background-color: $red;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
         p {
+            position: relative;
+            z-index: 1;
             font-weight: 400;
             font-size: 16px;
             color: $white;
@@ -30,5 +48,6 @@
     &__logo {
         position: relative;
         top: 130px;
+        margin-right: 105px;
     }
 }

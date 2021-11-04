@@ -1,15 +1,11 @@
 .gallery {
     background-color: $gray-300;
-    padding: 85px 0;
-
-    &__item {
-        max-width: 282px;
-        height: 395px;
-    }
+    padding: 85px 0 95px;
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(6, 282px);
+        grid-template-rows: 393px;
     }
 }
 

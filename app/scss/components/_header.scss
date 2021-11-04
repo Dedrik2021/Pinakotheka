@@ -1,47 +1,46 @@
 .header {
     padding: 35px 0;
-    position: relative;
+    position: fixed;
+    z-index: 20;
     background-color: $white;
+    top: 0;
+    right: 0;
+    left: 0;
     width: 100%;
     transition: padding 0.4s, box-shadow 0.4s;
 
     &.sticky {
-        position: fixed;
         padding: 20px;
-        z-index: 20;
         box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
     }
 }
 
-.menu__content,
-.menu__inner {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-}
-
 .menu {
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
 
-    &__content {
-        margin-right: 50px;
-        max-width: 1150px;
-        width: 100%;
-    }
-
     &__inner {
-        max-width: 630px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        max-width: 570px;
         width: 100%;
-        margin-right: 50px;
+        margin-right: 115px;
+        position: relative;
+        margin-left: auto;
+
+        @include r($screen-xxl) {
+            margin: 0 auto;
+            max-width: 510px;
+        }
     }
 
     &__form {
         display: flex;
         align-items: center;
-        position: relative;
-        right: 0;
+        position: absolute;
+        left: 0;
+        z-index: 5;
         background-color: $gray;
         height: 50px;
         border-radius: 30px;
@@ -52,7 +51,7 @@
         transition: background-color 0.6s, max-width 0.4s ease-in-out;
 
         &.active {
-            max-width: 365px;
+            max-width: 100%;
             background-color: $red;
         }
 
@@ -89,7 +88,7 @@
         }
 
         &.active {
-            max-width: 305px;
+            max-width: 93%;
             opacity: 1;
             visibility: visible;
             background-color: $white;
@@ -120,6 +119,7 @@
 
     &__list {
         display: flex;
+        margin-left: auto;
     }
 
     &__item {
@@ -179,6 +179,10 @@
         justify-content: space-between;
         max-width: 410px;
         width: 100%;
+
+        @include r($screen-xxl) {
+            max-width: 250px;
+        }
     }
 
     &__enter-btn {

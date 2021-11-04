@@ -7,41 +7,39 @@
 <main>
     <h1 class="sr-only">Unsere Dienstleistungen</h1>
     <div class="overlay"></div>
-    <div class="container">
-        <div class="modal">
-            <button class="modal__btn btn btn--close" type="button">
-                <span class="sr-only">Nah dran</span>
-                <span></span>
-            </button>
+    <div class="modal">
+        <button class="modal__btn btn btn--close" type="button">
+            <span class="sr-only">Nah dran</span>
+            <span></span>
+        </button>
 
-            @@include('./parts/components/_btns-tabs.html')
+        @@include('./parts/components/_btns-tabs.html')
 
-            <ul class="modal-form__tabs">
-                <li class="modal-form__item modal-form__item--enter active">
-                    
-                    @@include('./parts/components/_modal-form.html', {
-                        "enter": true,
-                        "register": false,
-                        "btn": "Betreten",
-                    })
+        <ul class="modal-form__tabs">
+            <li class="modal-form__item modal-form__item--enter active">
+                
+                @@include('./parts/components/_modal-form.html', {
+                    "enter": true,
+                    "register": false,
+                    "btn": "Betreten",
+                })
 
-                    @@include('./parts/components/_social.html')
+                @@include('./parts/components/_social.html')
 
-                </li>
-                <li class="modal-form__item modal-form__item--register">
+            </li>
+            <li class="modal-form__item modal-form__item--register">
 
-                    @@include('./parts/components/_modal-form.html', {
-                        "enter": false,
-                        "register": true,
-                        "btn": "Registrieren",
-                    })
+                @@include('./parts/components/_modal-form.html', {
+                    "enter": false,
+                    "register": true,
+                    "btn": "Registrieren",
+                })
 
-                    @@include('./parts/components/_social.html')
+                @@include('./parts/components/_social.html')
 
-                </li>
-            </ul>
-        </div>   
-    </div>
+            </li>
+        </ul>
+    </div>   
     
     @@include('./parts/index-page/_hero.html')
 

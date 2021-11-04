@@ -1,12 +1,8 @@
 .hero {
-    position: relative;
-    height: calc(100vh - 124px);
+    // height: calc(100vh - 124px);
+    padding: 124px 0 130px;
 
     .container {
-        position: relative;
-    }
-
-    &__sliders {
         position: relative;
     }
 
@@ -52,7 +48,6 @@
 
         .hero__item {
             position: relative;
-
 
             img {
                 position: relative;
