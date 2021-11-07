@@ -1,6 +1,10 @@
 .btns-tabs {
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+
+    @include r($mobile-sm) {
+        margin-bottom: 20px;
+    }
 
     &__item {
 

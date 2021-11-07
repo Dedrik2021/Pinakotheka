@@ -1,3 +1,66 @@
     @@include('./parts/components/_top.html', {
         "title": "",
     }) 
+
+    @@include('./parts/components/_header.html')
+
+    <main>
+        <h1 class="sr-only"></h1>
+        <div class="overlay"></div>
+        <div class="modal">
+            <div class="modal__box">
+                <img src="images/content/logo.svg" alt="logo" width="150" height="45">
+                <button class="modal__btn btn btn--close" type="button">
+                    <span class="sr-only">Nah dran</span>
+                    <span></span>
+                </button>
+            </div>
+            
+            @@include('./parts/components/_btns-tabs.html')
+    
+            <ul class="modal-form__tabs">
+                <li class="modal-form__item modal-form__item--enter active">
+                    
+                    @@include('./parts/components/_modal-form.html', {
+                        "enter": true,
+                        "register": false,
+                        "btn": "Betreten",
+                    })
+    
+                    @@include('./parts/components/_social.html')
+    
+                </li>
+                <li class="modal-form__item modal-form__item--register">
+    
+                    @@include('./parts/components/_modal-form.html', {
+                        "enter": false,
+                        "register": true,
+                        "btn": "Registrieren",
+                    })
+    
+                    @@include('./parts/components/_social.html')
+    
+                </li>
+            </ul>
+        </div> 
+        
+        
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @@include('./parts/components/_footer.html')
+
+<script src="js/main.min.js"></script>
+</body>
+</html>

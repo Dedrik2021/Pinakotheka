@@ -1,0 +1,16 @@
+<ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="/">
+            Heimat
+        </a>
+    </li>
+
+    @@for (var i = 0; i < arr.length; i++) {
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="`+arr[i].path+`.html">
+                `+arr[i] .title+`
+            </a>
+        </li>
+    }
+    
+</ul>

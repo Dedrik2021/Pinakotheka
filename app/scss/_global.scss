@@ -95,12 +95,15 @@ main {
         background-color: $red;
         transition: background-color 0.4s;
 
+        @include r($mobile-sm) {
+            top: 20px;
+            right: 15px;
+        }
+
         span::before,
         span::after,
         span {
             position: absolute;
-            // top: 50%;
-            // transform: translateY(-50%);
             z-index: 100;
             margin-top: -1px;
             right: 22%;
@@ -111,10 +114,6 @@ main {
             background-color: $white;
             transition: transform 0.4s;
         }
-
-        // @include r($mobile-sm) {
-        //     display: block;
-        // }
 
         span {
             height: 0;
@@ -131,14 +130,6 @@ main {
         &:hover {
             background-color: $black;
         }
-
-        // &:focus {
-
-        //     // @include r($mobile-xl) {
-        //     //     box-shadow: 0px 0px 0px 0px rgba(37, 37, 37, 0.5);
-        //     // }
-        // }
-
     }
 }
 
@@ -151,7 +142,7 @@ main {
     &:checked {
 
         &+.checkbox {
-            background-color: $green;
+            // background-color: $green;
             border-color: transparent;
 
             span {
@@ -178,6 +169,7 @@ main {
         position: absolute;
         width: 10px;
         height: 10px;
+        top: 1px;
         background-image: url(../images/content/check-icon.svg);
         background-position: center;
         opacity: 0;
@@ -199,7 +191,7 @@ main {
     visibility: hidden;
     transition: opacity 0.4s, visibility 0.4s;
 
-    // &._active,
+    &._active,
     &.active {
         opacity: 1;
         visibility: visible;

@@ -18,12 +18,13 @@
                     </button>
                 </form>
                 <ul class="menu__list">
-                    <li class="menu__item" tabindex="0">
+                    <li class="menu__item menu__item--dropdown" tabindex="0">
                         <a class="menu__link" href="#">Katalog</a>
                         <span></span>
+                        
                         <ul class="menu-dropdown">
                             <li class="menu-dropdown__item">
-                                <a class="menu-dropdown__link" href="#">Kategorie1</a>
+                                <a class="menu-dropdown__link" href="/creations.html">Kreationen</a>
                             </li>
                             <li class="menu-dropdown__item">
                                 <a class="menu-dropdown__link" href="#">Kategorie2</a>
@@ -48,11 +49,11 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item" tabindex="0">
                         <a class="menu__link" href="#">Autoren</a>
                         <span></span>
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item" tabindex="0">
                         <a class="menu__link" href="#">Arbeitsplan</a>
                         <span></span>
                     </li>
@@ -69,6 +70,10 @@
                 </ul>
                 <button class="menu__enter-btn btn" type="button">Eingang</button>
             </div>
+            <button class="menu__burger btn" type="button">
+                <span class="sr-only">Öffne das Menü</span>
+                <span></span>
+            </button>
         </nav>
     </div>
 </header>

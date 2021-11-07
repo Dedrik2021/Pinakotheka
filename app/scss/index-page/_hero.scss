@@ -1,6 +1,17 @@
 .hero {
-    // height: calc(100vh - 124px);
-    padding: 124px 0 130px;
+    padding: 265px 0 130px;
+
+    @include r($screen-xl) {
+        padding: 150px 0 70px;
+    }
+
+    @include r($mobile-md) {
+        padding: 120px 0 50px;
+    }
+
+    @include r($mobile-sm) {
+        padding: 100px 0 50px;
+    }
 
     .container {
         position: relative;
@@ -10,21 +21,50 @@
         position: absolute;
         width: 470px;
         z-index: 1;
-        height: 470px;
+        height: 70vh;
         left: 300px;
-        top: 0px;
+        top: -230px;
         background-image: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+
+        @include r($screen-xxl) {
+            width: 100%;
+            left: -20%;
+        }
+
+        @include r($screen-xl) {
+            top: 250px;
+        }
+
+        @include r($mobile-lg) {
+            top: 80px;
+        }
+
+        @include r($mobile-md) {
+            top: 100px;
+        }
+
+        @include r($mobile-sm) {
+            left: -15%;
+        }
     }
 
     &__scroll {
         position: absolute;
         left: -35px;
-        top: 305px;
+        top: 165px;
         color: $gray-100;
         font-weight: 400;
         font-size: 12px;
         text-transform: uppercase;
         transform: rotate(-90deg);
+
+        @include r($screen-xxl) {
+            top: -100px;
+        }
+
+        @include r($screen-xl) {
+            display: none;
+        }
 
         span {
             position: absolute;
@@ -39,11 +79,37 @@
     }
 
     &__pick-slider {
-        padding-top: 145px;
         padding-left: 27%;
+
+        @include r($screen-xxl) {
+            padding-left: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        @include r($screen-xl) {
+            justify-content: center;
+        }
 
         .slick-list {
             height: 590px;
+
+            @include r($screen-xxl) {
+                max-width: 1050px;
+            }
+
+            @include r($mobile-xl) {
+                max-width: 100%;
+                height: 58vh;
+            }
+
+            @include r($mobile-md) {
+                height: 58vh;
+            }
+
+            @include r($mobile-sm) {
+                height: 63vh;
+            }
         }
 
         .hero__item {
@@ -53,6 +119,19 @@
                 position: relative;
                 z-index: 10;
                 border-radius: 20px;
+                object-fit: cover;
+
+                @include r($mobile-xl) {
+                    height: 58vh;
+                }
+
+                @include r($mobile-md) {
+                    height: 58vh;
+                }
+
+                @include r($mobile-sm) {
+                    height: 63vh;
+                }
             }
         }
     }
@@ -66,14 +145,42 @@
         border-radius: 20px;
         width: 982px;
         height: 520px;
+
+        @include r($screen-xl) {
+            width: 950px;
+        }
+
+        @include r($mobile-xl) {
+            display: none;
+        }
     }
 
     &__content-slider {
         margin-top: -520px;
         z-index: 2;
 
+        @include r($screen-xl) {
+            margin-top: -170px;
+        }
+
+        @include r($mobile-xl) {
+            margin-top: -110px;
+        }
+
+        @include r($mobile-md) {
+            margin-top: -90px;
+        }
+
+        @include r($mobile-sm) {
+            margin-top: -50px;
+        }
+
         .slick-list {
             height: 458px;
+
+            @include r($mobile-md) {
+                height: 400px;
+            }
         }
     }
 
@@ -94,14 +201,35 @@
             font-size: 106px;
             letter-spacing: -0.1rem;
             margin-bottom: 20px;
+
+            @include r($mobile-xl) {
+                padding: 0 0 0 15px;
+            }
+
+            @include r($mobile-lg) {
+                font-size: 100px;
+            }
+
+            @include r($mobile-md) {
+                font-size: 76px;
+                padding: 0 15px;
+            }
+
+            @include r($mobile-sm) {
+                font-size: 40px;
+            }
         }
 
         &__id {
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             letter-spacing: 0rem;
             max-width: 350px;
             word-break: break-all;
+        }
+
+        &__wrapper {
+            border-top-right-radius: 10px;
         }
 
         &__material,
@@ -136,7 +264,12 @@
 
         &__material {
             margin-bottom: 45px;
+            border-bottom-right-radius: 10px;
             @include line-clamp(1);
+
+            @include r($mobile-md) {
+                margin-bottom: 20px;
+            }
         }
 
         &__box {
@@ -144,11 +277,28 @@
             align-items: center;
             margin-bottom: 20px;
             padding-left: 3px;
+
+            @include r($mobile-md) {
+                margin-bottom: 30px;
+            }
+
+            @include r($mobile-sm) {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
         }
 
         &__btn {
             padding: 20px 55px 18px;
             margin-right: 135px;
+
+            @include r($mobile-md) {
+                margin-right: 50px;
+            }
+
+            @include r($mobile-sm) {
+                margin-right: 0;
+            }
         }
 
         &__price {
@@ -161,12 +311,33 @@
             backdrop-filter: blur(10px);
             position: relative;
 
+            @include r($mobile-md) {
+                font-size: 50px;
+            }
+
+            @include r($mobile-sm) {
+                font-size: 25px;
+                margin-bottom: 20px;
+                padding: 15px 30px 15px 40px;
+            }
+
             span {
                 font-weight: 700;
                 font-size: 24px;
                 position: absolute;
                 left: 42px;
                 top: 28px;
+
+                @include r($mobile-md) {
+                    top: 20px;
+                    font-size: 20px;
+                }
+
+                @include r($mobile-sm) {
+                    top: 15px;
+                    font-size: 16px;
+                    left: 20px;
+                }
             }
         }
 
@@ -179,9 +350,17 @@
             max-width: 127px;
             width: 100%;
             position: absolute;
-            bottom: -27px;
-            left: 140px;
+            bottom: -22px;
+            left: 135px;
             background-color: $white;
+
+            @include r($mobile-lg) {
+                bottom: -30px;
+            }
+
+            @include r($mobile-md) {
+                bottom: -22px;
+            }
         }
     }
 }
@@ -197,6 +376,14 @@
     height: 40px;
     border-radius: 50%;
     transition: background-color 0.4s;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include r($mobile-md) {
+        bottom: 5px;
+        width: 50px;
+        height: 50px;
+    }
 
     &:hover {
         background-color: $black;
@@ -205,6 +392,10 @@
     &--next {
         left: 50px;
         background-image: url(../images/content/arrow-next.svg);
+
+        @include r($mobile-md) {
+            left: 65px;
+        }
     }
 
     &--prev {
@@ -215,8 +406,12 @@
 .slick-dots {
     display: flex;
     position: absolute;
-    left: 167px;
+    left: 163px;
     bottom: 8px;
+
+    @include r($mobile-md) {
+        bottom: 27px;
+    }
 
     li {
         font-size: 0;
@@ -231,14 +426,14 @@
         padding: 0;
         width: 5px;
         height: 5px;
-
         border-radius: 50%;
-
         background-color: $gray;
         transition: background-color 0.4s;
 
+        &:focus,
         &:hover {
             background-color: $red;
+            transform: scale(1.5);
         }
     }
 }

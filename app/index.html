@@ -8,11 +8,14 @@
     <h1 class="sr-only">Unsere Dienstleistungen</h1>
     <div class="overlay"></div>
     <div class="modal">
-        <button class="modal__btn btn btn--close" type="button">
-            <span class="sr-only">Nah dran</span>
-            <span></span>
-        </button>
-
+        <div class="modal__box">
+            <img src="images/content/logo.svg" alt="logo" width="150" height="45">
+            <button class="modal__btn btn btn--close" type="button">
+                <span class="sr-only">Nah dran</span>
+                <span></span>
+            </button>
+        </div>
+        
         @@include('./parts/components/_btns-tabs.html')
 
         <ul class="modal-form__tabs">
@@ -40,6 +43,7 @@
             </li>
         </ul>
     </div>   
+    
     
     @@include('./parts/index-page/_hero.html')
 

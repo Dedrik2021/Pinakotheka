@@ -1,21 +1,47 @@
 .modal {
     position: fixed;
     left: 50%;
-    top: 55%;
+    top: 58%;
     transform: translate(-50%, -50%);
-    z-index: 15;
+    z-index: 20;
     background-color: $white;
-    padding: 35px 30px;
+    padding: 20px 30px;
     border-radius: 15px;
     max-width: 450px;
     width: 100%;
     opacity: 0;
+    margin: 0 auto;
     visibility: hidden;
-    transition: opacity 0.4s, visibility 0.4s;
+    transition: opacity 0.4s, visibility 0.4s, left 0.3s ease;
+
+    @include r($mobile-xl) {
+        top: 52%;
+    }
+
+    @include r($mobile-sm) {
+        padding: 25px 15px 15px;
+        height: 100vh;
+        top: 50%;
+        z-index: 25;
+        max-width: 100%;
+        left: -120%;
+        border-radius: 0;
+        overflow: auto;
+        opacity: 1;
+        visibility: visible;
+    }
 
     &.active {
         opacity: 1;
         visibility: visible;
+
+        @include r($mobile-sm) {
+            left: 50%;
+        }
+    }
+
+    &__box {
+        margin-bottom: 20px;
     }
 
     &__enter {
@@ -24,12 +50,83 @@
         font-size: 16px;
         margin-bottom: 15px;
     }
+
+    .social {
+    
+        @include r($mobile-sm) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    
+        &__item {
+    
+            @include r($mobile-sm) {
+                max-width: 45%;
+                width: 100%;
+            }
+            
+            &:not(:last-child) {
+    
+                @include r($mobile-sm) {
+                    margin-right: 0;
+                }
+            }
+    
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: 10px;
+            }
+        }
+    
+        &__link {
+    
+            &--google {
+                background-size: 35%;
+                background-color: $yellow;
+    
+                @include r($mobile-sm) {
+                    background-size: 20%;
+                }
+            }
+    
+            &--facebook {
+                background-size: 12%;
+                background-color: $blue;
+    
+                @include r($mobile-sm) {
+                    background-size: 7%;
+                }
+            }
+    
+            &--twitter {
+                background-size: 25%;
+                background-color: $blue-100;
+    
+                @include r($mobile-sm) {
+                    background-size: 15%;
+                }
+            }
+    
+            &--instagram {
+                background-size: 25%;
+                background-color: $red-100;
+    
+                @include r($mobile-sm) {
+                    background-size: 14%;
+                }
+            }
+        }
+    }
 }
 
 .modal-form {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
+
+    @include r($mobile-sm) {
+        margin-bottom: 20px;
+    }
 
     &__item {
 
@@ -45,6 +142,10 @@
 
     &__top {
         margin-bottom: 25px;
+
+        @include r($mobile-sm) {
+            margin-bottom: 15px;
+        }
     }
 
     &__wrapper,
@@ -56,15 +157,29 @@
         align-items: center;
         position: relative;
 
-
         &:not(:last-child) {
             margin-right: 40px;
+        }
+    }
+
+    &__check-input {
+
+        &:checked {
+
+            &+.checkbox {
+                background-color: $green;
+            }
         }
     }
 
     &__wrapper-box {
         display: flex;
         position: relative;
+
+        @include r($mobile-sm) {
+            align-items: center;
+        }
+
 
         .checkbox {
             max-width: 15px;
@@ -74,6 +189,10 @@
         .modal-form__label {
             font-size: 12px !important;
             line-height: 1.5;
+
+            @include r($mobile-sm) {
+                color: $red;
+            }
 
             a {
                 font-size: 12px;

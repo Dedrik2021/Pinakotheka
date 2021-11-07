@@ -1,0 +1,567 @@
+    @@include('./parts/components/_top.html', {
+        "title": "Kreationen",
+    }) 
+
+    @@include('./parts/components/_header.html')
+
+    <main>
+        <h1 class="sr-only">Kreationen von Autoren</h1>
+        <div class="overlay"></div>
+        <div class="modal">
+            <div class="modal__box">
+                <img src="images/content/logo.svg" alt="logo" width="150" height="45">
+                <button class="modal__btn btn btn--close" type="button">
+                    <span class="sr-only">Nah dran</span>
+                    <span></span>
+                </button>
+            </div>
+            
+            @@include('./parts/components/_btns-tabs.html')
+    
+            <ul class="modal-form__tabs">
+                <li class="modal-form__item modal-form__item--enter active">
+                    
+                    @@include('./parts/components/_modal-form.html', {
+                        "enter": true,
+                        "register": false,
+                        "btn": "Betreten",
+                    })
+    
+                    @@include('./parts/components/_social.html')
+    
+                </li>
+                <li class="modal-form__item modal-form__item--register">
+    
+                    @@include('./parts/components/_modal-form.html', {
+                        "enter": false,
+                        "register": true,
+                        "btn": "Registrieren",
+                    })
+    
+                    @@include('./parts/components/_social.html')
+    
+                </li>
+            </ul>
+        </div> 
+        <div class="creations">
+            <div class="container">
+                @@include('./parts/components/_breadcrumbs.html', {
+                    arr: [{title: 'Katalog', path: 'creations'}]
+                })
+
+                <ul class="styles">
+                    <li class="styles__item">
+                        <a class="styles__link" href="#">
+                            <article class="style-card">
+                                <img class="style-card__img" src="images/content/style-1.jpg" alt="Gemälde" width="261" height="201">
+                                <h2 class="style-card__title">Gemälde</h2>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="styles__item">
+                        <a class="styles__link" href="#">
+                            <article class="style-card">
+                                <img class="style-card__img" src="images/content/style-2.jpg" alt="Skulptur" width="261" height="201">
+                                <h2 class="style-card__title">Skulptur</h2>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="styles__item">
+                        <a class="styles__link" href="#">
+                            <article class="style-card">
+                                <img class="style-card__img" src="images/content/style-3.jpg" alt="Zeichnung" width="261" height="201">
+                                <h2 class="style-card__title">Zeichnung</h2>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="styles__item">
+                        <a class="styles__link" href="#">
+                            <article class="style-card">
+                                <img class="style-card__img" src="images/content/style-4.jpg" alt="Digitale Kunst" width="261" height="201">
+                                <h2 class="style-card__title">Digitale Kunst</h2>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="styles__item">
+                        <a class="styles__link" href="#">
+                            <article class="style-card">
+                                <img class="style-card__img" src="images/content/style-5.jpg" alt="Handmade" width="261" height="201">
+                                <h2 class="style-card__title">Handmade</h2>
+                            </article>
+                        </a>
+                    </li>
+                </ul>
+                <div class="creations__content">
+                    <div class="creations__box">
+                        <span class="creations__title title">Gemälde</span>
+                        <div class="creations__filters">
+                            <p class="creations__filters-title">
+                                Kategorien
+                                <a id="clicks">0</a>
+                            </p>
+                        
+                            <button class="creations__btn btn btn--style" type="button">
+                                Stil
+                                <span class="creations__arrow"></span>
+                            </button>
+                            <div class="creations__filters-box creations__filters-box--style">
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="abstrakt">Abstrakt</label>
+                                    <input class="creations__input-check check" type="checkbox" name="[style]check" id="abstrakt" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="art">Kunst</label>
+                                    <input class="creations__input-check check" type="checkbox" name="[style]check" id="art" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="modern">Modern</label>
+                                    <input class="creations__input-check check" type="checkbox" name="[style]check" id="modern" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="expression">Expressionismus</label>
+                                    <input class="creations__input-check check" type="checkbox" name="[style]check" id="expression" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="figurativ">Figurativ</label>
+                                    <input class="creations__input-check check" type="checkbox" name="[style]check" id="figurativ" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="impression">Impressionismus</label>
+                                    <input class="creations__input-check check" type="checkbox" name="[style]check" id="impression" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>   
+                                </div>
+                                <a class="creations__link" href="#">Zeig mehr</a>
+                            </div>
+                        
+                            <button class="creations__btn btn btn--item" type="button">
+                                Artikel 
+                                <span></span>
+                            </button>
+                            <div class="creations__filters-box creations__filters-box--item">
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="abstrakt2">Abstrakt</label>
+                                    <input class="creations__input-check check" type="checkbox" name="[item]check" id="abstrakt2" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="art2">Kunst</label>
+                                    <input class="creations__input-check check" type="checkbox" name="[item]check" id="art2" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="modern2">Modern</label>
+                                    <input class="creations__input-check check" type="checkbox" name="[item]check" id="modern2" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="expression2">Expressionismus</label>
+                                    <input class="creations__input-check check" type="checkbox" name="[item]check" id="expression2" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="figurativ2">Figurativ</label>
+                                    <input class="creations__input-check check" type="checkbox" name="[item]check" id="figurativ2" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="impression2">Impressionismus</label>
+                                    <input class="creations__input-check check" type="checkbox" name="[item]check" id="impression2" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>   
+                                </div>
+                                <a class="creations__link" href="#">Zeig mehr</a>
+                            </div>
+                        
+                            <button class="creations__btn btn btn--material" type="button">
+                                Material
+                                <span></span>
+                            </button>
+                            <div class="creations__filters-box creations__filters-box--material">
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="acryl">
+                                        Acryl
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[material]check" id="acryl" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="gouache">
+                                        Gouache
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[material]check" id="gouache" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="oil">
+                                        Ölfarben
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[material]check" id="oil" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="watercolor">
+                                        Aquarell
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[material]check" id="watercolor" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="tempera">
+                                        Temperafarbe
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[material]check" id="tempera" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <a class="creations__link" href="#">Zeig mehr</a>
+                            </div>
+                        
+                            <button class="creations__btn btn btn--price" type="button">
+                                Preis
+                                <span></span>
+                            </button>
+                            <div class="creations__filters-box creations__filters-box--price">
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="fifty">
+                                        <span>$</span>
+                                        50
+                                        <span>-</span>
+                                        100
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[price]check" id="fifty" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="one">
+                                        <span>$</span>
+                                        100
+                                        <span>-</span>
+                                        200
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[price]check" id="one" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="two">
+                                        <span>$</span>
+                                        200
+                                        <span>-</span>
+                                        500
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[price]check" id="two" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="five">
+                                        <span>$</span>
+                                        500
+                                        <span>-</span>
+                                        1000
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[price]check" id="five" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="ten">
+                                        <span>$</span>
+                                        1000
+                                        <span>-</span>
+                                        1500
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[price]check" id="ten" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="one-five">
+                                        <span>$</span>
+                                        1500
+                                        <span>-</span>
+                                        2500
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[price]check" id="one-five" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="two-five">
+                                        <span>$</span>
+                                        2500
+                                        <span>-</span>
+                                        4000
+                                        <span>+</span>
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[price]check" id="two-five" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <a class="creations__link" href="#">Zeig mehr</a>
+                            </div>
+                        
+                            <button class="creations__btn btn btn--size" type="button">
+                                Die Größe
+                                <span></span>
+                            </button>
+                            <div class="creations__filters-box creations__filters-box--size">
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="fiftin">
+                                        50
+                                        <span>x</span>
+                                        100
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[size]check" id="fiftin" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="six">
+                                        60
+                                        <span>x</span>
+                                        70
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[size]check" id="six" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="six2">
+                                        60
+                                        <span>x</span>
+                                        80
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[size]check" id="six2" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="six3">
+                                        60
+                                        <span>x</span>
+                                        90
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[size]check" id="six3" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="six4">
+                                        90
+                                        <span>x</span>
+                                        120
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[size]check" id="six4" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <a class="creations__link" href="#">Zeig mehr</a>
+                            </div>
+                        
+                            <button class="creations__btn btn btn--color" type="button">
+                                Farbe
+                                <span></span>
+                            </button>
+                            <div class="creations__filters-box creations__filters-box--color">
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="red">
+                                        Rot
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[color]check" id="red" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="orange">
+                                        Orange
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[color]check" id="orange" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="yellow">
+                                        Gelb
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[color]check" id="yellow" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="green">
+                                        Grün
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[color]check" id="green" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                        
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="blue">
+                                        Blau
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[color]check" id="blue" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                        
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="violett">
+                                        Violett
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[color]check" id="violett" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                        
+                                <div class="creations__wrapper">
+                                    <label class="creations__label" for="white">
+                                        Weiß
+                                    </label>
+                                    <input class="creations__input-check check" type="checkbox" name="[color]check" id="white" onclick="window.increment(event)">
+                                    <div class="creations__checkbox checkbox">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <a class="creations__link" href="#">Zeig mehr</a>
+                            </div>
+                            <button class="creations__filters-btn btn" type="button">Filter zurücksetzen</button>
+                        </div>
+                    </div>
+                    <section class="modern">
+                        <div class="modern__box">
+                            <h2 class="modern__title">
+                                Modern
+                            </h2>
+                            <div class="modern__box-wrapper">
+                                <select class="modern__price">
+                                    <option value="Nach Preis sortieren">Nach Preis sortieren</option>
+                                    <option value="Nach Stilen sortieren">Nach Stilen sortieren</option>
+                                    <option value="Nach Artikeln sortieren">Nach Artikeln sortieren</option>
+                                    <option value="Nach Preis sortieren">Nach Größe sortieren</option>
+                                    <option value="Nach Preis sortieren">Nach Farbe sortieren</option>
+                                </select>
+                                <div class="modern__filters-view">
+                                    <button class="modern__filters-btn btn active btn-grid" type="button">
+                                        <span class="sr-only"></span>
+                                        <svg width="20" height="20">
+                                            <use xlink:href="images/sprite.svg#grid-icon"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="modern__filters-btn btn btn-list" type="button">
+                                        <span class="sr-only"></span>
+                                        <svg width="20" height="20">
+                                            <use xlink:href="images/sprite.svg#list-icon"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @@include('./parts/components/_footer.html')
+
+<script src="js/main.min.js"></script>
+</body>
+</html>

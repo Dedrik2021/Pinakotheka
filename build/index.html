@@ -30,12 +30,13 @@
                     </button>
                 </form>
                 <ul class="menu__list">
-                    <li class="menu__item" tabindex="0">
+                    <li class="menu__item menu__item--dropdown" tabindex="0">
                         <a class="menu__link" href="#">Katalog</a>
                         <span></span>
+                        
                         <ul class="menu-dropdown">
                             <li class="menu-dropdown__item">
-                                <a class="menu-dropdown__link" href="#">Kategorie1</a>
+                                <a class="menu-dropdown__link" href="/creations.html">Kreationen</a>
                             </li>
                             <li class="menu-dropdown__item">
                                 <a class="menu-dropdown__link" href="#">Kategorie2</a>
@@ -60,11 +61,11 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item" tabindex="0">
                         <a class="menu__link" href="#">Autoren</a>
                         <span></span>
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item" tabindex="0">
                         <a class="menu__link" href="#">Arbeitsplan</a>
                         <span></span>
                     </li>
@@ -81,6 +82,10 @@
                 </ul>
                 <button class="menu__enter-btn btn" type="button">Eingang</button>
             </div>
+            <button class="menu__burger btn" type="button">
+                <span class="sr-only">Öffne das Menü</span>
+                <span></span>
+            </button>
         </nav>
     </div>
 </header>
@@ -89,11 +94,14 @@
     <h1 class="sr-only">Unsere Dienstleistungen</h1>
     <div class="overlay"></div>
     <div class="modal">
-        <button class="modal__btn btn btn--close" type="button">
-            <span class="sr-only">Nah dran</span>
-            <span></span>
-        </button>
-
+        <div class="modal__box">
+            <img src="images/content/logo.svg" alt="logo" width="150" height="45">
+            <button class="modal__btn btn btn--close" type="button">
+                <span class="sr-only">Nah dran</span>
+                <span></span>
+            </button>
+        </div>
+        
         <ul class="btns-tabs">
     <li class="btns-tabs__item">
         <button class="btns-tabs__btn btn active" data-content="modal-form__item--enter" type="button">Eingang</button>
@@ -291,6 +299,7 @@
             </li>
         </ul>
     </div>   
+    
     
     <section class="hero hero--parallax">
     <h2 class="sr-only">Unsere Autoren</h2>
@@ -1385,7 +1394,7 @@
     </section>
     
     <div class="descr" style="background-image: url(images/content/descr-bg.jpg);">
-    <div class="container">
+    <div class="container container--lg">
         <div class="descr__content">
             <img class="descr__logo" src="images/content/logo-2.svg" alt="logo" width="340" height="95">
             <div class="descr__text">
@@ -1699,7 +1708,7 @@
                     <a class="footer__link" href="#">über das Projekt</a>
                 </li>
                 <li class="footer__item">
-                    <a class="footer__link" href="#">Katalog</a>
+                    <a class="footer__link" href="/creations.html">Katalog</a>
                 </li>
                 <li class="footer__item">
                     <a class="footer__link" href="#">Autoren</a>
