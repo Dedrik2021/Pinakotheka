@@ -6,15 +6,8 @@
         padding: 60px 0 85px;
     }
 
-    &__list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-        grid-template-rows: 393px;
-
-        @include r($mobile-lg) {
-            row-gap: 60px;
-            column-gap: 5px;
-        }
+    &__item {
+        height: auto;
     }
 }
 
@@ -153,7 +146,7 @@
     }
 
     &__content {
-        grid-template-columns: 11fr 1fr;
+        grid-template-columns: 12fr 122px;
 
         @include r($mobile-md) {
             grid-template-columns: 1fr;
@@ -162,6 +155,12 @@
 
     &__list {
         grid-template-columns: repeat(auto-fit, minmax(122px, 1fr));
+        gap: 19px;
+        margin-right: 10px;
+
+        @include r($mobile-md) {
+            margin: 0 0 10px;
+        }
     }
 
     &__item,
@@ -178,6 +177,7 @@
         align-items: center;
         margin: 0 auto;
         font-weight: 600;
+        padding: 0 15px;
         font-size: 14px;
         text-align: center;
         width: 122px;

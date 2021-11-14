@@ -1,13 +1,28 @@
 <article class="painting-card" tabindex="0">
-    <a class="painting-card__img-link" href="#">
+    <a class="painting-card__img-link" href="/creations-details.html">
         <div class="painting-card__img-wrapper">
             <img src="@@image-url" alt="@@alt">
         </div>
     </a>
-    <h3 class="painting-card__title">
-        @@title
-    </h3>
+
+    @@if (gallery === true) {
+        <a class="painting-card__link" href="/creations-details.html">
+            <h3 class="painting-card__title">
+                @@title
+            </h3>
+        </a>
+    }
+    
     <div class="painting-card__box">
+
+        @@if (creations === true) {
+            <a class="painting-card__link" href="/creations-details.html">
+                <h3 class="painting-card__title painting-card__title--box">
+                    @@title
+                </h3>
+            </a>
+        }
+
         <div class="painting-card__wrapper">
             <a class="painting-card__author-link" href="#">
                 <span>@@name</span>
@@ -18,11 +33,25 @@
         </div>
         <div class="painting-card__rating">
             <div class="painting-card__stars"></div>
+
+            @@if (creations === true) {
+                <div class="painting-card__card-stars"></div>
+            }
+
             <span class="painting-card__price">
                 @@price
                 <span>€</span>
             </span>
         </div>
+
+        @@if (creations === true) {
+            <div class="painting-card__text">
+                <p>
+                    Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                </p>
+            </div>
+        }
+
         <div class="painting-card__buy">
             <a class="painting-card__btn btn btn--universal btn--red-hover" href="#">
                 Kaufen

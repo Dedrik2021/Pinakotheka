@@ -1,0 +1,520 @@
+@@include('./parts/components/_top.html', {
+    "title": "Produktdetail",
+}) 
+
+@@include('./parts/components/_header.html')
+
+<main>
+    <h1 class="sr-only">Produktdetail</h1>
+    <div class="overlay"></div>
+    <div class="modal">
+        <div class="modal__box">
+            <img src="images/content/logo.svg" alt="logo" width="150" height="45">
+            <button class="modal__btn btn btn--close" type="button">
+                <span class="sr-only">Nah dran</span>
+                <span></span>
+            </button>
+        </div>
+        
+        @@include('./parts/components/_btns-tabs.html')
+
+        <ul class="modal-form__tabs">
+            <li class="modal-form__item modal-form__item--enter active">
+                
+                @@include('./parts/components/_modal-form.html', {
+                    "enter": true,
+                    "register": false,
+                    "btn": "Betreten",
+                })
+
+                @@include('./parts/components/_social.html')
+
+            </li>
+            <li class="modal-form__item modal-form__item--register">
+
+                @@include('./parts/components/_modal-form.html', {
+                    "enter": false,
+                    "register": true,
+                    "btn": "Registrieren",
+                })
+
+                @@include('./parts/components/_social.html')
+
+            </li>
+        </ul>
+    </div> 
+    <div class="creations-details">
+        <div class="container">
+            @@include('./parts/components/_breadcrumbs.html', {
+                arr: [{title: 'Katalog', path: 'creations'}, {title: 'Lot № 3532'}]
+            })
+
+            <!-- <section class="details">
+                <h2 class="sr-only">Einzelheiten</h2>
+                <article class="details-card">
+                    <div class="details-card__sliders">
+                        <ul class="details-card__thumb-slider">
+                            <li class="details-card__item">
+                                <img src="images/content/pick-slide-1.jpg" alt="rotes Bild" width="145" height="100">
+                            </li>
+                            <li class="details-card__item">
+                                <img src="images/content/pick-slide-1.jpg" alt="rotes Bild" width="145" height="100">
+                            </li>
+                            <li class="details-card__item">
+                                <img src="images/content/pick-slide-1.jpg" alt="rotes Bild" width="145" height="100">
+                            </li>
+                            <li class="details-card__item">
+                                <img src="images/content/pick-slide-1.jpg" alt="rotes Bild" width="145" height="100">
+                            </li>
+                        </ul>
+                        <ul class="details-card__big-slider">
+                            <li class="details-card__item">
+                                <img src="images/content/pick-slide-1.jpg" alt="rotes Bild" width="1040" height="540">
+                                <div class="details-card__img-blur blur" style="background-image: url(images/content/pick-slide-1.jpg);"></div>
+                            </li>
+                            <li class="details-card__item">
+                                <img src="images/content/pick-slide-1.jpg" alt="rotes Bild" width="1040" height="540">
+                                <div class="details-card__img-blur blur" style="background-image: url(images/content/pick-slide-1.jpg);"></div>
+                            </li>
+                            <li class="details-card__item">
+                                <img src="images/content/pick-slide-1.jpg" alt="rotes Bild" width="1040" height="540">
+                                <div class="details-card__img-blur blur" style="background-image: url(images/content/pick-slide-1.jpg);"></div>
+                            </li>
+                            <li class="details-card__item">
+                                <img src="images/content/pick-slide-1.jpg" alt="rotes Bild" width="1040" height="540">
+                                <div class="details-card__img-blur blur" style="background-image: url(images/content/pick-slide-1.jpg);"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="details-card__box">
+                        <span class="details-card__lot">
+                            Lot
+                            <span>№</span>
+                            3532
+                        </span>
+                        <h3 class="details-card__title">
+                            The Emotional Creation 
+                        </h3>
+                        <div class="details-card__wrapper">
+                            <span class="details-card__statistics details-card__statistics--shared">12 315 geteilt</span>
+                            <span class="details-card__statistics details-card__statistics--viewing">2 315 ansehen</span>
+                        </div>
+                        <div class="details-card__message">
+                            <button class="details-card__message-btn details-card__message-btn--like btn" type="button">
+                                <span class="sr-only">like</span>
+                                <svg width="20" height="20">
+                                    <use xlink:href="images/sprite.svg#like-icon"></use>
+                                </svg>
+                                <span>1678</span>  
+                            </button>
+                            <a class="details-card__message-btn details-card__message-btn--message btn" href="#">
+                                <svg width="20" height="20">
+                                    <use xlink:href="images/sprite.svg#message-icon"></use>
+                                </svg>
+                                <span>Schreiben dem Autor</span>  
+                            </a>
+                        </div>
+
+                        @@include('./parts/components/_block.html', {
+                            arr: [{title: 'Autor:', path: 'Carla Sá Fernandes'}, 
+                            {title: 'Stil:', path: 'Modern'}, 
+                            {title: 'Segeltuch:', path: 'Acryl, Tempera 50 x 50 zm'}],
+                        })
+                        
+                        <div class="details-card__price">
+                            <span class="details-card__price-sum">
+                                <span>€</span>
+                                1 320
+                            </span>
+                            <div class="details-card__question">
+                                Wie kauft man?
+                                <p class="details-card__question-text">
+                                    Gehen Sie zum Online-Shop, wählen Sie ein Produkt aus und kaufen Sie!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="details-card__btns">
+                            <a class="details-card__btns-btn details-card__btns-btn--buy btn btn--red-hover btn--universal" href="#">Kaufen</a>
+                            <a class="details-card__btns-btn btn btn--universal btn--red-hover" href="#">
+                                Schlagen Sie einen Preis vor
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </section> -->
+            <section class="creations-details__tabs">
+                <h2 class="sr-only">Besonderheiten</h2>
+                <ul class="tabs-btns">
+                    <li class="tabs-btns__item">
+                        <button class="tabs-btns__btn tabs-btns__btn--descr btn active" type="button" data-content="creations-details__item--descr">
+                            Beschreibung
+                            <span></span>
+                        </button>
+                    </li>
+                    <li class="tabs-btns__item">
+                        <button class="tabs-btns__btn tabs-btns__btn--charact btn" type="button" data-content="creations-details__item--charact">
+                            Charakteristisch
+                            <span></span>
+                        </button>
+                    </li>
+                    <li class="tabs-btns__item">
+                        <button class="tabs-btns__btn tabs-btns__btn--delivery btn" type="button" data-content="creations-details__item--delivery">
+                            Lieferung
+                            <span></span>
+                        </button>
+                    </li>
+                    <li class="tabs-btns__item">
+                        <button class="tabs-btns__btn tabs-btns__btn--guarant btn" type="button" data-content="creations-details__item--guarant">
+                            Garantien
+                            <span></span>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="creations-details__list">
+                    <li class="creations-details__item creations-details__item--descr active">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "index": false,
+                            "creationsDetails": true,
+                            "author": true,
+                            "image-url": "images/content/author-card-6.jpg",
+                            "alt": "Carla Sá Fernandes",
+                            "name": "Carla Sá Fernandes",
+                            "phone": "+498 924 214 980",
+                            "href": "+498924214980",
+                        })
+
+                        <div>
+                            <p>
+                                Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                            </p>
+                            <p>
+                                Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="creations-details__item creations-details__item--charact">
+
+                        @@include('./parts/components/_block.html', {
+                            arr: [{title: 'Standort:', path: 'München'}, 
+                                {title: 'Verkäufer:', path: 'Carla Sá Fernandes'}, 
+                                {title: 'Beschaffenheit:', path: 'Neu'},
+                                {title: 'Material:', path: 'Acryl'}, 
+                                {title: 'Methode der Erstellung:', path: 'Nicht'},
+                                {title: 'Bewerteter Wert:', path: '2 000 €'}, 
+                                {title: 'Jahre der Schöpfung:', path: '2019'},
+                                {title: 'Datum hinzugefügt:', path: '13.10.2020'}],
+                        })
+
+                        <div>
+                            <p>
+                                Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                            </p>
+                            <p>
+                                Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="creations-details__item creations-details__item--delivery">
+                        <div>
+                            <p>
+                                Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                                Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                            </p>
+                            <p>
+                                Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                            </p>
+                            <p>
+                                Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="creations-details__item creations-details__item--guarant">
+                        <div>
+                            <p>
+                                Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                            </p>
+                            <p>
+                                Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                            </p>
+                            <p>
+                                Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="others-creation">
+                <h2 class="others-creation__title title">andere Werke das Autors</h2>
+                <ul class="others-creation__list list-card">
+                    <li class="others-creation__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-1.jpg",
+                            "alt": "Timeo danaos et donna fere...",
+                            "title": "Timeo danaos et donna fere...",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 010"
+                        })
+                    </li>
+                    <li class="others-creation__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-2.jpg",
+                            "alt": "Storm",
+                            "title": "Storm",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 200"
+                        })
+                    </li>
+                    <li class="others-creation__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-3.jpg",
+                            "alt": "L'entrée d'Oisy- le - Rideau",
+                            "title": "L'entrée d'Oisy- le - Rideau",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "2 010"
+                        })
+                    </li>
+                    <li class="others-creation__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-4.jpg",
+                            "alt": "Pilote voyageur III",
+                            "title": "Pilote voyageur III",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 510"
+                        })
+                    </li>
+                    <li class="others-creation__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-13.jpg",
+                            "alt": "Rosa Bild...",
+                            "title": "Rosa Bild...",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 710"
+                        })
+                    </li>
+                    <li class="others-creation__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-6.jpg",
+                            "alt": "Imagination 2",
+                            "title": "Imagination 2",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 010"
+                        })
+                    </li>
+                    <li class="others-creation__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-7.jpg",
+                            "alt": "Wild.",
+                            "title": "Wild.",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "2 210"
+                        })
+                    </li>
+                    <li class="others-creation__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-8.jpg",
+                            "alt": "L'oeuf du serpent, Hommage...",
+                            "title": "L'oeuf du serpent, Hommage...",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 310"
+                        })
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section class="similar-paintings">
+            <div class="container">
+                <h2 class="similar-paintings__title title">
+                    Gemälde mit ähnlichen Themen
+                </h2>
+                <ul class="similar-paintings__list list-card">
+                    <li class="similar-paintings__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-12.jpg",
+                            "alt": "Tableau 2 novembre 16",
+                            "title": "Tableau 2 novembre 16",
+                            "name": "Marcello Carrozzini",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 510"
+                        })
+                    
+                    </li>
+                    <li class="similar-paintings__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-14.jpg",
+                            "alt": "Doxa",
+                            "title": "Doxa",
+                            "name": "Marcello Carrozzini",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 350"
+                        })
+                    </li>
+                    <li class="similar-paintings__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-15.jpg",
+                            "alt": "Flammes",
+                            "title": "Flammes",
+                            "name": "Marcello Carrozzini",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 710"
+                        })
+                    </li>
+                    <li class="similar-paintings__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-16.jpg",
+                            "alt": "Self Portrait 132",
+                            "title": "Self Portrait 132",
+                            "name": "Marcello Carrozzini",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "2 310"
+                        })
+                    </li>
+                    <li class="similar-paintings__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-17.jpg",
+                            "alt": "Timeo danaos et donna fere...",
+                            "title": "Timeo danaos et donna fere...",
+                            "name": "Marcello Carrozzini",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 910"
+                        })
+                    </li>
+                    <li class="similar-paintings__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-18.jpg",
+                            "alt": "Je t'écris ce poème",
+                            "title": "Je t'écris ce poème",
+                            "name": "Marcello Carrozzini",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 210"
+                        })
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="watched">
+            <div class="container">
+                <h2 class="watched__title title">
+                    vor kurzem hast du zugeschaut
+                </h2>
+                <ul class="watched__list list-card">
+                    <li class="watched__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-1.jpg",
+                            "alt": "Timeo danaos et donna fere...",
+                            "title": "Timeo danaos et donna fere...",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 010"
+                        })
+                    </li>
+                    <li class="watched__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-2.jpg",
+                            "alt": "Storm",
+                            "title": "Storm",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 200"
+                        })
+                    </li>
+                    <li class="watched__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-3.jpg",
+                            "alt": "L'entrée d'Oisy- le - Rideau",
+                            "title": "L'entrée d'Oisy- le - Rideau",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "2 010"
+                        })
+                    </li>
+                    <li class="watched__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-4.jpg",
+                            "alt": "Pilote voyageur III",
+                            "title": "Pilote voyageur III",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 510"
+                        })
+                    </li>
+                    <li class="watched__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-13.jpg",
+                            "alt": "Rosa Bild...",
+                            "title": "Rosa Bild...",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 710"
+                        })
+                    </li>
+                    <li class="watched__item">
+                        @@include('./parts/components/_painting-card.html', {
+                            "creations": false,
+                            "gallery": true,
+                            "image-url": "images/content/painting-card-6.jpg",
+                            "alt": "Imagination 2",
+                            "title": "Imagination 2",
+                            "name": "Carla Sá Fernandes",
+                            "material": "Acryl auf Leinwand (50x50zm)",
+                            "price": "1 010"
+                        })
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+</main>
+
+@@include('./parts/components/_footer.html')
+
+<script src="js/main.min.js"></script>
+</body>
+</html>

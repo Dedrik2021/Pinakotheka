@@ -84,6 +84,16 @@ main {
         }
     }
 
+    &--green {
+        transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+
+        &:hover {
+            color: $white;
+            background-color: $green;
+            border-color: transparent;
+        }
+    }
+
 
     &--close {
         position: absolute;
@@ -142,7 +152,6 @@ main {
     &:checked {
 
         &+.checkbox {
-            // background-color: $green;
             border-color: transparent;
 
             span {
@@ -204,5 +213,33 @@ main {
     font-weight: 400;
     font-size: 48px;
     font-family: $journalism;
-    @include line-clamp(1);
+
+    @include r($mobile-md) {
+        font-size: 40px;
+    }
+
+    @include r($mobile-sm) {
+        font-size: 35px;
+    }
+}
+
+.blur {
+    position: absolute;
+    top: 50px;
+    opacity: 0.5;
+    filter: blur(10px);
+    border-radius: 20px;
+    width: 982px;
+    height: 520px;
+}
+
+.list-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-template-rows: 393px;
+
+    @include r($mobile-lg) {
+        column-gap: 15px;
+        row-gap: 70px;
+    }
 }

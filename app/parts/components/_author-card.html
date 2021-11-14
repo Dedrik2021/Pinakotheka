@@ -1,0 +1,67 @@
+<article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="@@image-url" alt="@@alt" width="122" height="125">
+            
+            @@if(index === true) {
+                <span class="author-card__portfolio">@@portfolio</span>
+            }
+            
+        </div>
+    </a>
+
+    @@if(index === true) {
+        <span class="author-card__online @@online"></span>
+    }
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                @@name
+            </h2>
+        </a>
+
+        @@if(creationsDetails === true) {
+            <a class="author-card__link author-card__link--tel" href="tel:@@href">
+                @@phone
+            </a>
+        }
+        
+        @@if(author === true) {
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>4.8</span>
+            </div>
+        }
+
+        @@if(creationsDetails === true) {
+            <ul class="social">
+                <li class="social__item">
+                    <a class="social__link social__link--facebook" target="_blank" href="https://www.facebook.com/">
+                        <svg width="20" height="20">
+                            <use xlink:href="images/sprite.svg#facebook-icon"></use>
+                        </svg>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/tweeter">
+                        <svg width="20" height="20">
+                            <use xlink:href="images/sprite.svg#twitter-icon"></use>
+                        </svg>
+                        <span class="sr-only">Twitter</span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--instagram" target="_blank" href="https://www.instagram.com/?hl=de">
+                        <svg width="20" height="20">
+                            <use xlink:href="images/sprite.svg#instagram-icon"></use>
+                        </svg>
+                        <span class="sr-only">instagram</span>
+                    </a>
+                </li>
+            </ul>
+        }
+        
+    </div>
+</article>

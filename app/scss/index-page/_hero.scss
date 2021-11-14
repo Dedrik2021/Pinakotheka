@@ -137,14 +137,7 @@
     }
 
     &__img-blur {
-        position: absolute;
-        top: 50px;
         left: 50px;
-        opacity: 0.5;
-        filter: blur(10px);
-        border-radius: 20px;
-        width: 982px;
-        height: 520px;
 
         @include r($screen-xl) {
             width: 950px;

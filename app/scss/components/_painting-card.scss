@@ -4,14 +4,19 @@
     width: 100%;
     border-radius: 10px;
     padding: 10px;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s, border-bottom-right-radius 0.5s, border-bottom-left-radius 0.5s;
 
     @include r($mobile-lg) {
         background-color: $white;
+        box-shadow: 3px 5px 10px -2px rgba(0, 0, 0, 0.5);
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
     }
 
     &:hover {
         background-color: $white;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
 
         .painting-card__buy {
             opacity: 1;
@@ -47,9 +52,15 @@
         }
     }
 
+    &__link {
+        display: inline-block;
+        margin-bottom: 5px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color 0.4s, color 0.4s;
+    }
+
     &__title {
         @include line-clamp(1);
-        margin-bottom: 5px;
     }
 
     &__price,
@@ -91,10 +102,19 @@
             outline: transparent;
             border-bottom-color: $black;
         }
+    }
+
+    &__link,
+    &__author-link {
+
+        &:focus,
+        &:hover {
+            outline: transparent;
+            border-bottom-color: $gray-100;
+        }
 
         &:hover {
             color: $red;
-            border-bottom-color: $gray-100;
         }
     }
 
@@ -132,12 +152,13 @@
         opacity: 0;
         width: 100%;
         visibility: hidden;
-        transition: opacity 0.5s, visibility 0.5s, bottom 0.5s;
+        transition: opacity 0.4s, visibility 0.5s, bottom 0.5s;
 
         @include r($mobile-lg) {
             visibility: visible;
             opacity: 1;
             bottom: -55px;
+            box-shadow: 3px 10px 10px -2px rgba(0, 0, 0, 0.5);
         }
     }
 
