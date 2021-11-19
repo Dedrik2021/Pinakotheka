@@ -1,7 +1,6 @@
 .author-card {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     border-radius: 10px;
     height: 100%;
     transition: box-shadow 0.4s;
@@ -90,7 +89,10 @@
         transition: color 0.4s;
 
         &:hover {
-            color: $red;
+    
+            .author-card__user {
+                color: $red;
+            }
         }
 
         &:focus {
@@ -103,7 +105,89 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 1.5;
+        color: $gray-100;
         text-align: center;
-        @include line-clamp(4);
+        transition: color 0.4s;
+        @include line-clamp(2);
+    }
+
+    &__rating,
+    &__link--tel {
+        font-weight: 400;
+        font-size: 16px;
+        color: $gray-100;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        @include r($mobile-sm) {
+            justify-content: center;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    &__stars {
+        padding: 0;
+        margin-right: 10px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .social {
+        display: flex;
+        justify-content: flex-start;
+
+        &__item {
+
+            &:not(:last-child) {
+                margin-right: 5px;
+
+                @include r($mobile-sm) {
+                    margin-right: 15px;
+                }
+            }
+
+            &--google {
+                display: none;
+                margin: 0;
+            }
+        }
+
+        &__link {
+            border-color: transparent;
+            padding: 5px;
+            background-image: none;
+
+            @include r($mobile-md) {
+                background-color: $red;
+            }
+
+            svg {
+                width: 15px;
+                height: 15px;
+                fill: $gray-600;
+                transition: fill 0.4s;
+
+                @include r($mobile-md) {
+                    fill: $white;
+                }
+            }
+
+            &:hover {
+
+                svg {
+                    fill: $white;
+                }
+            }
+        }
     }
 }

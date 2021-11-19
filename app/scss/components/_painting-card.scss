@@ -22,6 +22,10 @@
             opacity: 1;
             visibility: visible;
             bottom: -55px;
+
+            @include r($mobile-lg) {
+                bottom: -65px;
+            }
         }
     }
 
@@ -33,6 +37,10 @@
             opacity: 1;
             visibility: visible;
             bottom: -55px;
+
+            @include r($mobile-lg) {
+                bottom: -65px;
+            }
         }
     }
 
@@ -73,7 +81,6 @@
 
     &__box {
         display: flex;
-        justify-content: space-between;
     }
 
     &__author-link,
@@ -125,6 +132,7 @@
     &__rating {
         display: flex;
         flex-direction: column;
+        margin-left: auto;
         align-items: flex-end;
         padding-top: 5px;
     }
@@ -157,7 +165,8 @@
         @include r($mobile-lg) {
             visibility: visible;
             opacity: 1;
-            bottom: -55px;
+            bottom: -65px;
+            padding: 10px 10px 20px;
             box-shadow: 3px 10px 10px -2px rgba(0, 0, 0, 0.5);
         }
     }

@@ -1,16 +1,17 @@
 .block {
-    
+
     &__item {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    
+
     &__author-item {
         font-weight: 300;
         color: $gray-100;
         line-height: 1.7;
         margin-right: 5px;
+        max-width: 70%;
 
         &--thing {
             font-weight: 500;

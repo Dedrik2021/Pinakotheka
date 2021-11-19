@@ -1,5 +1,19 @@
 .breadcrumbs {
     display: flex;
+    align-items: center;
+    margin: 130px 0 115px;
+
+    @include r($mobile-xl) {
+        margin: 90px 0;
+    }
+
+    @include r($mobile-lg) {
+        margin: 90px 0 70px;
+    }
+
+    @include r($mobile-md) {
+        margin: 90px 0 40px;
+    }
 
     &__item {
 
@@ -15,7 +29,7 @@
                 right: -18px;
                 background-color: $gray;
                 transform: rotate(-65deg);
-                top: 10px;
+                top: 7px;
             }
         }
 
@@ -38,6 +52,8 @@
         border-bottom: 1px solid transparent;
         color: $gray;
         transition: border-bottom-color 0.4s, color 0.4s;
+        max-width: 200px;
+        @include line-clamp(1);
 
         &:focus,
         &:hover {

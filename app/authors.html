@@ -1,0 +1,440 @@
+    @@include('./parts/components/_top.html', {
+        "title": "Autoren",
+    }) 
+
+    @@include('./parts/components/_header.html')
+
+    <main>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="modal">
+                <div class="modal__box">
+                    <img src="images/content/logo.svg" alt="logo" width="150" height="45">
+                    <button class="modal__btn btn btn--close" type="button">
+                        <span class="sr-only">Nah dran</span>
+                        <span></span>
+                    </button>
+                </div>
+                
+                @@include('./parts/components/_btns-tabs.html')
+        
+                <ul class="modal-form__tabs">
+                    <li class="modal-form__item modal-form__item--enter active">
+                        
+                        @@include('./parts/components/_modal-form.html', {
+                            "enter": true,
+                            "register": false,
+                            "btn": "Betreten",
+                        })
+        
+                        @@include('./parts/components/_social.html')
+        
+                    </li>
+                    <li class="modal-form__item modal-form__item--register">
+        
+                        @@include('./parts/components/_modal-form.html', {
+                            "enter": false,
+                            "register": true,
+                            "btn": "Registrieren",
+                        })
+        
+                        @@include('./parts/components/_social.html')
+        
+                    </li>
+                </ul>
+            </div> 
+
+            @@include('./parts/components/_breadcrumbs.html', {
+                arr: [{title: 'Autoren'}],
+            })
+
+        </div>
+        <section class="authors">
+            <div class="container">
+                <div class="authors__top">
+                    <h1 class="authors__title title">
+                        Autoren
+                    </h1>
+                    <div class="authors__box">
+                        <span class="authors__found">6414 Autoren gefunden</span>
+                        <div class="authors__wrapper">
+                            <form class="authors-search">
+                                <label class="authors-search__label" for="search-authors">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="images/sprite.svg#search-icon"></use>
+                                    </svg>
+                                </label>
+                                <input class="authors-search__input" type="search" name="[authors]search" id="search-authors" placeholder="Suche nach Nachnamen">
+                            </form>
+
+                            @@include('./parts/components/_filters-items.html', {
+                                "authors": true,
+                                "value1": "Gemälde",
+                                "value2": "Skulptur",
+                                "value3": "Zeichnung",
+                                "value4": "Digitale Kunst",
+                                "value5": "Handmade",
+                                "option1": "Gemälde",
+                                "option2": "Skulptur",
+                                "option3": "Zeichnung",
+                                "option4": "Digitale Kunst",
+                                "option5": "Handmade",
+                            })
+                            
+                            @@include('./parts/components/_filters-items.html', {
+                                "authors": false,
+                                "value1": "Preis",
+                                "value2": "Stilen",
+                                "value3": "Artikeln",
+                                "value4": "Größe",
+                                "value5": "Farbe",
+                                "option1": "Nach Preis sortieren",
+                                "option2": "Nach Preis sortieren",
+                                "option3": "Nach Artikeln sortieren",
+                                "option4": "Nach Größe sortieren",
+                                "option5": "Nach Farbe sortieren",
+                            })
+
+                        </div>
+                    </div>
+                </div>
+                <ul class="authors__list">
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-1.jpg",
+                            "alt": "Dominique Evrard",
+                            "name": "Dominique Evrard",
+                            "rating": "4.8",
+                            "portfolio": "12",
+                            "reviews": "16",
+                            "online": "active",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-11.jpg",
+                            "alt": "Ln Le Cheviller",
+                            "name": "Ln Le Cheviller",
+                            "rating": "4.7",
+                            "portfolio": "12",
+                            "reviews": "16",
+                            "online": "active",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-2.jpg",
+                            "alt": "Marcello Carrozzini",
+                            "name": "Marcello Carrozzini",
+                            "rating": "4.7",
+                            "portfolio": "27",
+                            "reviews": "32",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-10.jpg",
+                            "alt": "Chantal Proulx",
+                            "name": "Chantal Proulx",
+                            "rating": "4.6",
+                            "portfolio": "12",
+                            "reviews": "16",
+                            "online": "active",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-3.jpg",
+                            "alt": "Josep Obradors",
+                            "name": "Josep Obradors",
+                            "rating": "4.5",
+                            "portfolio": "12",
+                            "reviews": "14",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-9.jpg",
+                            "alt": "Anne Hoover",
+                            "name": "Anne Hoover",
+                            "rating": "4.4",
+                            "portfolio": "12",
+                            "reviews": "16",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-5.jpg",
+                            "alt": "Titan",
+                            "name": "Titan",
+                            "rating": "4.3",
+                            "portfolio": "4",
+                            "reviews": "4",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-8.jpg",
+                            "alt": "Geneviève Nicolas",
+                            "name": "Geneviève Nicolas",
+                            "rating": "3.9",
+                            "portfolio": "12",
+                            "reviews": "16",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-6.jpg",
+                            "alt": "Conny Wachsmann",
+                            "name": "Conny Wachsmann",
+                            "rating": "3.8",
+                            "portfolio": "8",
+                            "reviews": "16",
+                            "online": "active",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-7.jpg",
+                            "alt": "Frédérique Marteau",
+                            "name": "Frédérique Marteau",
+                            "rating": "3.7",
+                            "portfolio": "12",
+                            "reviews": "16",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-7.jpg",
+                            "alt": "Frédérique Marteau",
+                            "name": "Frédérique Marteau",
+                            "rating": "3.5",
+                            "portfolio": "12",
+                            "reviews": "16",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-6.jpg",
+                            "alt": "Conny Wachsmann",
+                            "name": "Conny Wachsmann",
+                            "rating": "3.2",
+                            "portfolio": "8",
+                            "reviews": "16",
+                            "online": "active",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-8.jpg",
+                            "alt": "Geneviève Nicolas",
+                            "name": "Geneviève Nicolas",
+                            "rating": "2.8",
+                            "portfolio": "12",
+                            "reviews": "16",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-5.jpg",
+                            "alt": "Titan",
+                            "name": "Titan",
+                            "rating": "2.6",
+                            "portfolio": "4",
+                            "reviews": "4",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-9.jpg",
+                            "alt": "Anne Hoover",
+                            "name": "Anne Hoover",
+                            "rating": "2.5",
+                            "portfolio": "12",
+                            "reviews": "16",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-3.jpg",
+                            "alt": "Josep Obradors",
+                            "name": "Josep Obradors",
+                            "rating": "2.4",
+                            "portfolio": "12",
+                            "reviews": "14",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-10.jpg",
+                            "alt": "Chantal Proulx",
+                            "name": "Chantal Proulx",
+                            "rating": "2.4",
+                            "portfolio": "12",
+                            "reviews": "16",
+                            "online": "active",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-2.jpg",
+                            "alt": "Marcello Carrozzini",
+                            "name": "Marcello Carrozzini",
+                            "rating": "2.3",
+                            "portfolio": "27",
+                            "reviews": "32",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-11.jpg",
+                            "alt": "Ln Le Cheviller",
+                            "name": "Ln Le Cheviller",
+                            "rating": "2.2",
+                            "portfolio": "12",
+                            "reviews": "16",
+                            "online": "active",
+                        })
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        @@include('./parts/components/_author-card.html', {
+                            "authorsList": false,
+                            "creationsDetails": false,
+                            "author": true,
+                            "authors": true,
+                            "image-url": "images/content/author-card-1.jpg",
+                            "alt": "Ln Le Cheviller",
+                            "name": "Ln Le Cheviller",
+                            "rating": "2.1",
+                            "portfolio": "12",
+                            "reviews": "16",
+                            "online": "active",
+                        })
+                        
+                    </li>
+                </ul>
+                <a class="authors__btn btn btn--universal" href="#">Zeig mehr</a>
+            </div>
+        </section>
+    </main>
+
+    @@include('./parts/components/_footer.html')
+
+<script src="js/main.min.js"></script>
+</body>
+</html>

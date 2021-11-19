@@ -1,5 +1,9 @@
 .filters-view {
 
+    @include r($mobile-sm) {
+        display: none;
+    }
+
     &__btn {
         padding-right: 3px;
 
@@ -13,7 +17,6 @@
             svg {
                 fill: $gray-100;
             }
-
         }
 
         &:focus {

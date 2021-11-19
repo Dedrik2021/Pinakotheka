@@ -33,7 +33,6 @@
                     <li class="menu__item menu__item--dropdown" tabindex="0">
                         <a class="menu__link" href="#">Katalog</a>
                         <span></span>
-                        
                         <ul class="menu-dropdown">
                             <li class="menu-dropdown__item">
                                 <a class="menu-dropdown__link" href="/creations.html">Kreationen</a>
@@ -62,7 +61,7 @@
                         </ul>
                     </li>
                     <li class="menu__item" tabindex="0">
-                        <a class="menu__link" href="#">Autoren</a>
+                        <a class="menu__link" href="/authors.html">Autoren</a>
                         <span></span>
                     </li>
                     <li class="menu__item" tabindex="0">
@@ -93,16 +92,17 @@
     <main>
         <h1 class="sr-only">Kreationen von Autoren</h1>
         <div class="overlay"></div>
-        <div class="modal">
-            <div class="modal__box">
-                <img src="images/content/logo.svg" alt="logo" width="150" height="45">
-                <button class="modal__btn btn btn--close" type="button">
-                    <span class="sr-only">Nah dran</span>
-                    <span></span>
-                </button>
-            </div>
-            
-            <ul class="btns-tabs">
+        <div class="container">
+            <div class="modal">
+                <div class="modal__box">
+                    <img src="images/content/logo.svg" alt="logo" width="150" height="45">
+                    <button class="modal__btn btn btn--close" type="button">
+                        <span class="sr-only">Nah dran</span>
+                        <span></span>
+                    </button>
+                </div>
+                
+                <ul class="btns-tabs">
     <li class="btns-tabs__item">
         <button class="btns-tabs__btn btn active" data-content="modal-form__item--enter" type="button">Eingang</button>
     </li>
@@ -110,12 +110,13 @@
         <button class="btns-tabs__btn btn" data-content="modal-form__item--register" type="button">Anmeldung</button>
     </li>
 </ul>
-    
-            <ul class="modal-form__tabs">
-                <li class="modal-form__item modal-form__item--enter active">
-                    
-                    <form class="modal-form">
+        
+                <ul class="modal-form__tabs">
+                    <li class="modal-form__item modal-form__item--enter active">
+                        
+                        <form class="modal-form">
     <div class="modal-form__top">
+
         
             <div class="modal-form__wrapper">
                 <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="customer">
@@ -171,8 +172,8 @@
     </div>
 </form>
 <span class="modal__enter">Mit sozialen Netzwerken anmelden</span>
-    
-                    <ul class="social">
+        
+                        <ul class="social">
     <li class="social__item social__item--google">
         <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
             <span class="sr-only">Google</span>
@@ -203,12 +204,13 @@
         </a>
     </li>
 </ul>
-    
-                </li>
-                <li class="modal-form__item modal-form__item--register">
-    
-                    <form class="modal-form">
+        
+                    </li>
+                    <li class="modal-form__item modal-form__item--register">
+        
+                        <form class="modal-form">
     <div class="modal-form__top">
+
         
         
         
@@ -239,7 +241,6 @@
             <span class="sr-only">Telefon</span>
         </label>
         <input class="modal-form__input" type="tel" placeholder="Telefon" name="[modal]tel" id="modal-tel" required>
-
     
     
     
@@ -281,8 +282,8 @@
     </div>
 </form>
 <span class="modal__enter">Mit sozialen Netzwerken anmelden</span>
-    
-                    <ul class="social">
+        
+                        <ul class="social">
     <li class="social__item social__item--google">
         <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
             <span class="sr-only">Google</span>
@@ -313,13 +314,12 @@
         </a>
     </li>
 </ul>
-    
-                </li>
-            </ul>
-        </div> 
-        <div class="creations">
-            <div class="container">
-                <ul class="breadcrumbs">
+        
+                    </li>
+                </ul>
+            </div> 
+
+            <ul class="breadcrumbs">
     <li class="breadcrumbs__item">
         <a class="breadcrumbs__link" href="/">
             Heimat
@@ -336,6 +336,10 @@
     
 </ul>
 
+
+        </div>
+        <div class="creations">
+            <div class="container">
 
                 <ul class="creations__list">
     <li class="creations__item">
@@ -406,7 +410,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="art">Kunst</label>
             <input class="creations__input-check check" type="checkbox" name="[style]check" id="art" onclick="window.increment(event)">
@@ -414,7 +417,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="modern">Modern</label>
             <input class="creations__input-check check" type="checkbox" name="[style]check" id="modern" onclick="window.increment(event)">
@@ -422,7 +424,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="expression">Expressionismus</label>
             <input class="creations__input-check check" type="checkbox" name="[style]check" id="expression" onclick="window.increment(event)">
@@ -430,7 +431,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="figurativ">Figurativ</label>
             <input class="creations__input-check check" type="checkbox" name="[style]check" id="figurativ" onclick="window.increment(event)">
@@ -438,7 +438,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="impression">Impressionismus</label>
             <input class="creations__input-check check" type="checkbox" name="[style]check" id="impression" onclick="window.increment(event)">
@@ -461,7 +460,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="art2">Kunst</label>
             <input class="creations__input-check check" type="checkbox" name="[item]check" id="art2" onclick="window.increment(event)">
@@ -469,7 +467,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="modern2">Modern</label>
             <input class="creations__input-check check" type="checkbox" name="[item]check" id="modern2" onclick="window.increment(event)">
@@ -477,7 +474,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="expression2">Expressionismus</label>
             <input class="creations__input-check check" type="checkbox" name="[item]check" id="expression2" onclick="window.increment(event)">
@@ -485,7 +481,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="figurativ2">Figurativ</label>
             <input class="creations__input-check check" type="checkbox" name="[item]check" id="figurativ2" onclick="window.increment(event)">
@@ -493,7 +488,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="impression2">Impressionismus</label>
             <input class="creations__input-check check" type="checkbox" name="[item]check" id="impression2" onclick="window.increment(event)">
@@ -518,7 +512,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="gouache">
                 Gouache
@@ -528,7 +521,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="creations__wrapper">
             <label class="creations__label" for="oil">
                 Ölfarben
@@ -538,7 +530,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="creations__wrapper">
             <label class="creations__label" for="watercolor">
                 Aquarell
@@ -548,7 +539,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="creations__wrapper">
             <label class="creations__label" for="tempera">
                 Temperafarbe
@@ -578,7 +568,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="one">
                 <span>$</span>
@@ -591,7 +580,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="two">
                 <span>$</span>
@@ -604,7 +592,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="creations__wrapper">
             <label class="creations__label" for="five">
                 <span>$</span>
@@ -617,7 +604,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="creations__wrapper">
             <label class="creations__label" for="ten">
                 <span>$</span>
@@ -630,7 +616,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="creations__wrapper">
             <label class="creations__label" for="one-five">
                 <span>$</span>
@@ -643,7 +628,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="creations__wrapper">
             <label class="creations__label" for="two-five">
                 <span>$</span>
@@ -676,7 +660,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="six">
                 60
@@ -688,7 +671,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="six2">
                 60
@@ -700,7 +682,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="creations__wrapper">
             <label class="creations__label" for="six3">
                 60
@@ -712,7 +693,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="creations__wrapper">
             <label class="creations__label" for="six4">
                 90
@@ -741,7 +721,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="orange">
                 Orange
@@ -751,7 +730,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="yellow">
                 Gelb
@@ -761,7 +739,6 @@
                 <span></span>
             </div>
         </div>
-        
         <div class="creations__wrapper">
             <label class="creations__label" for="green">
                 Grün
@@ -771,7 +748,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="creations__wrapper">
             <label class="creations__label" for="blue">
                 Blau
@@ -781,7 +757,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="creations__wrapper">
             <label class="creations__label" for="violett">
                 Violett
@@ -791,7 +766,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="creations__wrapper">
             <label class="creations__label" for="white">
                 Weiß
@@ -823,13 +797,14 @@
                             </h2>
                             <div class="modern__box-wrapper">
                                 
-                                <select class="filters-items">
+                                <select class="filters-items ">
     <option value="Preis" selected>Nach Preis sortieren</option>
-    <option value="Stilen">Nach Stilen sortieren</option>
+    <option value="Stilen">Nach Preis sortieren</option>
     <option value="Artikeln">Nach Artikeln sortieren</option>
     <option value="Größe">Nach Größe sortieren</option>
     <option value="Farbe">Nach Farbe sortieren</option>
 </select>
+
                                 
                                 <div class="filters-view">
     <button class="filters-view__btn btn active btn-grid" type="button">
@@ -2433,7 +2408,6 @@
                 </div>
             </div>
         </div>
-
     </main> 
 
     <footer class="footer">
@@ -2454,7 +2428,7 @@
                     <a class="footer__link" href="/creations.html">Katalog</a>
                 </li>
                 <li class="footer__item">
-                    <a class="footer__link" href="#">Autoren</a>
+                    <a class="footer__link" href="/authors.html">Autoren</a>
                 </li>
             </ul>
             <ul class="footer__list">
@@ -2479,7 +2453,6 @@
                     <a class="footer__link" href="#">Kontakte</a>
                 </li>
             </ul>
-            
             <div class="footer__wrapper">
                 <a class="footer__tel" href="tel:+498924214970">+4 98 924 214 975</a>
                 <ul class="social">

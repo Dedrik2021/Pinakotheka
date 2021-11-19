@@ -1,0 +1,1821 @@
+    <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoren</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/content/favicon.ico">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body id="body"> 
+
+    <header class="header">
+    <div class="container">
+        <nav class="menu">
+            <a class="logo header__logo" href="/">
+                <img src="images/content/logo.svg" alt="logo" width="180" height="50">
+            </a> 
+            <div class="menu__inner">
+                <form class="menu__form">
+                    <label for="nav-search">
+                        <span class="sr-only">Suche</span>
+                    </label>
+                    <input class="menu__search" type="search" name="[nav]search" placeholder="Tippe um zu suchen" id="nav-search" required>
+                    <button class="menu__btn btn" type="submit">
+                        <span class="sr-only">Suche drücken</span>
+                        <svg width="16" height="16">
+                            <use xlink:href="images/sprite.svg#search-icon"></use>
+                        </svg>
+                    </button>
+                </form>
+                <ul class="menu__list">
+                    <li class="menu__item menu__item--dropdown" tabindex="0">
+                        <a class="menu__link" href="#">Katalog</a>
+                        <span></span>
+                        <ul class="menu-dropdown">
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="/creations.html">Kreationen</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie2</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie3</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie4</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie5</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie6</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie7</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie8</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item" tabindex="0">
+                        <a class="menu__link" href="/authors.html">Autoren</a>
+                        <span></span>
+                    </li>
+                    <li class="menu__item" tabindex="0">
+                        <a class="menu__link" href="#">Arbeitsplan</a>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu__box">
+                <ul class="buttons">
+                    <li class="buttons__item">
+                        <button class="buttons__btn btn active" type="button">De</button>
+                    </li>
+                    <li class="buttons__item">
+                        <button class="buttons__btn btn" type="button">En</button>
+                    </li>
+                </ul>
+                <button class="menu__enter-btn btn" type="button">Eingang</button>
+            </div>
+            <button class="menu__burger btn" type="button">
+                <span class="sr-only">Öffne das Menü</span>
+                <span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="modal">
+                <div class="modal__box">
+                    <img src="images/content/logo.svg" alt="logo" width="150" height="45">
+                    <button class="modal__btn btn btn--close" type="button">
+                        <span class="sr-only">Nah dran</span>
+                        <span></span>
+                    </button>
+                </div>
+                
+                <ul class="btns-tabs">
+    <li class="btns-tabs__item">
+        <button class="btns-tabs__btn btn active" data-content="modal-form__item--enter" type="button">Eingang</button>
+    </li>
+    <li class="btns-tabs__item">
+        <button class="btns-tabs__btn btn" data-content="modal-form__item--register" type="button">Anmeldung</button>
+    </li>
+</ul>
+        
+                <ul class="modal-form__tabs">
+                    <li class="modal-form__item modal-form__item--enter active">
+                        
+                        <form class="modal-form">
+    <div class="modal-form__top">
+
+        
+            <div class="modal-form__wrapper">
+                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="customer">
+                <div class="auto-park__checkbox checkbox">
+                    <span></span>
+                </div>
+                <label class="modal-form__label" for="customer">Kunde</label>
+            </div>
+            <div class="modal-form__wrapper">
+                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="painter">
+                <div class="auto-park__checkbox checkbox">
+                    <span></span>
+                </div>
+                <label class="modal-form__label" for="painter">Maler</label>
+            </div>
+        
+        
+        
+    </div>
+    
+    
+    
+    
+        <label for="modal-email">
+            <span class="sr-only">Email</span>
+        </label>
+        <input class="modal-form__input" type="email" placeholder="Email" name="[modal]email" id="modal-email" required>
+
+        <label for="modal-password">
+            <span class="sr-only">Passwort</span>
+        </label>
+        <input class="modal-form__input" type="password" placeholder="Passwort" name="[modal]password" id="modal-password" required>
+    
+
+    
+
+    <button class="modal-form__btn btn btn--red-hover" type="submit">Betreten</button>
+    <div class="modal-form__bottom">
+
+        
+            <div class="modal-form__wrapper">
+                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="forgotten-password">
+                <div class="auto-park__checkbox checkbox">
+                    <span></span>
+                </div>
+                <label class="modal-form__label" for="forgotten-password">Passwort merken</label>
+            </div>
+            <a class="modal-form__link" href="#">Vergessen Passwort?</a>
+        
+
+        
+        
+    </div>
+</form>
+<span class="modal__enter">Mit sozialen Netzwerken anmelden</span>
+        
+                        <ul class="social">
+    <li class="social__item social__item--google">
+        <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
+            <span class="sr-only">Google</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--facebook" target="_blank" href="https://www.facebook.com/">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#facebook-icon"></use>
+            </svg>
+            <span class="sr-only">Facebook</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/tweeter">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#twitter-icon"></use>
+            </svg>
+            <span class="sr-only">Twitter</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--instagram" target="_blank" href="https://www.instagram.com/?hl=de">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#instagram-icon"></use>
+            </svg>
+            <span class="sr-only">instagram</span>
+        </a>
+    </li>
+</ul>
+        
+                    </li>
+                    <li class="modal-form__item modal-form__item--register">
+        
+                        <form class="modal-form">
+    <div class="modal-form__top">
+
+        
+        
+        
+            <div class="modal-form__wrapper">
+                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="modal-user">
+                <div class="auto-park__checkbox checkbox">
+                    <span></span>
+                </div>
+                <label class="modal-form__label" for="modal-user">Kunde</label>
+            </div>
+            <div class="modal-form__wrapper">
+                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="autor">
+                <div class="auto-park__checkbox checkbox">
+                    <span></span>
+                </div>
+                <label class="modal-form__label" for="autor">Autor</label>
+            </div>
+        
+    </div>
+    
+    
+        <label for="modal-name">
+            <span class="sr-only">Name</span>
+        </label>
+        <input class="modal-form__input" type="text" placeholder="Name" name="[modal]name" id="modal-name" required>
+
+        <label for="modal-tel">
+            <span class="sr-only">Telefon</span>
+        </label>
+        <input class="modal-form__input" type="tel" placeholder="Telefon" name="[modal]tel" id="modal-tel" required>
+    
+    
+    
+
+    
+        <label for="modal-email2">
+            <span class="sr-only">Email</span>
+        </label>
+        <input class="modal-form__input" type="email" placeholder="Email" name="[modal]email" id="modal-email2" required>
+
+        <label for="modal-password2">
+            <span class="sr-only">Passwort</span>
+        </label>
+        <input class="modal-form__input" type="password" placeholder="Passwort" name="[modal]password" id="modal-password2" required>
+        
+        <label for="modal-repassword">
+            <span class="sr-only">Passwort wiederholen</span>
+        </label>
+        <input class="modal-form__input" type="password" placeholder="Passwort wiederholen" name="[modal]password" id="modal-repassword" required>
+    
+
+    <button class="modal-form__btn btn btn--red-hover" type="submit">Registrieren</button>
+    <div class="modal-form__bottom">
+
+        
+
+        
+            <div class="modal-form__wrapper-box">
+                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="Agreement" required>
+                <div class="auto-park__checkbox checkbox">
+                    <span></span>
+                </div>
+                <label class="modal-form__label" for="Agreement">
+                    Ich stimme den <a href="#">Dienstordnungsvereinbarung</a> zu den Bedingungen und zu den in der <a href="#">Nutzungsvereinbarung</a> beschriebenen Zwecken zu
+                </label>
+            </div>
+        
+        
+    </div>
+</form>
+<span class="modal__enter">Mit sozialen Netzwerken anmelden</span>
+        
+                        <ul class="social">
+    <li class="social__item social__item--google">
+        <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
+            <span class="sr-only">Google</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--facebook" target="_blank" href="https://www.facebook.com/">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#facebook-icon"></use>
+            </svg>
+            <span class="sr-only">Facebook</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/tweeter">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#twitter-icon"></use>
+            </svg>
+            <span class="sr-only">Twitter</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--instagram" target="_blank" href="https://www.instagram.com/?hl=de">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#instagram-icon"></use>
+            </svg>
+            <span class="sr-only">instagram</span>
+        </a>
+    </li>
+</ul>
+        
+                    </li>
+                </ul>
+            </div> 
+
+            <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="/">
+            Heimat
+        </a>
+    </li>
+
+    
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="undefined.html">
+                Autoren
+            </a>
+        </li>
+    
+    
+</ul>
+
+
+        </div>
+        <section class="authors">
+            <div class="container">
+                <div class="authors__top">
+                    <h1 class="authors__title title">
+                        Autoren
+                    </h1>
+                    <div class="authors__box">
+                        <span class="authors__found">6414 Autoren gefunden</span>
+                        <div class="authors__wrapper">
+                            <form class="authors-search">
+                                <label class="authors-search__label" for="search-authors">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="images/sprite.svg#search-icon"></use>
+                                    </svg>
+                                </label>
+                                <input class="authors-search__input" type="search" name="[authors]search" id="search-authors" placeholder="Suche nach Nachnamen">
+                            </form>
+
+                            <select class="filters-items items">
+    <option value="Gemälde" selected>Gemälde</option>
+    <option value="Skulptur">Skulptur</option>
+    <option value="Zeichnung">Zeichnung</option>
+    <option value="Digitale Kunst">Digitale Kunst</option>
+    <option value="Handmade">Handmade</option>
+</select>
+
+                            
+                            <select class="filters-items ">
+    <option value="Preis" selected>Nach Preis sortieren</option>
+    <option value="Stilen">Nach Preis sortieren</option>
+    <option value="Artikeln">Nach Artikeln sortieren</option>
+    <option value="Größe">Nach Größe sortieren</option>
+    <option value="Farbe">Nach Farbe sortieren</option>
+</select>
+
+
+                        </div>
+                    </div>
+                </div>
+                <ul class="authors__list">
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-1.jpg" alt="Dominique Evrard" width="122" height="125">
+            
+            
+            <span class="author-card__online active"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Dominique Evrard
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>4.8</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-11.jpg" alt="Ln Le Cheviller" width="122" height="125">
+            
+            
+            <span class="author-card__online active"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Ln Le Cheviller
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>4.7</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-2.jpg" alt="Marcello Carrozzini" width="122" height="125">
+            
+            
+            <span class="author-card__online @@online"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Marcello Carrozzini
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>4.7</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">32 Bewertungen</span>
+                <span class="author-card__portfolio">27 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-10.jpg" alt="Chantal Proulx" width="122" height="125">
+            
+            
+            <span class="author-card__online active"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Chantal Proulx
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>4.6</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-3.jpg" alt="Josep Obradors" width="122" height="125">
+            
+            
+            <span class="author-card__online @@online"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Josep Obradors
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>4.5</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">14 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-9.jpg" alt="Anne Hoover" width="122" height="125">
+            
+            
+            <span class="author-card__online @@online"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Anne Hoover
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>4.4</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-5.jpg" alt="Titan" width="122" height="125">
+            
+            
+            <span class="author-card__online @@online"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Titan
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>4.3</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">4 Bewertungen</span>
+                <span class="author-card__portfolio">4 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-8.jpg" alt="Geneviève Nicolas" width="122" height="125">
+            
+            
+            <span class="author-card__online @@online"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Geneviève Nicolas
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>3.9</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-6.jpg" alt="Conny Wachsmann" width="122" height="125">
+            
+            
+            <span class="author-card__online active"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Conny Wachsmann
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>3.8</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">8 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-7.jpg" alt="Frédérique Marteau" width="122" height="125">
+            
+            
+            <span class="author-card__online @@online"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Frédérique Marteau
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>3.7</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-7.jpg" alt="Frédérique Marteau" width="122" height="125">
+            
+            
+            <span class="author-card__online @@online"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Frédérique Marteau
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>3.5</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-6.jpg" alt="Conny Wachsmann" width="122" height="125">
+            
+            
+            <span class="author-card__online active"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Conny Wachsmann
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>3.2</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">8 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-8.jpg" alt="Geneviève Nicolas" width="122" height="125">
+            
+            
+            <span class="author-card__online @@online"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Geneviève Nicolas
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>2.8</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-5.jpg" alt="Titan" width="122" height="125">
+            
+            
+            <span class="author-card__online @@online"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Titan
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>2.6</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">4 Bewertungen</span>
+                <span class="author-card__portfolio">4 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-9.jpg" alt="Anne Hoover" width="122" height="125">
+            
+            
+            <span class="author-card__online @@online"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Anne Hoover
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>2.5</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-3.jpg" alt="Josep Obradors" width="122" height="125">
+            
+            
+            <span class="author-card__online @@online"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Josep Obradors
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>2.4</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">14 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-10.jpg" alt="Chantal Proulx" width="122" height="125">
+            
+            
+            <span class="author-card__online active"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Chantal Proulx
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>2.4</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-2.jpg" alt="Marcello Carrozzini" width="122" height="125">
+            
+            
+            <span class="author-card__online @@online"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Marcello Carrozzini
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>2.3</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">32 Bewertungen</span>
+                <span class="author-card__portfolio">27 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-11.jpg" alt="Ln Le Cheviller" width="122" height="125">
+            
+            
+            <span class="author-card__online active"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Ln Le Cheviller
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>2.2</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                    <li class="authors__item">
+
+                        <article class="author-card">
+    <a class="author-card__img-link" href="#">
+        <div class="author-card__img-wrapper">
+            <img src="images/content/author-card-1.jpg" alt="Ln Le Cheviller" width="122" height="125">
+            
+            
+            <span class="author-card__online active"></span>
+        </div>
+    </a>
+    
+    <div class="author-card__box">
+        <a class="author-card__link" href="#">
+            <h2 class="author-card__user">
+                Ln Le Cheviller
+            </h2>
+        </a>
+
+        
+        
+        
+            <div class="author-card__rating">
+                <div class="author-card__stars"></div>
+                <span>2.1</span>
+            </div>
+        
+
+        
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">16 Bewertungen</span>
+                <span class="author-card__portfolio">12 Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
+        
+
+        
+        
+    </div>
+</article>
+                        
+                    </li>
+                </ul>
+                <a class="authors__btn btn btn--universal" href="#">Zeig mehr</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__box">
+                <a class="logo footer__logo" href="/">
+                    <img src="images/content/logo-2.svg" alt="logo" width="170" height="45">
+                </a>
+                <span class="footer__copy">2020 Alle Rechte vorbehalten</span>
+                <a class="footer__box-link" href="#">Datenschutz-Bestimmungen</a>
+            </div>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a class="footer__link" href="#">über das Projekt</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="/creations.html">Katalog</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="/authors.html">Autoren</a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Nutzungsbedingungen</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Garantien</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">FAQ</a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Nachrichten</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Für Autoren</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Kontakte</a>
+                </li>
+            </ul>
+            <div class="footer__wrapper">
+                <a class="footer__tel" href="tel:+498924214970">+4 98 924 214 975</a>
+                <ul class="social">
+                    <li class="social__item">
+                        <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
+                            <span class="sr-only">Google</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--facebook" target="_blank" href="https://www.facebook.com/">
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/tweeter">
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--instagram" target="_blank" href="https://www.instagram.com/?hl=de">
+                            <span class="sr-only">instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="js/main.min.js"></script>
+</body>
+</html>

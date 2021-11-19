@@ -7,49 +7,52 @@
 <main>
     <h1 class="sr-only">Produktdetail</h1>
     <div class="overlay"></div>
-    <div class="modal">
-        <div class="modal__box">
-            <img src="images/content/logo.svg" alt="logo" width="150" height="45">
-            <button class="modal__btn btn btn--close" type="button">
-                <span class="sr-only">Nah dran</span>
-                <span></span>
-            </button>
-        </div>
-        
-        @@include('./parts/components/_btns-tabs.html')
+    <div class="container">
+        <div class="modal">
+            <div class="modal__box">
+                <img src="images/content/logo.svg" alt="logo" width="150" height="45">
+                <button class="modal__btn btn btn--close" type="button">
+                    <span class="sr-only">Nah dran</span>
+                    <span></span>
+                </button>
+            </div>
+            
+            @@include('./parts/components/_btns-tabs.html')
+    
+            <ul class="modal-form__tabs">
+                <li class="modal-form__item modal-form__item--enter active">
+                    
+                    @@include('./parts/components/_modal-form.html', {
+                        "enter": true,
+                        "register": false,
+                        "btn": "Betreten",
+                    })
+    
+                    @@include('./parts/components/_social.html')
+    
+                </li>
+                <li class="modal-form__item modal-form__item--register">
+    
+                    @@include('./parts/components/_modal-form.html', {
+                        "enter": false,
+                        "register": true,
+                        "btn": "Registrieren",
+                    })
+    
+                    @@include('./parts/components/_social.html')
+    
+                </li>
+            </ul>
+        </div> 
 
-        <ul class="modal-form__tabs">
-            <li class="modal-form__item modal-form__item--enter active">
-                
-                @@include('./parts/components/_modal-form.html', {
-                    "enter": true,
-                    "register": false,
-                    "btn": "Betreten",
-                })
+        @@include('./parts/components/_breadcrumbs.html', {
+            arr: [{title: 'Katalog', path: 'creations'}, {title: 'Lot № 3532'}]
+        })
 
-                @@include('./parts/components/_social.html')
-
-            </li>
-            <li class="modal-form__item modal-form__item--register">
-
-                @@include('./parts/components/_modal-form.html', {
-                    "enter": false,
-                    "register": true,
-                    "btn": "Registrieren",
-                })
-
-                @@include('./parts/components/_social.html')
-
-            </li>
-        </ul>
-    </div> 
+    </div>
     <div class="creations-details">
         <div class="container">
-            @@include('./parts/components/_breadcrumbs.html', {
-                arr: [{title: 'Katalog', path: 'creations'}, {title: 'Lot № 3532'}]
-            })
-
-            <!-- <section class="details">
+            <section class="details">
                 <h2 class="sr-only">Einzelheiten</h2>
                 <article class="details-card">
                     <div class="details-card__sliders">
@@ -141,7 +144,7 @@
                         </div>
                     </div>
                 </article>
-            </section> -->
+            </section> 
             <section class="creations-details__tabs">
                 <h2 class="sr-only">Besonderheiten</h2>
                 <ul class="tabs-btns">
@@ -174,14 +177,17 @@
                     <li class="creations-details__item creations-details__item--descr active">
 
                         @@include('./parts/components/_author-card.html', {
-                            "index": false,
+                            "authorsList": false,
                             "creationsDetails": true,
                             "author": true,
+                            "authors": false,
                             "image-url": "images/content/author-card-6.jpg",
                             "alt": "Carla Sá Fernandes",
                             "name": "Carla Sá Fernandes",
                             "phone": "+498 924 214 980",
                             "href": "+498924214980",
+                            "rating": "4.8",
+                            "authorsListOnline": "false",
                         })
 
                         <div>
@@ -216,6 +222,8 @@
                         </div>
                     </li>
                     <li class="creations-details__item creations-details__item--delivery">
+                        <img src="images/content/logo.svg" alt="logo" width="180"
+                        height="50">
                         <div>
                             <p>
                                 Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
@@ -230,8 +238,11 @@
                         </div>
                     </li>
                     <li class="creations-details__item creations-details__item--guarant">
+                        <img src="images/content/logo.svg" alt="logo" width="180"
+                        height="50">
                         <div>
                             <p>
+                                Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
                                 Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
                             </p>
                             <p>
@@ -510,7 +521,6 @@
             </div>
         </section>
     </div>
-    
 </main>
 
 @@include('./parts/components/_footer.html')

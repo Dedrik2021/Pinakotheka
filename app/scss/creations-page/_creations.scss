@@ -1,21 +1,4 @@
 .creations {
-    padding-top: 130px;
-
-    @include r($mobile-xl) {
-        padding-top: 90px;
-    }
-
-    .breadcrumbs {
-        margin-bottom: 110px;
-
-        @include r($mobile-xl) {
-            margin-bottom: 70px;
-        }
-
-        @include r($mobile-lg) {
-            margin-bottom: 40px;
-        }
-    }
 
     &__content {
         display: flex;
@@ -103,11 +86,6 @@
             margin-bottom: 30px;
             padding: 0;
         }
-
-        @include r($mobile-sm) {
-            flex-direction: column;
-            align-items: flex-start;
-        }
     }
 
     &__title {
@@ -119,18 +97,19 @@
 
         @include r($mobile-sm) {
             max-width: 100%;
-            margin-bottom: 15px;
+            width: 100%;
         }
     }
 
     &__box-wrapper {
         display: flex;
         align-items: center;
+        max-width: 320px;
+        width: 100%;
 
         @include r($mobile-sm) {
-            max-width: 100%;
-            width: 100%;
-            justify-content: space-between;
+            max-width: auto;
+            justify-content: flex-end;
         }
     }
 
@@ -138,7 +117,7 @@
         margin-bottom: 70px;
 
         @include r($mobile-lg) {
-            margin-bottom: 80px;
+            margin-bottom: 90px;
         }
 
         &.list {
@@ -187,6 +166,10 @@
 
         &.list {
 
+            @include r($mobile-sm) {
+                display: none;
+            }
+
             &:not(:last-child) {
                 margin-bottom: 20px;
             }
@@ -220,6 +203,11 @@
                     display: block;
                     margin-right: 40px;
                     border-radius: 10px;
+                    transition: box-shadow 0.4s;
+
+                    &:hover {
+                        box-shadow: 5px 8px 10px -2px rgba(0, 0, 0, 0.5);
+                    }
 
                     @include r($mobile-lg) {
                         margin: 0 0 20px;

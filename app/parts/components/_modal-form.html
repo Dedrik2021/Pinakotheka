@@ -1,5 +1,6 @@
 <form class="modal-form">
     <div class="modal-form__top">
+
         @@if(register === false) {
             <div class="modal-form__wrapper">
                 <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="customer">
@@ -45,7 +46,6 @@
             <span class="sr-only">Telefon</span>
         </label>
         <input class="modal-form__input" type="tel" placeholder="Telefon" name="[modal]tel" id="modal-tel" required>
-
     }
     
     @@if (enter === true) {

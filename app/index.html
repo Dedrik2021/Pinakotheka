@@ -44,7 +44,6 @@
         </ul>
     </div>   
     
-    
     @@include('./parts/index-page/_hero.html')
 
     <section class="gallery">
@@ -353,19 +352,20 @@
             </ul>
         </div>
     </div>
-    <div class="authors">
+    <div class="authors-list">
         <div class="container">
-            <span class="authors__title title">
+            <span class="authors-list__title title">
                 Autoren
             </span>
-            <div class="authors__content">
-                <ul class="authors__list">
-                    <li class="authors__item">
+            <div class="authors-list__content">
+                <ul class="authors-list__list">
+                    <li class="authors-list__item">
 
                         @@include('./parts/components/_author-card.html', {
-                            "index": true,
+                            "authorsList": true,
                             "creationsDetails": false,
                             "author": false,
+                            "authors": false,
                             "image-url": "images/content/author-card-1.jpg",
                             "alt": "Dominique Evrard",
                             "portfolio": "12",
@@ -374,12 +374,13 @@
                         })
 
                     </li>
-                    <li class="authors__item">
+                    <li class="authors-list__item">
 
                         @@include('./parts/components/_author-card.html', {
-                            "index": true,
+                            "authorsList": true,
                             "creationsDetails": false,
                             "author": false,
+                            "authors": false,
                             "image-url": "images/content/author-card-2.jpg",
                             "alt": "Marcello Carrozzini",
                             "portfolio": "27",
@@ -387,12 +388,13 @@
                         })
 
                     </li>
-                    <li class="authors__item">
+                    <li class="authors-list__item">
 
                         @@include('./parts/components/_author-card.html', {
-                            "index": true,
+                            "authorsList": true,
                             "creationsDetails": false,
                             "author": false,
+                            "authors": false,
                             "image-url": "images/content/author-card-3.jpg",
                             "alt": "Josep Obradors",
                             "portfolio": "32",
@@ -400,12 +402,13 @@
                         })
 
                     </li>
-                    <li class="authors__item">
+                    <li class="authors-list__item">
 
                         @@include('./parts/components/_author-card.html', {
-                            "index": true,
+                            "authorsList": true,
                             "creationsDetails": false,
                             "author": false,
+                            "authors": false,
                             "image-url": "images/content/author-card-4.jpg",
                             "alt": "Titan",
                             "portfolio": "08",
@@ -414,12 +417,14 @@
                         })
 
                     </li>
-                    <li class="authors__item">
+                    <li class="authors-list__item">
 
                         @@include('./parts/components/_author-card.html', {
-                            "index": true,
+                            "authorsList": true,
                             "creationsDetails": false,
                             "author": false,
+                            "authors": false,
+                            "authors": false,
                             "image-url": "images/content/author-card-5.jpg",
                             "alt": "Conny Wachsmann",
                             "portfolio": "04",
@@ -428,26 +433,29 @@
                         })
 
                     </li>
-                    <li class="authors__item">
+                    <li class="authors-list__item">
 
                         @@include('./parts/components/_author-card.html', {
-                            "index": true,
+                            "authorsList": true,
                             "creationsDetails": false,
                             "author": false,
+                            "authors": false,
+                            "authors": false,
                             "image-url": "images/content/author-card-6.jpg",
                             "alt": "Frédérique Marteau",
                             "portfolio": "16",
                             "online": "active",
-                            "name": "Frédérique Marteau"
+                            "name": "Frédérique Marteau",
                         })
 
                     </li>
-                    <li class="authors__item">
+                    <li class="authors-list__item">
 
                         @@include('./parts/components/_author-card.html', {
-                            "index": true,
+                            "authorsList": true,
                             "creationsDetails": false,
                             "author": false,
+                            "authors": false,
                             "image-url": "images/content/author-card-7.jpg",
                             "alt": "Geneviève Nicolas",
                             "portfolio": "19",
@@ -455,12 +463,13 @@
                         })
 
                     </li>
-                    <li class="authors__item">
+                    <li class="authors-list__item">
 
                         @@include('./parts/components/_author-card.html', {
-                            "index": true,
+                            "authorsList": true,
                             "creationsDetails": false,
                             "author": false,
+                            "authors": false,
                             "image-url": "images/content/author-card-8.jpg",
                             "alt": "Fabienne Monestier",
                             "portfolio": "24",
@@ -468,12 +477,13 @@
                         })
 
                     </li>
-                    <li class="authors__item">
+                    <li class="authors-list__item">
 
                         @@include('./parts/components/_author-card.html', {
-                            "index": true,
+                            "authorsList": true,
                             "creationsDetails": false,
                             "author": false,
+                            "authors": false,
                             "image-url": "images/content/author-card-9.jpg",
                             "alt": "Anne Hoover",
                             "portfolio": "37",
@@ -481,12 +491,13 @@
                         })
 
                     </li>
-                    <li class="authors__item">
+                    <li class="authors-list__item">
                         
                         @@include('./parts/components/_author-card.html', {
-                            "index": true,
+                            "authorsList": true,
                             "creationsDetails": false,
                             "author": false,
+                            "authors": false,
                             "image-url": "images/content/author-card-10.jpg",
                             "alt": "Chantal Proulx",
                             "portfolio": "02",
@@ -494,12 +505,13 @@
                         })
 
                     </li>
-                    <li class="authors__item">
+                    <li class="authors-list__item">
 
                         @@include('./parts/components/_author-card.html', {
-                            "index": true,
+                            "authorsList": true,
                             "creationsDetails": false,
                             "author": false,
+                            "authors": false,
                             "image-url": "images/content/author-card-11.jpg",
                             "alt": "Ln Le Cheviller",
                             "portfolio": "15",
@@ -508,7 +520,7 @@
 
                     </li>
                 </ul>
-                <a class="authors__btn btn btn--red-hover" href="#">Aussehen alle Autoren</a>
+                <a class="authors-list__btn btn btn--red-hover" href="#">Aussehen alle Autoren</a>
             </div>
         </div>
     </div>

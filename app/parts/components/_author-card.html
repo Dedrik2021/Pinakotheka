@@ -3,16 +3,12 @@
         <div class="author-card__img-wrapper">
             <img src="@@image-url" alt="@@alt" width="122" height="125">
             
-            @@if(index === true) {
+            @@if(authorsList === true) {
                 <span class="author-card__portfolio">@@portfolio</span>
             }
-            
+            <span class="author-card__online @@online"></span>
         </div>
     </a>
-
-    @@if(index === true) {
-        <span class="author-card__online @@online"></span>
-    }
     
     <div class="author-card__box">
         <a class="author-card__link" href="#">
@@ -30,8 +26,42 @@
         @@if(author === true) {
             <div class="author-card__rating">
                 <div class="author-card__stars"></div>
-                <span>4.8</span>
+                <span>@@rating</span>
             </div>
+        }
+
+        @@if(authors === true) {
+            <div class="author-card__wrapper">
+                <span class="author-card__portfolio author-card__portfolio--reviews">@@reviews Bewertungen</span>
+                <span class="author-card__portfolio">@@portfolio Erzeugnis</span>
+            </div>
+            <ul class="author-painting">
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        <img src="images/content/painting-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="author-painting__item">
+                    <a class="author-painting__link" href="#">
+                        Alle Werke ansehen
+                    </a>
+                </li>
+            </ul>
         }
 
         @@if(creationsDetails === true) {

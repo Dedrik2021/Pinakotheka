@@ -1,18 +1,13 @@
 .hero {
-    padding: 265px 0 130px;
 
-    @include r($screen-xl) {
-        padding: 150px 0 70px;
+    @include r($mobile-xl) {
+        padding-bottom: 50px;
     }
 
     @include r($mobile-md) {
-        padding: 120px 0 50px;
+        padding-bottom: 30px;
     }
-
-    @include r($mobile-sm) {
-        padding: 100px 0 50px;
-    }
-
+    
     .container {
         position: relative;
     }
@@ -23,7 +18,7 @@
         z-index: 1;
         height: 70vh;
         left: 300px;
-        top: -230px;
+        top: -50px;
         background-image: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 
         @include r($screen-xxl) {
@@ -51,7 +46,7 @@
     &__scroll {
         position: absolute;
         left: -35px;
-        top: 165px;
+        top: 460px;
         color: $gray-100;
         font-weight: 400;
         font-size: 12px;
@@ -75,6 +70,22 @@
             top: 2px;
             transform: rotate(90deg);
             background-repeat: no-repeat;
+        }
+    }
+
+    &__sliders {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 100%;
+
+        @include r($mobile-xl) {
+            padding-top: 84px;
+        }
+
+        @include r($mobile-sm) {
+            padding-top: 74px;
         }
     }
 
@@ -114,6 +125,7 @@
 
         .hero__item {
             position: relative;
+            max-width: 100%;
 
             img {
                 position: relative;
@@ -122,10 +134,6 @@
                 object-fit: cover;
 
                 @include r($mobile-xl) {
-                    height: 58vh;
-                }
-
-                @include r($mobile-md) {
                     height: 58vh;
                 }
 
@@ -151,6 +159,10 @@
     &__content-slider {
         margin-top: -520px;
         z-index: 2;
+        max-width: 1425px;
+        width: 100%;
+        margin: -520px auto 0;
+        padding-left: 15px;
 
         @include r($screen-xl) {
             margin-top: -170px;
@@ -166,6 +178,10 @@
 
         @include r($mobile-sm) {
             margin-top: -50px;
+        }
+
+        .hero__item {
+            max-width: auto;
         }
 
         .slick-list {
@@ -344,7 +360,7 @@
             width: 100%;
             position: absolute;
             bottom: -22px;
-            left: 135px;
+            left: 140px;
             background-color: $white;
 
             @include r($mobile-lg) {
@@ -363,7 +379,7 @@
     background-color: transparent;
     position: absolute;
     bottom: -10px;
-    left: 0px;
+    left: 15px;
     z-index: 10;
     width: 40px;
     height: 40px;
@@ -383,11 +399,11 @@
     }
 
     &--next {
-        left: 50px;
+        left: 65px;
         background-image: url(../images/content/arrow-next.svg);
 
         @include r($mobile-md) {
-            left: 65px;
+            left: 80px;
         }
     }
 
@@ -399,7 +415,7 @@
 .slick-dots {
     display: flex;
     position: absolute;
-    left: 163px;
+    left: 180px;
     bottom: 8px;
 
     @include r($mobile-md) {

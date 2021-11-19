@@ -215,9 +215,11 @@ $(function() {
         arrows: false,
         responsive: [
             {
-                breakpoint: 577,
+                breakpoint: 769,
                 settings: {
                     vertical: false,
+                    // slidesToShow: 3,
+                    // slidesToScroll: 1,
                 }
             },
         ]
@@ -310,6 +312,12 @@ let tab = function () {
 
 tab();
 
+window.increment = function(event) {
+    var btn = event.target;
+    btn.clicks = ((btn.clicks || 0) + 1) % 2;
+    window.clicks = (window.clicks || 0) + btn.clicks * 2 - 1;
+    document.getElementById("clicks").innerText = window.clicks;
+}
 
 let header = document.querySelector('.header');
     enterBtn = document.querySelector('.menu__enter-btn');
@@ -327,7 +335,6 @@ let header = document.querySelector('.header');
     filtersBtn = document.querySelector('.modern__filters-btn')
     filters = document.querySelector('.creations__filters')
     filtersCloseBtn = document.querySelector('.creations__close-btn')
-    // tabsBtns = document.querySelector('.tabs-btns__btn')
     
 window.addEventListener('scroll', checkScroll);
 document.addEventListener('DOMContentLoaded', checkScroll);
@@ -374,28 +381,19 @@ function onMenuBurger() {
     menuBlock.classList.toggle('active')
     menuBurger.classList.toggle('active')
     overlay.classList.toggle('_active')
-    overlay.classList.remove('active')
     menuBox.classList.toggle('active')
-    modalEl.classList.remove('active')
-    bodyLock.classList.add('lock')
-    filters.classList.remove('active')
 
-    // if(menuBurger) {
-    //     if(menuBurger === 'active') {
-    //         bodyLock.classList.add('lock')
-    //     } else if(menuBurger.classList.remove('active')) {
-    //         bodyLock.classList.remove('lock')
-    //     }
-    // }
+    if(menuBurger.classList.contains('active')) {
+        bodyLock.classList.add('lock')
+        modalEl.classList.remove('active')
+        overlay.classList.remove('active')
+        filters.classList.remove('active')
+
+    } else {
+        bodyLock.classList.remove('lock')
+    }
     
 };
-
-menuBurger.addEventListener('click', function(){
-    let menuBurger = document.querySelector('.menu__burger')
-    menuBurger.addEventListener('click', function(){
-        bodyLock.classList.toggle('lock')
-    })
-})
 
 function onFiltersBtn() {
     filters.classList.add('active')
@@ -414,13 +412,6 @@ function onFiltersCloseBtn() {
     filters.classList.remove('active')
     bodyLock.classList.remove('lock')
 };
-
-window.increment = function(event) {
-    var btn = event.target;
-    btn.clicks = ((btn.clicks || 0) + 1) % 2;
-    window.clicks = (window.clicks || 0) + btn.clicks * 2 - 1;
-    document.getElementById("clicks").innerText = window.clicks;
-}
 
 
 

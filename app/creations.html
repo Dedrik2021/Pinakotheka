@@ -7,47 +7,51 @@
     <main>
         <h1 class="sr-only">Kreationen von Autoren</h1>
         <div class="overlay"></div>
-        <div class="modal">
-            <div class="modal__box">
-                <img src="images/content/logo.svg" alt="logo" width="150" height="45">
-                <button class="modal__btn btn btn--close" type="button">
-                    <span class="sr-only">Nah dran</span>
-                    <span></span>
-                </button>
-            </div>
-            
-            @@include('./parts/components/_btns-tabs.html')
-    
-            <ul class="modal-form__tabs">
-                <li class="modal-form__item modal-form__item--enter active">
-                    
-                    @@include('./parts/components/_modal-form.html', {
-                        "enter": true,
-                        "register": false,
-                        "btn": "Betreten",
-                    })
-    
-                    @@include('./parts/components/_social.html')
-    
-                </li>
-                <li class="modal-form__item modal-form__item--register">
-    
-                    @@include('./parts/components/_modal-form.html', {
-                        "enter": false,
-                        "register": true,
-                        "btn": "Registrieren",
-                    })
-    
-                    @@include('./parts/components/_social.html')
-    
-                </li>
-            </ul>
-        </div> 
+        <div class="container">
+            <div class="modal">
+                <div class="modal__box">
+                    <img src="images/content/logo.svg" alt="logo" width="150" height="45">
+                    <button class="modal__btn btn btn--close" type="button">
+                        <span class="sr-only">Nah dran</span>
+                        <span></span>
+                    </button>
+                </div>
+                
+                @@include('./parts/components/_btns-tabs.html')
+        
+                <ul class="modal-form__tabs">
+                    <li class="modal-form__item modal-form__item--enter active">
+                        
+                        @@include('./parts/components/_modal-form.html', {
+                            "enter": true,
+                            "register": false,
+                            "btn": "Betreten",
+                        })
+        
+                        @@include('./parts/components/_social.html')
+        
+                    </li>
+                    <li class="modal-form__item modal-form__item--register">
+        
+                        @@include('./parts/components/_modal-form.html', {
+                            "enter": false,
+                            "register": true,
+                            "btn": "Registrieren",
+                        })
+        
+                        @@include('./parts/components/_social.html')
+        
+                    </li>
+                </ul>
+            </div> 
+
+            @@include('./parts/components/_breadcrumbs.html', {
+                arr: [{title: 'Katalog'}]
+            })
+
+        </div>
         <div class="creations">
             <div class="container">
-                @@include('./parts/components/_breadcrumbs.html', {
-                    arr: [{title: 'Katalog'}]
-                })
 
                 @@include('./parts/creations-page/_creations-list.html')
 
@@ -72,7 +76,19 @@
                             </h2>
                             <div class="modern__box-wrapper">
                                 
-                                @@include('./parts/components/_filters-items.html')
+                                @@include('./parts/components/_filters-items.html', {
+                                    "authors": false,
+                                    "value1": "Preis",
+                                    "value2": "Stilen",
+                                    "value3": "Artikeln",
+                                    "value4": "Größe",
+                                    "value5": "Farbe",
+                                    "option1": "Nach Preis sortieren",
+                                    "option2": "Nach Preis sortieren",
+                                    "option3": "Nach Artikeln sortieren",
+                                    "option4": "Nach Größe sortieren",
+                                    "option5": "Nach Farbe sortieren",
+                                })
                                 
                                 @@include('./parts/components/_filters-view.html')
 
@@ -379,7 +395,6 @@
                 </div>
             </div>
         </div>
-
     </main> 
 
     @@include('./parts/components/_footer.html')
