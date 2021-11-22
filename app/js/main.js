@@ -346,14 +346,13 @@ menuBurger.addEventListener('click', onMenuBurger);
 menuCursour.addEventListener('click', onMenuCursour);
 filtersBtn.addEventListener('click', onFiltersBtn);
 filtersCloseBtn.addEventListener('click', onFiltersCloseBtn);
-tabsBtns.addEventListener('click', onTabsBtns);
 
 function checkScroll() {
     let scrollPos = window.scrollY;
 
     if(scrollPos > 0) {
         header.classList.add('sticky');
-        $( ".menu-dropdown" ).slideUp();
+        $( ".menu-dropdown" ).slideUp('slow');
     } else {
         header.classList.remove('sticky');
     }
@@ -377,6 +376,9 @@ function onMenuBtn() {
     menuBtn.classList.toggle('active')
     menuForm.classList.toggle('active')
     menuSearch.classList.toggle('active')
+    if(menuBtn.classList.contains('active')) {
+        $( ".menu-dropdown" ).slideUp( "slow")
+    }
 };
 
 function onMenuBurger() {
@@ -390,11 +392,9 @@ function onMenuBurger() {
         modalEl.classList.remove('active')
         overlay.classList.remove('active')
         filters.classList.remove('active')
-
     } else {
         bodyLock.classList.remove('lock')
     }
-    
 };
 
 function onFiltersBtn() {
