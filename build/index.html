@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../images/content/favicon.ico">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body id="body"> 
+<body id="body" onkeydown="ESCclose(event)"> 
 
     <header class="header">
     <div class="container">
@@ -31,7 +31,7 @@
                 </form>
                 <ul class="menu__list">
                     <li class="menu__item menu__item--dropdown" tabindex="0">
-                        <a class="menu__link" href="#">Katalog</a>
+                        <button class="menu__link" type="button">Katalog</button>
                         <span></span>
                         <ul class="menu-dropdown">
                             <li class="menu-dropdown__item">
@@ -2215,6 +2215,6 @@
 </footer>
 
 
-<script src="js/main.min.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>

@@ -73,6 +73,7 @@ $(function() {
         slidesToScroll: 1,
         dots: true,
         autoplay: true,
+        
     });
 
     
@@ -352,6 +353,7 @@ function checkScroll() {
 
     if(scrollPos > 0) {
         header.classList.add('sticky');
+        $( ".menu-dropdown" ).slideUp();
     } else {
         header.classList.remove('sticky');
     }
@@ -415,3 +417,14 @@ function onFiltersCloseBtn() {
 
 
 
+// function ESCclose(evt) {
+//     if (evt.keyCode == 27) 
+//     window.close();
+    
+// }
+
+// function ESCclose(evt) {
+//     if (evt.keyCode == 27) {
+//       window.close();
+//     }
+//   }
