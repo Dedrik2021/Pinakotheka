@@ -415,16 +415,10 @@ function onFiltersCloseBtn() {
     bodyLock.classList.remove('lock')
 };
 
-
-
-// function ESCclose(evt) {
-//     if (evt.keyCode == 27) 
-//     window.close();
-    
-// }
-
-// function ESCclose(evt) {
-//     if (evt.keyCode == 27) {
-//       window.close();
-//     }
-//   }
+function ESCclose(evt) {
+    if (evt.keyCode == 27) {
+        menuBtn.classList.remove('active')
+        menuForm.classList.remove('active')
+        menuSearch.classList.remove('active')
+    }
+}
