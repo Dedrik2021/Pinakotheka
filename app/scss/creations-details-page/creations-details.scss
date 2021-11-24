@@ -14,7 +14,10 @@
     }
 
     &__item {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        transition: opacity 0.4s, visibility 0.4s;
     
         div {
             max-width: 1110px;
@@ -116,6 +119,9 @@
 
         &.active {
             display: flex;
+            opacity: 1;
+            visibility: visible;
+            position: relative;
         }
     }
 
@@ -135,7 +141,6 @@
         @include r($mobile-sm) {
             flex-direction: column;
             padding: 10px 5px;
-            // max-width: 400px;
         }
 
         &__img-link {
@@ -232,6 +237,12 @@
         
     //     padding-top: 490px;
     // }
+
+    &__item {
+        position: relative;
+        @include liner-gradient;
+        cursor: pointer;
+    }
 
     &__sliders{
         // max-width: 1250px;
