@@ -141,15 +141,16 @@
         position: relative;
         border-radius: 3px;
         background-color: $white;
+        padding: 5px;
         transition: background-color 0.4s;
 
         &:hover {
             background-color: $gray-400;
         }
 
-        &:not(:last-child) {
-            margin-bottom: 13px;
-        }
+        // &:not(:last-child) {
+        //     margin-bottom: 13px;
+        // }
     }
 
     &__label {
@@ -177,7 +178,8 @@
     }
 
     &__input-check {
-        top: 6px;
+        top: 12px;
+        left: 7px;
 
         &:checked {
 
@@ -189,7 +191,7 @@
     }
 
     &__checkbox {
-        top: 3px;
+        top: 9px;
     }
 
     &__link {
