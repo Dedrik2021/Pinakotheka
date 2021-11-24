@@ -253,35 +253,11 @@ $(function() {
     
     tab();
 
-    mixer = mixitup('.gallery__content');
+    const mixer1 = mixitup('.gallery__content');
+    
 });
 
-let tab = function () {
-    let tabNav = document.querySelectorAll('.tabs-btns__btn'),
-        tabContent = document.querySelectorAll('.creations-details__item'),
-        tabName;
-
-    tabNav.forEach(item => {
-        item.addEventListener('click', selectTabNav)
-    });
-
-    function selectTabNav() {
-        tabNav.forEach(item => {
-            item.classList.remove('active');
-        });
-        this.classList.add('active');
-        tabName = this.getAttribute('data-content');
-        selectTabContent(tabName);
-    }
-
-    function selectTabContent(tabName) {
-        tabContent.forEach(item => {
-            item.classList.contains(tabName) ? item.classList.add('active') : item.classList.remove('active');
-        })
-    }
-};
-
-tab();
+const mixer2 = mixitup('.creations-details__tabs');
 
 window.increment = function(event) {
     var btn = event.target;

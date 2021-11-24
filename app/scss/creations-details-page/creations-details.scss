@@ -14,10 +14,6 @@
     }
 
     &__item {
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        transition: opacity 0.4s, visibility 0.4s;
     
         div {
             max-width: 1110px;
@@ -42,8 +38,13 @@
             }
         }
 
+        &--descr {
+            margin-bottom: 0;
+        }
+
         &--charact,
         &--descr {
+            display: flex;
             justify-content: space-between;
 
             @include r($mobile-md) {
@@ -83,6 +84,7 @@
 
         &--guarant,
         &--delivery {
+            display: flex;
             justify-content: center;
 
             @include r($mobile-lg) {
@@ -115,13 +117,6 @@
                     }
                 }
             }
-        }
-
-        &.active {
-            display: flex;
-            opacity: 1;
-            visibility: visible;
-            position: relative;
         }
     }
 
@@ -700,6 +695,7 @@
         span {
             display: block;
             position: relative;
+            z-index: 5;
             top: 2px;
             margin-top: 15px;
             border: 2px solid transparent;
