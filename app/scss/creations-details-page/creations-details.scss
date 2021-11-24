@@ -15,10 +15,7 @@
 
     &__item {
         display: none;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 1s, visibility 1s;
-
+    
         div {
             max-width: 1110px;
             width: 100%;
@@ -752,6 +749,10 @@
 }
 
 .others-creation {
+
+    @include r($mobile-lg) {
+        margin-bottom: 150px;
+    }
 
     @include r($mobile-md) {
         margin-bottom: 140px;
