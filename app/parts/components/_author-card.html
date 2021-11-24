@@ -32,8 +32,12 @@
 
         @@if(authors === true) {
             <div class="author-card__wrapper">
-                <span class="author-card__portfolio author-card__portfolio--reviews">@@reviews Bewertungen</span>
-                <span class="author-card__portfolio">@@portfolio Erzeugnis</span>
+                <a class="author-card__portfolio author-card__portfolio--reviews" href="#">
+                    <span>@@reviews Bewertungen</span>
+                </a>
+                <a class="author-card__portfolio" href="#">
+                    <span> @@portfolio Erzeugnis</span>
+                </a>
             </div>
             <ul class="author-painting">
                 <li class="author-painting__item">
