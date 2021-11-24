@@ -178,6 +178,7 @@
 
         @include r($mobile-sm) {
             margin-top: -50px;
+            padding: 0 15px;
         }
 
         .hero__item {
@@ -361,7 +362,6 @@
             position: absolute;
             bottom: -22px;
             left: 140px;
-            background-color: $white;
 
             @include r($mobile-lg) {
                 bottom: -30px;
@@ -370,6 +370,15 @@
             @include r($mobile-md) {
                 bottom: -22px;
             }
+
+            @include r($mobile-sm) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &__num {
+            background-color: $white;
         }
     }
 }
@@ -405,6 +414,11 @@
         @include r($mobile-md) {
             left: 80px;
         }
+
+        @include r($mobile-sm) {
+            left: auto;
+            right: 15px;
+        }
     }
 
     &--prev {
@@ -417,9 +431,15 @@
     position: absolute;
     left: 180px;
     bottom: 8px;
+    z-index: -1;
 
     @include r($mobile-md) {
-        bottom: 27px;
+        bottom: 28px;
+    }
+
+    @include r($mobile-sm) {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     li {

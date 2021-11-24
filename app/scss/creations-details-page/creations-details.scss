@@ -15,6 +15,9 @@
 
     &__item {
         display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s, visibility 1s;
 
         div {
             max-width: 1110px;

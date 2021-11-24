@@ -43,7 +43,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 1.8;
-        color: $gray-100;
+        color: $white;
         margin-bottom: 10px;
     }
 
@@ -54,7 +54,7 @@
         &:focus,
         &:hover {
             outline: transparent;
-            border-bottom-color: $gray-200;
+            border-bottom-color: $white;
         }
     }
 

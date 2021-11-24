@@ -58,14 +58,14 @@
                     <div class="authors__box">
                         <span class="authors__found">6414 Autoren gefunden</span>
                         <div class="authors__wrapper">
-                            <form class="authors-search">
+                            <div class="authors-search">
                                 <label class="authors-search__label" for="search-authors">
                                     <svg width="16" height="16">
                                         <use xlink:href="images/sprite.svg#search-icon"></use>
                                     </svg>
                                 </label>
-                                <input class="authors-search__input" type="search" name="[authors]search" id="search-authors" placeholder="Suche nach Nachnamen">
-                            </form>
+                                <input class="authors-search__input" type="text" name="[authors]search" id="search-authors" placeholder="Suche nach Nachnamen">
+                            </div>
 
                             @@include('./parts/components/_filters-items.html', {
                                 "authors": true,

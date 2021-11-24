@@ -76,36 +76,6 @@ $(function() {
         
     });
 
-    
-    let isMobile = false;
-    let isDestroyed = true;
-    if (window.innerWidth <= 576) isMobile = true;
-
-    function initializeSlick() {
-        $('.gallery-filters').slick({
-            prevArrow: '<button type="button" class="slick-btn slick-btn--prev"><<<</button>',
-            nextArrow: '<button type="button" class="slick-btn slick-btn--next">>>></button>',
-            slidesToScroll: 1,
-        });
-        isDestroyed = false;
-    }
-
-    function destroySlick() {
-        $('.gallery-filters').slick('unslick');
-            isDestroyed = true;
-    }
-
-    if (isMobile && isDestroyed) initializeSlick();
-    else if (!isMobile && !isDestroyed) destroySlick();
-
-    window.addEventListener('resize', function () {
-        if (!isMobile && window.innerWidth <= 576) isMobile = true;
-        if (isMobile && window.innerWidth > 576) isMobile = false;
-
-        if (isMobile && isDestroyed) initializeSlick();
-        else if (!isMobile && !isDestroyed) destroySlick();
-    });
-
     $(".painting-card__stars, .author-card__stars").rateYo({
         starWidth: '14px',
         normalFill: '#d6d6d6',
@@ -219,8 +189,8 @@ $(function() {
                 breakpoint: 769,
                 settings: {
                     vertical: false,
-                    // slidesToShow: 3,
-                    // slidesToScroll: 1,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
                 }
             },
         ]
