@@ -49,6 +49,18 @@ $roboto: 'Roboto', sans-serif;
     }
 }
 
+@mixin overlay {
+    
+    &::before {
+        position: fixed;
+        content: "";
+        z-index: 10;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
 @mixin r($width) {
     
     @media only screen and (max-width: $width) {

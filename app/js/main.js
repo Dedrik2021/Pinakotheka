@@ -9,22 +9,15 @@ $(function() {
 
     $(document).mouseup(function (e) {
         var container = $('.menu');
-        if (container.has(e.target).length === 0 && $('.menu__form, .menu__search, .overlay, .menu__btn').hasClass('active')) {
+        if (container.has(e.target).length === 0 && $('.menu__form, .menu__search, .menu__btn').hasClass('active')) {
             $('.menu__form, .menu__search, .menu__btn').removeClass('active');
         }
     });
 
     $(document).mouseup(function (e) {
         var container = $('.modal, .menu, .creations');
-        if (container.has(e.target).length === 0 && $('.overlay, .modal, .menu__inner, .menu__burger, .menu__box, .creations__filters').hasClass('active')) {
-            $('.overlay, .modal, .menu__inner, .menu__burger, .menu__box, .creations__filters').removeClass('active');
-        }
-    });
-
-    $(document).mouseup(function (e) {
-        var container = $('.menu');
-        if (container.has(e.target).length === 0 && $('.overlay').hasClass('_active')) {
-            $('.overlay').removeClass('_active');
+        if (container.has(e.target).length === 0 && $('.modal, .menu__inner, .menu__burger, .menu__box, .creations__filters').hasClass('active')) {
+            $('.modal, .menu__inner, .menu__burger, .menu__box, .creations__filters').removeClass('active');
         }
     });
 
@@ -253,11 +246,45 @@ $(function() {
     
     tab();
 
-    const mixer1 = mixitup('.gallery__content');
+    var containerEl1 = document.querySelector('.gallery__content');
+    // var containerEl2 = document.querySelector('.creations-details__tabs');
     
+    var config = {
+        controls: {
+            scope: 'local'
+        }
+    };
+
+    var mixer1 = mixitup(containerEl1, config);
+    // var mixer2 = mixitup(containerEl2, config);
 });
 
-const mixer2 = mixitup('.creations-details__tabs');
+let tab = function () {
+    let tabNav = document.querySelectorAll('.tabs-btns__btn'),
+        tabContent = document.querySelectorAll('.creations-details__item'),
+        tabName;
+
+    tabNav.forEach(item => {
+        item.addEventListener('click', selectTabNav)
+    });
+
+    function selectTabNav() {
+        tabNav.forEach(item => {
+            item.classList.remove('active');
+        });
+        this.classList.add('active');
+        tabName = this.getAttribute('data-content');
+        selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+        tabContent.forEach(item => {
+            item.classList.contains(tabName) ? item.classList.add('active') : item.classList.remove('active');
+        })
+    }
+};
+
+tab();
 
 window.increment = function(event) {
     var btn = event.target;
@@ -269,7 +296,6 @@ window.increment = function(event) {
 let header = document.querySelector('.header');
     enterBtn = document.querySelector('.menu__enter-btn');
     modalEl = document.querySelector('.modal');
-    overlay = document.querySelector('.overlay');
     btnClose = document.querySelector('.btn--close');
     bodyLock = document.getElementById('body');
     menuBtn = document.querySelector('.menu__btn');
@@ -309,7 +335,6 @@ function onMenuCursour() {
 }
 
 function onEnterBtn() {
-    overlay.classList.add('active')
     modalEl.classList.add('active')
     menuBlock.classList.remove('active')
     menuBox.classList.remove('active')
@@ -330,13 +355,11 @@ function onMenuBtn() {
 function onMenuBurger() {
     menuBlock.classList.toggle('active')
     menuBurger.classList.toggle('active')
-    overlay.classList.toggle('_active')
     menuBox.classList.toggle('active')
 
     if(menuBurger.classList.contains('active')) {
         bodyLock.classList.add('lock')
         modalEl.classList.remove('active')
-        overlay.classList.remove('active')
         filters.classList.remove('active')
     } else {
         bodyLock.classList.remove('lock')
@@ -345,18 +368,15 @@ function onMenuBurger() {
 
 function onFiltersBtn() {
     filters.classList.add('active')
-    overlay.classList.add('active')
     bodyLock.classList.add('lock')
 }
 
 function onBtnClose() {
-    overlay.classList.remove('active')
     modalEl.classList.remove('active')
     bodyLock.classList.remove('lock')
 };
 
 function onFiltersCloseBtn() {
-    overlay.classList.remove('active')
     filters.classList.remove('active')
     bodyLock.classList.remove('lock')
 };

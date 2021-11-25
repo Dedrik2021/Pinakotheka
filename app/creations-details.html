@@ -6,7 +6,6 @@
 
 <main>
     <h1 class="sr-only">Produktdetail</h1>
-    <div class="overlay"></div>
     <div class="container">
         <div class="modal">
             <div class="modal__box">
@@ -149,32 +148,32 @@
                 <h2 class="sr-only">Besonderheiten</h2>
                 <ul class="tabs-btns">
                     <li class="tabs-btns__item">
-                        <button class="tabs-btns__btn tabs-btns__btn--descr btn mixitup-control-active" type="button" data-filter=".descr">
+                        <button class="tabs-btns__btn tabs-btns__btn--descr btn active" type="button" data-filter=".descr" data-content="creations-details__item--descr">
                             Beschreibung
                             <span></span>
                         </button>
                     </li>
                     <li class="tabs-btns__item">
-                        <button class="tabs-btns__btn tabs-btns__btn--charact btn" type="button" data-filter=".charact">
+                        <button class="tabs-btns__btn tabs-btns__btn--charact btn" type="button" data-filter=".charact" data-content="creations-details__item--charact">
                             Charakteristisch
                             <span></span>
                         </button>
                     </li>
                     <li class="tabs-btns__item">
-                        <button class="tabs-btns__btn tabs-btns__btn--delivery btn" type="button" data-filter=".delivery">
+                        <button class="tabs-btns__btn tabs-btns__btn--delivery btn" type="button" data-filter=".delivery" data-content="creations-details__item--delivery">
                             Lieferung
                             <span></span>
                         </button>
                     </li>
                     <li class="tabs-btns__item">
-                        <button class="tabs-btns__btn tabs-btns__btn--guarant btn" type="button" data-filter=".guarant">
+                        <button class="tabs-btns__btn tabs-btns__btn--guarant btn" type="button" data-filter=".guarant" data-content="creations-details__item--guarant">
                             Garantien
                             <span></span>
                         </button>
                     </li>
                 </ul>
                 <ul class="creations-details__list">
-                    <li class="creations-details__item creations-details__item--descr mix descr">
+                    <li class="creations-details__item creations-details__item--descr active mix descr">
 
                         @@include('./parts/components/_author-card.html', {
                             "authorsList": false,
@@ -524,5 +523,5 @@
 </main>
 
     @@include('./parts/components/_footer.html')
-
+    
 @@include('./parts/components/_bottom.html')

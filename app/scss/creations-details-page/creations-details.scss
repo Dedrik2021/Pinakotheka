@@ -9,11 +9,12 @@
         padding-top: 45px;
 
         @include r($mobile-md) {
-            padding-top: 20px;
+            padding-top: 30px;
         }
     }
 
     &__item {
+        display: none !important;
     
         div {
             max-width: 1110px;
@@ -118,6 +119,10 @@
                 }
             }
         }
+
+        &.active {
+            display: flex !important;
+        }
     }
 
     .author-card {
@@ -167,7 +172,7 @@
 
                 @include r($mobile-sm) {
                     width: 400px;
-                    height: 60vh;
+                    height: 300px;
                 }
             }
         }
@@ -659,11 +664,26 @@
     display: flex;
     align-items: center;
 
+    @include r($mobile-md) {
+        justify-content: center;
+    }
+
     @include r($mobile-sm) {
-        flex-direction: column;
+        overflow-x: auto;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    &::-webkit-scrollbar {
+        height: 0;
     }
 
     &__item {
+
+        @include r($mobile-sm) {
+            margin: 0 15px;
+            min-width: 150px;
+        }
 
         &:not(:last-child) {
             margin-right: 280px;
@@ -681,7 +701,7 @@
             }
 
             @include r($mobile-sm) {
-                margin: 0 0 15px;
+                margin-right: 15px;
             }
         }
     }
@@ -691,6 +711,11 @@
         font-size: 20px;
         color: $gray-500;
         transition: color 0.4s, font-weight 0.2s;
+
+        @include r($mobile-sm) {
+            width: 100%;
+            color: $red;
+        }
 
         span {
             display: block;
