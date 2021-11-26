@@ -7,7 +7,7 @@
 <main>
     <h1 class="sr-only">Produktdetail</h1>
     <div class="container">
-        <div class="modal">
+        <div class="modal" onkeydown="ESCclose(event)">
             <div class="modal__box">
                 <img src="images/content/logo.svg" alt="logo" width="150" height="45">
                 <button class="modal__btn btn btn--close" type="button">
@@ -148,25 +148,25 @@
                 <h2 class="sr-only">Besonderheiten</h2>
                 <ul class="tabs-btns">
                     <li class="tabs-btns__item">
-                        <button class="tabs-btns__btn tabs-btns__btn--descr btn active" type="button" data-filter=".descr" data-content="creations-details__item--descr">
+                        <button class="tabs-btns__btn tabs-btns__btn--descr btn active" type="button" data-filter=".descr">
                             Beschreibung
                             <span></span>
                         </button>
                     </li>
                     <li class="tabs-btns__item">
-                        <button class="tabs-btns__btn tabs-btns__btn--charact btn" type="button" data-filter=".charact" data-content="creations-details__item--charact">
+                        <button class="tabs-btns__btn tabs-btns__btn--charact btn" type="button" data-filter=".charact">
                             Charakteristisch
                             <span></span>
                         </button>
                     </li>
                     <li class="tabs-btns__item">
-                        <button class="tabs-btns__btn tabs-btns__btn--delivery btn" type="button" data-filter=".delivery" data-content="creations-details__item--delivery">
+                        <button class="tabs-btns__btn tabs-btns__btn--delivery btn" type="button" data-filter=".delivery">
                             Lieferung
                             <span></span>
                         </button>
                     </li>
                     <li class="tabs-btns__item">
-                        <button class="tabs-btns__btn tabs-btns__btn--guarant btn" type="button" data-filter=".guarant" data-content="creations-details__item--guarant">
+                        <button class="tabs-btns__btn tabs-btns__btn--guarant btn" type="button" data-filter=".guarant">
                             Garantien
                             <span></span>
                         </button>
@@ -256,7 +256,7 @@
             </section>
             <section class="others-creation">
                 <h2 class="others-creation__title title">andere Werke das Autors</h2>
-                <ul class="others-creation__list list-card">
+                <ul class="others-creation__list cards-list">
                     <li class="others-creation__item">
                         @@include('./parts/components/_painting-card.html', {
                             "creations": false,
@@ -361,7 +361,7 @@
                 <h2 class="similar-paintings__title title">
                     Gemälde mit ähnlichen Themen
                 </h2>
-                <ul class="similar-paintings__list list-card">
+                <ul class="similar-paintings__list cards-list">
                     <li class="similar-paintings__item">
                         @@include('./parts/components/_painting-card.html', {
                             "creations": false,
@@ -443,7 +443,7 @@
                 <h2 class="watched__title title">
                     vor kurzem hast du zugeschaut
                 </h2>
-                <ul class="watched__list list-card">
+                <ul class="watched__list cards-list">
                     <li class="watched__item">
                         @@include('./parts/components/_painting-card.html', {
                             "creations": false,

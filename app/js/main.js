@@ -246,45 +246,8 @@ $(function() {
     
     tab();
 
-    var containerEl1 = document.querySelector('.gallery__content');
-    // var containerEl2 = document.querySelector('.creations-details__tabs');
-    
-    var config = {
-        controls: {
-            scope: 'local'
-        }
-    };
-
-    var mixer1 = mixitup(containerEl1, config);
-    // var mixer2 = mixitup(containerEl2, config);
+    mixer = mixitup('.gallery__content, .creations-details__tabs');
 });
-
-let tab = function () {
-    let tabNav = document.querySelectorAll('.tabs-btns__btn'),
-        tabContent = document.querySelectorAll('.creations-details__item'),
-        tabName;
-
-    tabNav.forEach(item => {
-        item.addEventListener('click', selectTabNav)
-    });
-
-    function selectTabNav() {
-        tabNav.forEach(item => {
-            item.classList.remove('active');
-        });
-        this.classList.add('active');
-        tabName = this.getAttribute('data-content');
-        selectTabContent(tabName);
-    }
-
-    function selectTabContent(tabName) {
-        tabContent.forEach(item => {
-            item.classList.contains(tabName) ? item.classList.add('active') : item.classList.remove('active');
-        })
-    }
-};
-
-tab();
 
 window.increment = function(event) {
     var btn = event.target;
@@ -347,6 +310,7 @@ function onMenuBtn() {
     menuBtn.classList.toggle('active')
     menuForm.classList.toggle('active')
     menuSearch.classList.toggle('active')
+
     if(menuBtn.classList.contains('active')) {
         $( ".menu-dropdown" ).slideUp( "slow")
     }
@@ -383,6 +347,8 @@ function onFiltersCloseBtn() {
 
 function ESCclose(evt) {
     if (evt.keyCode == 27) {
+        bodyLock.classList.remove('lock')
+        modalEl.classList.remove('active')
         menuBtn.classList.remove('active')
         menuForm.classList.remove('active')
         menuSearch.classList.remove('active')

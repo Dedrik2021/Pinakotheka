@@ -1,7 +1,15 @@
 .creations-details {
 
     &__tabs {
-        padding-bottom: 30px;
+        padding-bottom: 80px;
+
+        @include r($mobile-xl) {
+            padding-bottom: 50px;
+        }
+
+        @include r($mobile-md) {
+            padding-bottom: 30px;
+        }
     }
 
     &__list {
@@ -14,7 +22,6 @@
     }
 
     &__item {
-        display: none !important;
     
         div {
             max-width: 1110px;
@@ -118,10 +125,6 @@
                     }
                 }
             }
-        }
-
-        &.active {
-            display: flex !important;
         }
     }
 

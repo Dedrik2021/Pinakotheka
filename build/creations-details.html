@@ -92,7 +92,7 @@
 <main>
     <h1 class="sr-only">Produktdetail</h1>
     <div class="container">
-        <div class="modal">
+        <div class="modal" onkeydown="ESCclose(event)">
             <div class="modal__box">
                 <img src="images/content/logo.svg" alt="logo" width="150" height="45">
                 <button class="modal__btn btn btn--close" type="button">
@@ -118,14 +118,14 @@
 
         
             <div class="modal-form__wrapper">
-                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="customer">
+                <input class="modal-form__check-input check" type="checkbox" name="[enter]checkbox" id="customer">
                 <div class="auto-park__checkbox checkbox">
                     <span></span>
                 </div>
                 <label class="modal-form__label" for="customer">Kunde</label>
             </div>
             <div class="modal-form__wrapper">
-                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="painter">
+                <input class="modal-form__check-input check" type="checkbox" name="[enter]checkbox" id="painter">
                 <div class="auto-park__checkbox checkbox">
                     <span></span>
                 </div>
@@ -142,12 +142,12 @@
         <label for="modal-email">
             <span class="sr-only">Email</span>
         </label>
-        <input class="modal-form__input" type="email" placeholder="Email" name="[modal]email" id="modal-email" required>
+        <input class="modal-form__input" type="email" placeholder="Email" name="[enter]email" id="modal-email" required>
 
         <label for="modal-password">
             <span class="sr-only">Passwort</span>
         </label>
-        <input class="modal-form__input" type="password" placeholder="Passwort" name="[modal]password" id="modal-password" required>
+        <input class="modal-form__input" type="password" placeholder="Passwort" name="[enter]password" id="modal-password" required>
     
 
     
@@ -157,7 +157,7 @@
 
         
             <div class="modal-form__wrapper">
-                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="forgotten-password">
+                <input class="modal-form__check-input check" type="checkbox" name="[enter]checkbox" id="forgotten-password">
                 <div class="auto-park__checkbox checkbox">
                     <span></span>
                 </div>
@@ -214,14 +214,14 @@
         
         
             <div class="modal-form__wrapper">
-                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="modal-user">
+                <input class="modal-form__check-input check" type="checkbox" name="[register]checkbox" id="modal-user">
                 <div class="auto-park__checkbox checkbox">
                     <span></span>
                 </div>
                 <label class="modal-form__label" for="modal-user">Kunde</label>
             </div>
             <div class="modal-form__wrapper">
-                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="autor">
+                <input class="modal-form__check-input check" type="checkbox" name="[register]checkbox" id="autor">
                 <div class="auto-park__checkbox checkbox">
                     <span></span>
                 </div>
@@ -234,12 +234,12 @@
         <label for="modal-name">
             <span class="sr-only">Name</span>
         </label>
-        <input class="modal-form__input" type="text" placeholder="Name" name="[modal]name" id="modal-name" required>
+        <input class="modal-form__input" type="text" placeholder="Name" name="[register]name" id="modal-name" required>
 
         <label for="modal-tel">
             <span class="sr-only">Telefon</span>
         </label>
-        <input class="modal-form__input" type="tel" placeholder="Telefon" name="[modal]tel" id="modal-tel" required>
+        <input class="modal-form__input" type="tel" placeholder="Telefon" name="[register]tel" id="modal-tel" required>
     
     
     
@@ -248,17 +248,17 @@
         <label for="modal-email2">
             <span class="sr-only">Email</span>
         </label>
-        <input class="modal-form__input" type="email" placeholder="Email" name="[modal]email" id="modal-email2" required>
+        <input class="modal-form__input" type="email" placeholder="Email" name="[register]email" id="modal-email2" required>
 
         <label for="modal-password2">
             <span class="sr-only">Passwort</span>
         </label>
-        <input class="modal-form__input" type="password" placeholder="Passwort" name="[modal]password" id="modal-password2" required>
+        <input class="modal-form__input" type="password" placeholder="Passwort" name="[register]password" id="modal-password2" required>
         
         <label for="modal-repassword">
             <span class="sr-only">Passwort wiederholen</span>
         </label>
-        <input class="modal-form__input" type="password" placeholder="Passwort wiederholen" name="[modal]password" id="modal-repassword" required>
+        <input class="modal-form__input" type="password" placeholder="Passwort wiederholen" name="[register]password" id="modal-repassword" required>
     
 
     <button class="modal-form__btn btn btn--red-hover" type="submit">Registrieren</button>
@@ -268,7 +268,7 @@
 
         
             <div class="modal-form__wrapper-box">
-                <input class="modal-form__check-input check" type="checkbox" name="[modal]checkbox" id="Agreement" required>
+                <input class="modal-form__check-input check" type="checkbox" name="[register]checkbox" id="Agreement" required>
                 <div class="auto-park__checkbox checkbox">
                     <span></span>
                 </div>
@@ -457,25 +457,25 @@
                 <h2 class="sr-only">Besonderheiten</h2>
                 <ul class="tabs-btns">
                     <li class="tabs-btns__item">
-                        <button class="tabs-btns__btn tabs-btns__btn--descr btn active" type="button" data-filter=".descr" data-content="creations-details__item--descr">
+                        <button class="tabs-btns__btn tabs-btns__btn--descr btn active" type="button" data-filter=".descr">
                             Beschreibung
                             <span></span>
                         </button>
                     </li>
                     <li class="tabs-btns__item">
-                        <button class="tabs-btns__btn tabs-btns__btn--charact btn" type="button" data-filter=".charact" data-content="creations-details__item--charact">
+                        <button class="tabs-btns__btn tabs-btns__btn--charact btn" type="button" data-filter=".charact">
                             Charakteristisch
                             <span></span>
                         </button>
                     </li>
                     <li class="tabs-btns__item">
-                        <button class="tabs-btns__btn tabs-btns__btn--delivery btn" type="button" data-filter=".delivery" data-content="creations-details__item--delivery">
+                        <button class="tabs-btns__btn tabs-btns__btn--delivery btn" type="button" data-filter=".delivery">
                             Lieferung
                             <span></span>
                         </button>
                     </li>
                     <li class="tabs-btns__item">
-                        <button class="tabs-btns__btn tabs-btns__btn--guarant btn" type="button" data-filter=".guarant" data-content="creations-details__item--guarant">
+                        <button class="tabs-btns__btn tabs-btns__btn--guarant btn" type="button" data-filter=".guarant">
                             Garantien
                             <span></span>
                         </button>
@@ -650,7 +650,7 @@
             </section>
             <section class="others-creation">
                 <h2 class="others-creation__title title">andere Werke das Autors</h2>
-                <ul class="others-creation__list list-card">
+                <ul class="others-creation__list cards-list">
                     <li class="others-creation__item">
                         <article class="painting-card" tabindex="0">
     <a class="painting-card__img-link" href="/creations-details.html">
@@ -1147,7 +1147,7 @@
                 <h2 class="similar-paintings__title title">
                     Gemälde mit ähnlichen Themen
                 </h2>
-                <ul class="similar-paintings__list list-card">
+                <ul class="similar-paintings__list cards-list">
                     <li class="similar-paintings__item">
                         <article class="painting-card" tabindex="0">
     <a class="painting-card__img-link" href="/creations-details.html">
@@ -1523,7 +1523,7 @@
                 <h2 class="watched__title title">
                     vor kurzem hast du zugeschaut
                 </h2>
-                <ul class="watched__list list-card">
+                <ul class="watched__list cards-list">
                     <li class="watched__item">
                         <article class="painting-card" tabindex="0">
     <a class="painting-card__img-link" href="/creations-details.html">

@@ -6,7 +6,7 @@
 
 <main>
     <h1 class="sr-only">Unsere Dienstleistungen</h1>
-    <div class="modal">
+    <div class="modal" onkeydown="ESCclose(event)">
         <div class="modal__box">
             <img src="images/content/logo.svg" alt="logo" width="150" height="45">
             <button class="modal__btn btn btn--close" type="button">
@@ -52,7 +52,7 @@
 
                 @@include('./parts/index-page/_gallery-filters.html')
 
-                <ul class="gallery__list list-card">
+                <ul class="gallery__list cards-list">
                     <li class="gallery__item mix empfohlen beliebt">
 
                         @@include('./parts/components/_painting-card.html', {
