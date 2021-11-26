@@ -1,8 +1,6 @@
 <article class="painting-card" tabindex="0">
     <a class="painting-card__img-link" href="/creations-details.html">
-        <div class="painting-card__img-wrapper">
-            <img src="@@image-url" alt="@@alt">
-        </div>
+        <img src="@@image-url" alt="@@alt">
     </a>
 
     @@if (gallery === true) {
@@ -62,7 +60,7 @@
                     <use xlink:href="images/sprite.svg#share-icon"></use>
                 </svg>
             </a>
-            <button class="painting-card__btn painting-card__btn--favorite btn btn--red-hover">
+            <button class="painting-card__btn painting-card__btn--favorite btn btn--red-hover" type="button">
                 <span class="sr-only">added to favorite pick</span>
                 <svg width="20" height="17">
                     <use xlink:href="images/sprite.svg#favorit-icon"></use>
