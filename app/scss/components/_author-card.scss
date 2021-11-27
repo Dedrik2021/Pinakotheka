@@ -15,7 +15,8 @@
         box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.5);
     }
     
-    &__img-wrapper {
+    &__img-link {
+        display: block;
         height: 125px;
         border-radius: 10px;
         position: relative;
