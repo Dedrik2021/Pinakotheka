@@ -1,5 +1,9 @@
 .creations-details {
 
+    &__inner {
+        margin-bottom: 145px;
+    }
+
     &__tabs {
         padding-bottom: 80px;
 
@@ -204,10 +208,6 @@
             }
         }
     }
-}
-
-.details {
-    margin-bottom: 145px;
 }
 
 .details-card {
@@ -748,7 +748,7 @@
     }
 }
 
-.watched,
+.recent-watched,
 .similar-paintings,
 .others-creation {
     margin-bottom: 110px;
@@ -803,6 +803,6 @@
     }
 }
 
-.watched {
+.recent-watched {
     margin-bottom: 120px;
 }
