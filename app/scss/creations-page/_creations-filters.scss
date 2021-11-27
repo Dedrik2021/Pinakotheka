@@ -173,21 +173,24 @@
         }
     }
 
-    &__input-check {
+    &__input-checkbox {
         top: 12px;
         left: 7px;
 
         &:checked {
 
-            &+.checkbox {
-
+            &+.checkbox-custom {
                 background-color: $red;
+
+                span {
+                    opacity: 1;
+                }
             }
         }
     }
 
     &__checkbox {
-        top: 9px;
+        top: 8px;
     }
 
     &__link {

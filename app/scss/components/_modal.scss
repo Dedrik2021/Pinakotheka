@@ -207,12 +207,16 @@
         }
     }
 
-    &__check-input {
+    &__checkbox-input {
 
         &:checked {
 
-            &+.checkbox {
+            &+.checkbox-custom {
                 background-color: $green;
+
+                span{
+                    opacity: 1;
+                }
             }
         }
     }
@@ -226,7 +230,7 @@
         }
 
 
-        .checkbox {
+        .checkbox-custom {
             max-width: 15px;
             width: 100%;
         }
