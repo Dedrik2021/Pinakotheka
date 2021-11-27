@@ -66,7 +66,7 @@
                                 <input class="authors-search__input" type="text" name="[authors]search" id="search-authors" placeholder="Suche nach Nachnamen">
                             </div>
 
-                            @@include('./parts/components/_filters-items.html', {
+                            @@include('./parts/components/_select-filter.html', {
                                 "authors": true,
                                 "value1": "Gemälde",
                                 "value2": "Skulptur",
@@ -80,7 +80,7 @@
                                 "option5": "Handmade",
                             })
                             
-                            @@include('./parts/components/_filters-items.html', {
+                            @@include('./parts/components/_select-filter.html', {
                                 "authors": false,
                                 "value1": "Preis",
                                 "value2": "Stilen",
