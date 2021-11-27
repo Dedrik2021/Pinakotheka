@@ -16,9 +16,13 @@
             <a class="logo header__logo" href="/">
                 <img src="images/content/logo.svg" alt="logo" width="180" height="50">
             </a> 
+            <button class="menu__burger btn" type="button">
+                <span class="sr-only">Öffne das Menü</span>
+                <span></span>
+            </button>
             <div class="menu__inner">
                 <form class="menu__form" onkeydown="ESCclose(event)">
-                    <label for="nav-search">
+                    <label class="menu__label" for="nav-search">
                         <span class="sr-only">Suche</span>
                     </label>
                     <input class="menu__search" type="search" name="[nav]search" placeholder="Tippe um zu suchen" id="nav-search" required>
@@ -32,7 +36,7 @@
                 <ul class="menu__list">
                     <li class="menu__item menu__item--dropdown" tabindex="0">
                         <button class="menu__link" type="button">Katalog</button>
-                        <span></span>
+                        <span class="menu__border-bottom"></span>
                         <ul class="menu-dropdown">
                             <li class="menu-dropdown__item">
                                 <a class="menu-dropdown__link" href="/creations.html">Kreationen</a>
@@ -62,29 +66,25 @@
                     </li>
                     <li class="menu__item" tabindex="0">
                         <a class="menu__link" href="/authors.html">Autoren</a>
-                        <span></span>
+                        <span class="menu__border-bottom"></span>
                     </li>
                     <li class="menu__item" tabindex="0">
                         <a class="menu__link" href="#">Arbeitsplan</a>
-                        <span></span>
+                        <span class="menu__border-bottom"></span>
                     </li>
                 </ul>
             </div>
             <div class="menu__box">
-                <ul class="buttons">
-                    <li class="buttons__item">
-                        <button class="buttons__btn btn active" type="button">De</button>
+                <ul class="language-switcher">
+                    <li class="language-switcher__item">
+                        <button class="language-switcher__btn btn active" type="button">De</button>
                     </li>
-                    <li class="buttons__item">
-                        <button class="buttons__btn btn" type="button">En</button>
+                    <li class="language-switcher__item">
+                        <button class="language-switcher__btn btn" type="button">En</button>
                     </li>
                 </ul>
                 <button class="menu__enter-btn btn" type="button">Eingang</button>
             </div>
-            <button class="menu__burger btn" type="button">
-                <span class="sr-only">Öffne das Menü</span>
-                <span></span>
-            </button>
         </nav>
     </div>
 </header>

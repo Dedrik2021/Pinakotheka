@@ -176,6 +176,7 @@
 
             .painting-card {
                 display: flex;
+                border-radius: 10px;
                 padding: 10px 20px 10px 10px;
                 max-width: 100%;
                 width: 100%;
@@ -200,33 +201,29 @@
                 }
 
                 &__img-link {
-                    display: block;
                     margin-right: 40px;
                     border-radius: 10px;
+                    max-width: 400px;
+                    width: 100%;
+                    height: 100%;
+                    margin-bottom: 0;
                     transition: box-shadow 0.4s;
+                    
+                    @include r($mobile-lg) {
+                        margin: 0 0 20px;
+                        max-width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
 
                     &:hover {
                         box-shadow: 5px 8px 10px -2px rgba(0, 0, 0, 0.5);
                     }
 
-                    @include r($mobile-lg) {
-                        margin: 0 0 20px;
-                    }
-                }
-
-                &__img-wrapper {
-                    width: 400px;
-                    height: 100%;
-
-                    @include r($mobile-lg) {
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        margin-bottom: 0;
-                    }
-
                     img {
-                        width: 500px;
+                        min-width: 400px;
+                        width: 100%;
+                        height: 100%;
                         object-fit: cover;
 
                         @include r($mobile-lg) {
@@ -250,6 +247,14 @@
 
                 &__link {
                     margin-bottom: 15px;
+
+                    @include r($mobile-lg) {
+                        margin-bottom: 0;
+                    }
+
+                    &--creations {
+                        margin-bottom: 15px;
+                    }
                 }
 
                 &__title {
@@ -261,10 +266,6 @@
 
                         @include r($mobile-md) {
                             font-size: 30px;
-                        }
-
-                        @include r($mobile-lg) {
-                            font-size: 22px;
                         }
                     }
                 }

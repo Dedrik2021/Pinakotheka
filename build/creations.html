@@ -16,9 +16,13 @@
             <a class="logo header__logo" href="/">
                 <img src="images/content/logo.svg" alt="logo" width="180" height="50">
             </a> 
+            <button class="menu__burger btn" type="button">
+                <span class="sr-only">Öffne das Menü</span>
+                <span></span>
+            </button>
             <div class="menu__inner">
                 <form class="menu__form" onkeydown="ESCclose(event)">
-                    <label for="nav-search">
+                    <label class="menu__label" for="nav-search">
                         <span class="sr-only">Suche</span>
                     </label>
                     <input class="menu__search" type="search" name="[nav]search" placeholder="Tippe um zu suchen" id="nav-search" required>
@@ -32,7 +36,7 @@
                 <ul class="menu__list">
                     <li class="menu__item menu__item--dropdown" tabindex="0">
                         <button class="menu__link" type="button">Katalog</button>
-                        <span></span>
+                        <span class="menu__border-bottom"></span>
                         <ul class="menu-dropdown">
                             <li class="menu-dropdown__item">
                                 <a class="menu-dropdown__link" href="/creations.html">Kreationen</a>
@@ -62,29 +66,25 @@
                     </li>
                     <li class="menu__item" tabindex="0">
                         <a class="menu__link" href="/authors.html">Autoren</a>
-                        <span></span>
+                        <span class="menu__border-bottom"></span>
                     </li>
                     <li class="menu__item" tabindex="0">
                         <a class="menu__link" href="#">Arbeitsplan</a>
-                        <span></span>
+                        <span class="menu__border-bottom"></span>
                     </li>
                 </ul>
             </div>
             <div class="menu__box">
-                <ul class="buttons">
-                    <li class="buttons__item">
-                        <button class="buttons__btn btn active" type="button">De</button>
+                <ul class="language-switcher">
+                    <li class="language-switcher__item">
+                        <button class="language-switcher__btn btn active" type="button">De</button>
                     </li>
-                    <li class="buttons__item">
-                        <button class="buttons__btn btn" type="button">En</button>
+                    <li class="language-switcher__item">
+                        <button class="language-switcher__btn btn" type="button">En</button>
                     </li>
                 </ul>
                 <button class="menu__enter-btn btn" type="button">Eingang</button>
             </div>
-            <button class="menu__burger btn" type="button">
-                <span class="sr-only">Öffne das Menü</span>
-                <span></span>
-            </button>
         </nav>
     </div>
 </header>
@@ -842,7 +842,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Timeo danaos et donna fere...
                 </h3>
@@ -917,7 +917,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Storm
                 </h3>
@@ -992,7 +992,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                      L'entrée d'Oisy- le - Rideau
                 </h3>
@@ -1067,7 +1067,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Pilote voyageur III
                 </h3>
@@ -1142,7 +1142,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Rosa Bild...
                 </h3>
@@ -1217,7 +1217,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Ombres-Elles
                 </h3>
@@ -1292,7 +1292,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Imagination 2
                 </h3>
@@ -1367,7 +1367,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Wild.
                 </h3>
@@ -1442,7 +1442,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     L'oeuf du serpent, Hommage...
                 </h3>
@@ -1517,7 +1517,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Nuage orange
                 </h3>
@@ -1592,7 +1592,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     L'aurore
                 </h3>
@@ -1667,7 +1667,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Confused Bunny
                 </h3>
@@ -1742,7 +1742,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Tableau 2 novembre 16
                 </h3>
@@ -1817,7 +1817,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Doxa
                 </h3>
@@ -1892,7 +1892,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Flammes
                 </h3>
@@ -1967,7 +1967,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Self Portrait 132
                 </h3>
@@ -2042,7 +2042,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Timeo danaos et donna fere...
                 </h3>
@@ -2117,7 +2117,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Je t'écris ce poème
                 </h3>
@@ -2192,7 +2192,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Timeo danaos et donna fere...
                 </h3>
@@ -2267,7 +2267,7 @@
     <div class="painting-card__box">
 
         
-            <a class="painting-card__link" href="/creations-details.html">
+            <a class="painting-card__link painting-card__link--creations" href="/creations-details.html">
                 <h3 class="painting-card__title painting-card__title--box">
                     Storm
                 </h3>
