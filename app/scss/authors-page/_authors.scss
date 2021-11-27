@@ -252,8 +252,9 @@
 
     &__btn {
         color: $gray;
-        display: table;
+        display: block;
         margin: 0 auto;
+        width: fit-content;
         margin-bottom: 120px;
         border-radius: 0;
         border-bottom: 1px solid transparent;

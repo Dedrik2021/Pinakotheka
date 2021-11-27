@@ -157,7 +157,6 @@
     }
 
     &__content-slider {
-        margin-top: -520px;
         z-index: 2;
         max-width: 1425px;
         width: 100%;
@@ -380,49 +379,6 @@
         &__num {
             background-color: $white;
         }
-    }
-}
-
-.slick-btn {
-    border: none;
-    background-color: transparent;
-    position: absolute;
-    bottom: -10px;
-    left: 15px;
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: background-color 0.4s;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @include r($mobile-md) {
-        bottom: 5px;
-        width: 50px;
-        height: 50px;
-    }
-
-    &:hover {
-        background-color: $black;
-    }
-
-    &--next {
-        left: 65px;
-        background-image: url(../images/content/arrow-next.svg);
-
-        @include r($mobile-md) {
-            left: 80px;
-        }
-
-        @include r($mobile-sm) {
-            left: auto;
-            right: 15px;
-        }
-    }
-
-    &--prev {
-        background-image: url(../images/content/arrow-prev.svg);
     }
 }
 

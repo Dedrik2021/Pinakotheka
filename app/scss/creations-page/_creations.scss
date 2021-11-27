@@ -419,8 +419,9 @@
     }
 
     &__link {
-        display: table;
+        display: block;
         margin: 0 auto;
+        width: fit-content;
         font-size: 16px;
         font-weight: 700;
         color: $gray;
