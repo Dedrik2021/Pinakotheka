@@ -47,8 +47,8 @@
 
                 <div class="modal-form__bottom">
                     <div class="modal-form__wrapper">
-                        <input class="modal-form__check-input check" type="checkbox" name="[enter]checkbox" id="forgotten-password">
-                        <div class="auto-park__checkbox checkbox">
+                        <input class="modal-form__checkbox-input checkbox-origin" type="checkbox" name="[enter]checkbox" id="forgotten-password">
+                        <div class="auto-park__checkbox checkbox-custom">
                             <span></span>
                         </div>
                         <label class="modal-form__label" for="forgotten-password">Passwort merken</label>
@@ -57,28 +57,9 @@
                 </div>
             </form>
             <span class="modal__enter">Mit sozialen Netzwerken anmelden</span>
-            <ul class="social">
-                <li class="social__item social__item--google">
-                    <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
-                        <span class="sr-only">Google</span>
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a class="social__link social__link--facebook" target="_blank" href="https://www.facebook.com/">
-                        <span class="sr-only">Facebook</span>
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/tweeter">
-                        <span class="sr-only">Twitter</span>
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a class="social__link social__link--instagram" target="_blank" href="https://www.instagram.com/?hl=de">
-                        <span class="sr-only">instagram</span>
-                    </a>
-                </li>
-            </ul>
+
+            @@include('../../parts/components/_social.html')
+
         </li>
         <li class="modal-form__item modal-form__item--register">
             <form class="modal-form">
@@ -126,8 +107,8 @@
 
                 <div class="modal-form__bottom">
                     <div class="modal-form__wrapper-box">
-                        <input class="modal-form__check-input check" type="checkbox" name="[register]checkbox" id="Agreement" required>
-                        <div class="auto-park__checkbox checkbox">
+                        <input class="modal-form__checkbox-input checkbox-origin" type="checkbox" name="[register]checkbox" id="Agreement" required>
+                        <div class="auto-park__checkbox checkbox-custom">
                             <span></span>
                         </div>
                         <label class="modal-form__label" for="Agreement">
@@ -138,28 +119,8 @@
             </form>
             <span class="modal__enter">Mit sozialen Netzwerken anmelden</span>
 
-            <ul class="social">
-                <li class="social__item social__item--google">
-                    <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
-                        <span class="sr-only">Google</span>
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a class="social__link social__link--facebook" target="_blank" href="https://www.facebook.com/">
-                        <span class="sr-only">Facebook</span>
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/tweeter">
-                        <span class="sr-only">Twitter</span>
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a class="social__link social__link--instagram" target="_blank" href="https://www.instagram.com/?hl=de">
-                        <span class="sr-only">instagram</span>
-                    </a>
-                </li>
-            </ul>
+            @@include('../../parts/components/_social.html')
+
         </li>
     </ul>
 </div> 
