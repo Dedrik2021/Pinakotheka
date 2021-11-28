@@ -182,8 +182,6 @@ $(function() {
                 breakpoint: 769,
                 settings: {
                     vertical: false,
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
                 }
             },
         ]

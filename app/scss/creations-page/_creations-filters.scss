@@ -150,7 +150,7 @@
     }
 
     &__label {
-        min-width: 100%;
+        width: 100%;
         font-size: 14px;
         font-weight: 300;
         line-height: 1.6;
@@ -159,7 +159,6 @@
         color: $gray-200;
         cursor: pointer;
         transition: font-weight 0.5s;
-        max-width: 80%;
         word-wrap: break-word;
         position: relative;
         z-index: 10;

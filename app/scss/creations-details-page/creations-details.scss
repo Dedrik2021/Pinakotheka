@@ -1,7 +1,15 @@
 .creations-details {
 
-    &__inner {
+    &__info {
         margin-bottom: 145px;
+
+        @include r($mobile-xl) {
+            margin-bottom: 90px;
+        }
+
+        @include r($mobile-md) {
+            margin-bottom: 50px;
+        }
     }
 
     &__tabs {

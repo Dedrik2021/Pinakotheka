@@ -10,11 +10,13 @@
         font-weight: 300;
         color: $gray-100;
         line-height: 1.7;
-        margin-right: 5px;
+        margin-right: 15px;
         max-width: 70%;
+        @include line-clamp(1);
 
         &--thing {
             font-weight: 500;
+            margin-right: 0;
         }
     }
 }
