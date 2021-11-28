@@ -10,6 +10,24 @@
         overflow-x: auto;
         text-align: center;
         justify-content: space-between;
+        background-color: $gray;
+        border-radius: 15px;
+        padding: 11px 0px 3px;
+        position: relative;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        z-index: 10;
+        width: 35px;
+        height: 20px;
+        background-size: 80%;
+        right: -5px;
+        top: 10px;
+        transform: rotate(-90deg);
+        background-image: url(../images/content/angle-down.svg);
+        background-repeat: no-repeat;
     }
 
     &::-webkit-scrollbar {
@@ -51,6 +69,7 @@
         transition: color 0.4s, font-weight 0.2s;
 
         @include r($mobile-sm) {
+            font-weight: 700;
             width: 100%;
             color: $red;
         }
@@ -84,8 +103,16 @@
             color: $gray-200;
             pointer-events: none;
 
+            @include r($mobile-sm) {
+                color: $white;
+            }
+
             span {
                 border-color: $black;
+
+                @include r($mobile-sm) {
+                    border-color: $white;
+                }
             }
         }
     }

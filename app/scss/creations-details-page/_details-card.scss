@@ -265,6 +265,10 @@
     &__title {
         font-size: 30px;
         margin-bottom: 20px;
+
+        @include r($mobile-sm) {
+            font-size: 25px;
+        }
     }
 
     &__price,

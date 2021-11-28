@@ -31,6 +31,10 @@
         @include r($mobile-md) {
             padding-top: 30px;
         }
+
+        @include r($mobile-sm) {
+            border-top: none;
+        }
     }
 
     &__item {
