@@ -1,0 +1,171 @@
+.news {
+
+    &__title {
+        margin-bottom: 30px;
+
+        @include r($mobile-sm) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -10px 40px;
+
+        @include r($mobile-lg) {
+            margin: 0 -5px 30px;
+        }
+
+        @include r($mobile-sm) {
+            flex-direction: column;
+            margin: 0 0 30px;
+        }
+    }
+
+    &__item {
+        margin: 0 10px 20px;
+        width: 545px;
+        flex: 1 1 30%;
+
+        @include r($mobile-lg) {
+            margin: 0 5px 20px;
+        }
+
+        @include r($mobile-md) {
+            flex: 2 0 40%;
+        }
+
+        @include r($mobile-sm) {
+            margin: 0;
+            width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        &:nth-child(1) {
+            width: 969px;
+            flex: 1 1 50%;
+
+            @include r($mobile-md) {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 686px;
+            flex: 1 1 33.5%;
+
+            @include r($mobile-md) {
+                width: 600px;
+                flex: 2 0 41%;
+            }
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+
+            @include r($mobile-sm) {
+                max-width: 545px;
+                width: 100%;
+            }
+        }
+    }
+
+    .news-card {
+        max-width: 100%;
+        width: 100%;
+
+        height: 100%;
+        
+        &__link {
+            flex-direction: column;
+            height: 100%;
+            max-width: 100%;
+            width: 100%;
+            padding: 5px 5px 0;
+        }
+
+        &__box {
+            display: flex;
+            margin-top: auto;
+            padding: 20px;
+
+            @include r($mobile-lg) {
+                padding: 10px 15px 15px;
+            }
+
+            @include r($mobile-md) {
+                padding: 10px 10px 15px;
+            }
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 10px;
+            order: -1;
+
+            @include r($mobile-lg) {
+                font-size: 22px;
+            }
+
+            @include r($mobile-md) {
+                font-size: 20px;
+                color: $red;
+            }
+        }
+
+        &__date {
+            margin-bottom: 15px;
+            margin-top: auto;
+        }
+
+        &__text {
+            margin-top: auto;
+            @include line-clamp(3);
+
+            @include r($mobile-lg) {
+                margin: auto 0;
+            }
+
+            @include r($mobile-md) {
+                margin: auto 0 0;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                color: $gray-100;
+                line-height: 1.8;
+                transition: color 0.4s;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+
+        &__img-wrapper {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            margin-right: 0;
+            padding: 0;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+
+                @include r($mobile-sm) {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}

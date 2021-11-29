@@ -278,39 +278,42 @@
     
     @@include('./parts/index-page/_descr.html')
 
-    <div class="news">
+    <div class="news-block">
         <div class="container">
-            <div class="news__box">
-                <span class="news__title title">
+            <div class="news-block__box">
+                <span class="news-block__title title">
                     Nachrichten
                 </span>
-                <a class="news__link" href="#">Alle Nachrichten</a>
+                <a class="news-block__link" href="#">Alle Nachrichten</a>
             </div>
-            <ul class="news__list">
-                <li class="news__item">
+            <ul class="news-block__list">
+                <li class="news-block__item">
 
                     @@include('./parts/components/_news-card.html', {
                         "image-url": "images/content/news-card-1.jpg",
                         "alt": "mysteriös vermisste Meisterwerke",
                         "title": "Top 5 mysteriös vermisste Meisterwerke",
+                        "news": false,
                     })
 
                 </li>
-                <li class="news__item">
+                <li class="news-block__item">
 
                     @@include('./parts/components/_news-card.html', {
                         "image-url": "images/content/news-card-2.jpg",
                         "alt": "Kunst, Plastikmüll & Natur",
                         "title": "Dirk Krull : Kunst, Plastikmüll & Natur",
+                        "news": false,
                     })
 
                 </li>
-                <li class="news__item">
+                <li class="news-block__item">
 
                     @@include('./parts/components/_news-card.html', {
                         "image-url": "images/content/news-card-3.jpg",
                         "alt": "Salvador Dali",
                         "title": "10 things you probably didn't know about Salvador Dali",
+                        "news": false,
                     })
 
                 </li>
