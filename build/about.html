@@ -1,0 +1,846 @@
+    <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über das Projekt</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/content/favicon.ico">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body id="body"> 
+
+    <header class="header">
+    <div class="container">
+        <nav class="menu">
+            <a class="logo header__logo" href="/">
+                <img src="images/content/logo.svg" alt="logo" width="180" height="50">
+            </a> 
+            <button class="menu__burger btn" type="button">
+                <span class="sr-only">Öffne das Menü</span>
+                <span></span>
+            </button>
+            <div class="menu__inner">
+                <form class="menu__form" onkeydown="ESCclose(event)">
+                    <label class="menu__label" for="nav-search">
+                        <span class="sr-only">Suche</span>
+                    </label>
+                    <input class="menu__search" type="search" name="[nav]search" placeholder="Tippe um zu suchen" id="nav-search" required>
+                    <button class="menu__btn btn" type="submit">
+                        <span class="sr-only">Suche drücken</span>
+                        <svg width="16" height="16">
+                            <use xlink:href="images/sprite.svg#search-icon"></use>
+                        </svg>
+                    </button>
+                </form>
+                <ul class="menu__list">
+                    <li class="menu__item menu__item--dropdown" tabindex="0">
+                        <button class="menu__link" type="button">Katalog</button>
+                        <span class="menu__border-bottom"></span>
+                        <ul class="menu-dropdown">
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="/creations.html">Kreationen</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="/news.html">Nachrichten</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="/about.html">Über das Projekt</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="/error-404.html">Error-404</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie5</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie6</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie7</a>
+                            </li>
+                            <li class="menu-dropdown__item">
+                                <a class="menu-dropdown__link" href="#">Kategorie8</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item" tabindex="0">
+                        <a class="menu__link" href="/authors.html">Autoren</a>
+                        <span class="menu__border-bottom"></span>
+                    </li>
+                    <li class="menu__item" tabindex="0">
+                        <a class="menu__link" href="/error-404.html">Arbeitsplan</a>
+                        <span class="menu__border-bottom"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu__box">
+                <ul class="language-switcher">
+                    <li class="language-switcher__item">
+                        <button class="language-switcher__btn btn active" type="button">De</button>
+                    </li>
+                    <li class="language-switcher__item">
+                        <button class="language-switcher__btn btn" type="button">En</button>
+                    </li>
+                </ul>
+                <button class="menu__enter-btn btn" type="button">Eingang</button>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <div class="container">
+            <div class="modal" onkeydown="ESCclose(event)">
+    <div class="modal__box">
+        <img src="images/content/logo.svg" alt="logo" width="150" height="45">
+        <button class="modal__btn btn btn--close" type="button">
+            <span class="sr-only">Nah dran</span>
+            <span></span>
+        </button>
+    </div>
+    <ul class="btns-tabs">
+        <li class="btns-tabs__item">
+            <button class="btns-tabs__btn btn active" data-content="modal-form__item--enter" type="button">Eingang</button>
+        </li>
+        <li class="btns-tabs__item">
+            <button class="btns-tabs__btn btn" data-content="modal-form__item--register" type="button">Anmeldung</button>
+        </li>
+    </ul>
+    <ul class="modal-form__tabs">
+        <li class="modal-form__item modal-form__item--enter active">
+            <form class="modal-form">
+                <div class="modal-form__top">
+                    <div class="modal-form__wrapper">
+                        <input class="modal-form__checkbox-input checkbox-origin" type="checkbox" name="[enter]checkbox" id="customer">
+                        <div class="auto-park__checkbox checkbox-custom">
+                            <span></span>
+                        </div>
+                        <label class="modal-form__label" for="customer">Kunde</label>
+                    </div>
+                    <div class="modal-form__wrapper">
+                        <input class="modal-form__checkbox-input checkbox-origin" type="checkbox" name="[enter]checkbox" id="painter">
+                        <div class="auto-park__checkbox checkbox-custom">
+                            <span></span>
+                        </div>
+                        <label class="modal-form__label" for="painter">Maler</label>
+                    </div>
+                </div>
+                <label for="modal-email">
+                    <span class="sr-only">Email</span>
+                </label>
+                <input class="modal-form__input" type="email" placeholder="Email" name="[enter]email" id="modal-email" required>
+        
+                <label for="modal-password">
+                    <span class="sr-only">Passwort</span>
+                </label>
+                <input class="modal-form__input" type="password" placeholder="Passwort" name="[enter]password" id="modal-password" required>
+
+                <button class="modal-form__btn btn btn--red-hover" type="submit">Betreten</button>
+
+                <div class="modal-form__bottom">
+                    <div class="modal-form__wrapper">
+                        <input class="modal-form__checkbox-input checkbox-origin" type="checkbox" name="[enter]checkbox" id="forgotten-password">
+                        <div class="auto-park__checkbox checkbox-custom">
+                            <span></span>
+                        </div>
+                        <label class="modal-form__label" for="forgotten-password">Passwort merken</label>
+                    </div>
+                    <a class="modal-form__link" href="#">Vergessen Passwort?</a>
+                </div>
+            </form>
+            <span class="modal__enter">Mit sozialen Netzwerken anmelden</span>
+
+            <ul class="social">
+    <li class="social__item social__item--google">
+        <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
+            <span class="sr-only">Google</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--facebook" target="_blank" href="https://www.facebook.com/">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#facebook-icon"></use>
+            </svg>
+            <span class="sr-only">Facebook</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/tweeter">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#twitter-icon"></use>
+            </svg>
+            <span class="sr-only">Twitter</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--instagram" target="_blank" href="https://www.instagram.com/?hl=de">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#instagram-icon"></use>
+            </svg>
+            <span class="sr-only">instagram</span>
+        </a>
+    </li>
+</ul>
+
+        </li>
+        <li class="modal-form__item modal-form__item--register">
+            <form class="modal-form">
+                <div class="modal-form__top">
+                    <div class="modal-form__wrapper">
+                        <input class="modal-form__checkbox-input checkbox-origin" type="checkbox" name="[register]checkbox" id="modal-user">
+                        <div class="auto-park__checkbox checkbox-custom">
+                            <span></span>
+                        </div>
+                        <label class="modal-form__label" for="modal-user">Kunde</label>
+                    </div>
+                    <div class="modal-form__wrapper">
+                        <input class="modal-form__checkbox-input checkbox-origin" type="checkbox" name="[register]checkbox" id="autor">
+                        <div class="auto-park__checkbox checkbox-custom">
+                            <span></span>
+                        </div>
+                        <label class="modal-form__label" for="autor">Autor</label>
+                    </div>
+                </div>
+                <label for="modal-name">
+                    <span class="sr-only">Name</span>
+                </label>
+                <input class="modal-form__input" type="text" placeholder="Name" name="[register]name" id="modal-name" required>
+        
+                <label for="modal-tel">
+                    <span class="sr-only">Telefon</span>
+                </label>
+                <input class="modal-form__input" type="tel" placeholder="Telefon" name="[register]tel" id="modal-tel" required>
+                <label for="modal-email2">
+                    <span class="sr-only">Email</span>
+                </label>
+                <input class="modal-form__input" type="email" placeholder="Email" name="[register]email" id="modal-email2" required>
+        
+                <label for="modal-password2">
+                    <span class="sr-only">Passwort</span>
+                </label>
+                <input class="modal-form__input" type="password" placeholder="Passwort" name="[register]password" id="modal-password2" required>
+                
+                <label for="modal-repassword">
+                    <span class="sr-only">Passwort wiederholen</span>
+                </label>
+                <input class="modal-form__input" type="password" placeholder="Passwort wiederholen" name="[register]password" id="modal-repassword" required>
+
+                <button class="modal-form__btn btn btn--red-hover" type="submit">Registrieren</button>
+
+                <div class="modal-form__bottom">
+                    <div class="modal-form__wrapper-box">
+                        <input class="modal-form__checkbox-input checkbox-origin" type="checkbox" name="[register]checkbox" id="Agreement" required>
+                        <div class="auto-park__checkbox checkbox-custom">
+                            <span></span>
+                        </div>
+                        <label class="modal-form__label" for="Agreement">
+                            Ich stimme den <a href="#">Dienstordnungsvereinbarung</a> zu den Bedingungen und zu den in der <a href="#">Nutzungsvereinbarung</a> beschriebenen Zwecken zu
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <span class="modal__enter">Mit sozialen Netzwerken anmelden</span>
+
+            <ul class="social">
+    <li class="social__item social__item--google">
+        <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
+            <span class="sr-only">Google</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--facebook" target="_blank" href="https://www.facebook.com/">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#facebook-icon"></use>
+            </svg>
+            <span class="sr-only">Facebook</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/tweeter">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#twitter-icon"></use>
+            </svg>
+            <span class="sr-only">Twitter</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--instagram" target="_blank" href="https://www.instagram.com/?hl=de">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#instagram-icon"></use>
+            </svg>
+            <span class="sr-only">instagram</span>
+        </a>
+    </li>
+</ul>
+
+        </li>
+    </ul>
+</div> 
+
+            <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="/">
+            Heimat
+        </a>
+    </li>
+
+    
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="undefined.html">
+                Über das Projekt
+            </a>
+        </li>
+    
+    
+</ul>
+
+
+            <section class="about">
+                <h1 class="about__title title">
+                    Über das Projekt
+                </h1>
+                <div class="about__bg" style="background-image: url(images/content/about-bg.jpg);"></div>
+                <div class="about__inner">
+                    <div>
+                        <p>
+                            Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                        </p>
+                        <p>
+                            Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site. Dieser Text trägt keine semantische Last, sondern ist nur eine Nachahmung des Füllens der Textblöcke der Site.
+                        </p>
+                    </div>
+                    <ul class="about-advantages">
+                        <li class="about-advantages__item">
+                            <span class="about-advantages__count">237</span>
+                            <span class="about-advantages__sucess">
+                                Gemälde 
+                                <br>
+                                in einem Monat hinzugefügt
+                            </span>
+                        </li>
+                        <li class="about-advantages__item">
+                            <span class="about-advantages__count about-advantages__count--month">1346</span>
+                            <span class="about-advantages__sucess">
+                                Gemälde
+                                <br>
+                                diesen Monat verkauft
+                            </span>
+                        </li>
+                        <li class="about-advantages__item">
+                            <span class="about-advantages__count">936</span>
+                            <span class="about-advantages__sucess">
+                                neue Autoren
+                                <br>
+                                auf der Seite
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="faq">
+                <h2 class="faq__title title">Faq</h2>
+                <div class="faq__inner">
+                    <div class="faq__inner-left">
+                        <div class="faq__questions">
+                            <button class="faq__btn btn--sale btn" type="button">Wie das lot verkaufen?</button>
+    
+                            <ul class="list-items list-items--sale">
+
+    
+        <li class="list-items__item">
+            Jede Aktion, die gegen DE-Gesetze verstößt
+        </li>
+    
+        <li class="list-items__item">
+            Alter unter 18
+        </li>
+    
+        <li class="list-items__item">
+            Der Betrug
+        </li>
+    
+        <li class="list-items__item">
+            Verstoß gegen die Kommunikationsregeln
+        </li>
+    
+        <li class="list-items__item">
+            Mehrere Konten verwenden
+        </li>
+    
+        <li class="list-items__item">
+            Künstlicher Einfluss auf Bewertungen und Rezensionen
+        </li>
+    
+        <li class="list-items__item">
+            Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen
+        </li>
+    
+    
+</ul>
+    
+                        </div>
+                        <div class="faq__questions">
+                            <button class="faq__btn btn--buy btn" type="button">Wie das lot kaufen?</button>
+    
+                            <ul class="list-items list-items--buy">
+
+    
+        <li class="list-items__item">
+            Jede Aktion, die gegen DE-Gesetze verstößt
+        </li>
+    
+        <li class="list-items__item">
+            Alter unter 18
+        </li>
+    
+        <li class="list-items__item">
+            Der Betrug
+        </li>
+    
+        <li class="list-items__item">
+            Verstoß gegen die Kommunikationsregeln
+        </li>
+    
+        <li class="list-items__item">
+            Mehrere Konten verwenden
+        </li>
+    
+        <li class="list-items__item">
+            Künstlicher Einfluss auf Bewertungen und Rezensionen
+        </li>
+    
+        <li class="list-items__item">
+            Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen
+        </li>
+    
+    
+</ul>
+    
+                        </div>
+                        <div class="faq__questions">
+                            <button class="faq__btn btn--services btn" type="button">Kostenpflichtige Dienste</button>
+    
+                            <ul class="list-items list-items--services">
+
+    
+        <li class="list-items__item">
+            Jede Aktion, die gegen DE-Gesetze verstößt
+        </li>
+    
+        <li class="list-items__item">
+            Alter unter 18
+        </li>
+    
+        <li class="list-items__item">
+            Der Betrug
+        </li>
+    
+        <li class="list-items__item">
+            Verstoß gegen die Kommunikationsregeln
+        </li>
+    
+        <li class="list-items__item">
+            Mehrere Konten verwenden
+        </li>
+    
+        <li class="list-items__item">
+            Künstlicher Einfluss auf Bewertungen und Rezensionen
+        </li>
+    
+        <li class="list-items__item">
+            Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen
+        </li>
+    
+    
+</ul>
+    
+                        </div>
+                        <div class="faq__questions">
+                            <button class="faq__btn btn--block btn" type="button">Warum kann ein Künstler- oder Kundenkonto gesperrt werden?</button>
+    
+                            <ul class="list-items list-items--block">
+
+    
+        <li class="list-items__item">
+            Jede Aktion, die gegen DE-Gesetze verstößt
+        </li>
+    
+        <li class="list-items__item">
+            Alter unter 18
+        </li>
+    
+        <li class="list-items__item">
+            Der Betrug
+        </li>
+    
+        <li class="list-items__item">
+            Verstoß gegen die Kommunikationsregeln
+        </li>
+    
+        <li class="list-items__item">
+            Mehrere Konten verwenden
+        </li>
+    
+        <li class="list-items__item">
+            Künstlicher Einfluss auf Bewertungen und Rezensionen
+        </li>
+    
+        <li class="list-items__item">
+            Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen
+        </li>
+    
+    
+</ul>
+    
+                        </div>
+                        <div class="faq__questions">
+                            <button class="faq__btn btn--reviews btn" type="button">Warum Bewertungen erforderlich sind</button>
+    
+                            <ul class="list-items list-items--reviews">
+
+    
+        <li class="list-items__item">
+            Jede Aktion, die gegen DE-Gesetze verstößt
+        </li>
+    
+        <li class="list-items__item">
+            Alter unter 18
+        </li>
+    
+        <li class="list-items__item">
+            Der Betrug
+        </li>
+    
+        <li class="list-items__item">
+            Verstoß gegen die Kommunikationsregeln
+        </li>
+    
+        <li class="list-items__item">
+            Mehrere Konten verwenden
+        </li>
+    
+        <li class="list-items__item">
+            Künstlicher Einfluss auf Bewertungen und Rezensionen
+        </li>
+    
+        <li class="list-items__item">
+            Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen
+        </li>
+    
+    
+</ul>
+    
+                        </div>
+                        <div class="faq__questions">
+                            <button class="faq__btn btn--register btn" type="button">So registrieren Sie sich auf der Website</button>
+    
+                            <ul class="list-items list-items--register">
+
+    
+        <li class="list-items__item">
+            Jede Aktion, die gegen DE-Gesetze verstößt
+        </li>
+    
+        <li class="list-items__item">
+            Alter unter 18
+        </li>
+    
+        <li class="list-items__item">
+            Der Betrug
+        </li>
+    
+        <li class="list-items__item">
+            Verstoß gegen die Kommunikationsregeln
+        </li>
+    
+        <li class="list-items__item">
+            Mehrere Konten verwenden
+        </li>
+    
+        <li class="list-items__item">
+            Künstlicher Einfluss auf Bewertungen und Rezensionen
+        </li>
+    
+        <li class="list-items__item">
+            Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen
+        </li>
+    
+    
+</ul>
+    
+                        </div>
+                    </div>
+                    <div class="faq__inner-right">
+                        <div class="faq__questions">
+                            <button class="faq__btn btn--create btn" type="button">Wie erstellt man viel richtig?</button>
+    
+                            <ul class="list-items list-items--create">
+
+    
+        <li class="list-items__item">
+            Jede Aktion, die gegen DE-Gesetze verstößt
+        </li>
+    
+        <li class="list-items__item">
+            Alter unter 18
+        </li>
+    
+        <li class="list-items__item">
+            Der Betrug
+        </li>
+    
+        <li class="list-items__item">
+            Verstoß gegen die Kommunikationsregeln
+        </li>
+    
+        <li class="list-items__item">
+            Mehrere Konten verwenden
+        </li>
+    
+        <li class="list-items__item">
+            Künstlicher Einfluss auf Bewertungen und Rezensionen
+        </li>
+    
+        <li class="list-items__item">
+            Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen
+        </li>
+    
+    
+</ul>
+    
+                        </div>
+                        <div class="faq__questions">
+                            <button class="faq__btn btn--auction btn" type="button">Wie funktioniert die Auktion?</button>
+    
+                            <ul class="list-items list-items--auction">
+
+    
+        <li class="list-items__item">
+            Jede Aktion, die gegen DE-Gesetze verstößt
+        </li>
+    
+        <li class="list-items__item">
+            Alter unter 18
+        </li>
+    
+        <li class="list-items__item">
+            Der Betrug
+        </li>
+    
+        <li class="list-items__item">
+            Verstoß gegen die Kommunikationsregeln
+        </li>
+    
+        <li class="list-items__item">
+            Mehrere Konten verwenden
+        </li>
+    
+        <li class="list-items__item">
+            Künstlicher Einfluss auf Bewertungen und Rezensionen
+        </li>
+    
+        <li class="list-items__item">
+            Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen
+        </li>
+    
+    
+</ul>
+    
+                        </div>
+                        <div class="faq__questions">
+                            <button class="faq__btn btn--favorite btn" type="button">Wie finden Sie schnell Ihren Lieblingsartikel?</button>
+    
+                            <ul class="list-items list-items--favorite">
+
+    
+        <li class="list-items__item">
+            Jede Aktion, die gegen DE-Gesetze verstößt
+        </li>
+    
+        <li class="list-items__item">
+            Alter unter 18
+        </li>
+    
+        <li class="list-items__item">
+            Der Betrug
+        </li>
+    
+        <li class="list-items__item">
+            Verstoß gegen die Kommunikationsregeln
+        </li>
+    
+        <li class="list-items__item">
+            Mehrere Konten verwenden
+        </li>
+    
+        <li class="list-items__item">
+            Künstlicher Einfluss auf Bewertungen und Rezensionen
+        </li>
+    
+        <li class="list-items__item">
+            Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen
+        </li>
+    
+    
+</ul>
+    
+                        </div>
+                        <div class="faq__questions">
+                            <button class="faq__btn btn--painting btn" type="button">Ist es möglich, ein Werk auf der Website nach der Farbe des Gemäldes auszuwählen?</button>
+    
+                            <ul class="list-items list-items--painting">
+
+    
+        <li class="list-items__item">
+            Jede Aktion, die gegen DE-Gesetze verstößt
+        </li>
+    
+        <li class="list-items__item">
+            Alter unter 18
+        </li>
+    
+        <li class="list-items__item">
+            Der Betrug
+        </li>
+    
+        <li class="list-items__item">
+            Verstoß gegen die Kommunikationsregeln
+        </li>
+    
+        <li class="list-items__item">
+            Mehrere Konten verwenden
+        </li>
+    
+        <li class="list-items__item">
+            Künstlicher Einfluss auf Bewertungen und Rezensionen
+        </li>
+    
+        <li class="list-items__item">
+            Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen
+        </li>
+    
+    
+</ul>
+    
+                        </div>
+                        <div class="faq__questions">
+                            <button class="faq__btn btn--notcomesms btn" type="button">Was tun, wenn bei der Registrierung auf der Website keine SMS ankommt?</button>
+    
+                            <ul class="list-items list-items--notcomesms">
+
+    
+        <li class="list-items__item">
+            Jede Aktion, die gegen DE-Gesetze verstößt
+        </li>
+    
+        <li class="list-items__item">
+            Alter unter 18
+        </li>
+    
+        <li class="list-items__item">
+            Der Betrug
+        </li>
+    
+        <li class="list-items__item">
+            Verstoß gegen die Kommunikationsregeln
+        </li>
+    
+        <li class="list-items__item">
+            Mehrere Konten verwenden
+        </li>
+    
+        <li class="list-items__item">
+            Künstlicher Einfluss auf Bewertungen und Rezensionen
+        </li>
+    
+        <li class="list-items__item">
+            Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen
+        </li>
+    
+    
+</ul>
+    
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__box">
+                <a class="logo footer__logo" href="/">
+                    <img src="images/content/logo-2.svg" alt="logo" width="170" height="45">
+                </a>
+                <span class="footer__copy">2020 Alle Rechte vorbehalten</span>
+                <a class="footer__box-link" href="#">Datenschutz-Bestimmungen</a>
+            </div>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a class="footer__link" href="/about.html">Über das Projekt</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="/creations.html">Katalog</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="/authors.html">Autoren</a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Nutzungsbedingungen</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Garantien</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="/about.html">FAQ</a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a class="footer__link" href="/news.html">Nachrichten</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Für Autoren</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Kontakte</a>
+                </li>
+            </ul>
+            <div class="footer__wrapper">
+                <a class="footer__tel" href="tel:+498924214970">+4 98 924 214 975</a>
+                <ul class="social">
+                    <li class="social__item">
+                        <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
+                            <span class="sr-only">Google</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--facebook" target="_blank" href="https://www.facebook.com/">
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/tweeter">
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--instagram" target="_blank" href="https://www.instagram.com/?hl=de">
+                            <span class="sr-only">instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="js/main.min.js"></script>
+</body>
+</html>

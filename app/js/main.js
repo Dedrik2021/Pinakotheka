@@ -112,39 +112,27 @@ $(function() {
     })
 
     $( ".btn--style" ).click(function() {
-        $( ".creations__filters-box--style" ).slideToggle( "slow", function() {
-        
-        });
+        $( ".creations__filters-box--style" ).slideToggle( "slow")
     });
 
     $( ".btn--size" ).click(function() {
-        $( ".creations__filters-box--size" ).slideToggle( "slow", function() {
-        
-        });
+        $( ".creations__filters-box--size" ).slideToggle( "slow")
     });
 
     $( ".btn--price" ).click(function() {
-        $( ".creations__filters-box--price" ).slideToggle( "slow", function() {
-        
-        });
+        $( ".creations__filters-box--price" ).slideToggle( "slow")
     });
 
     $( ".btn--item" ).click(function() {
-        $( ".creations__filters-box--item" ).slideToggle( "slow", function() {
-        
-        });
+        $( ".creations__filters-box--item" ).slideToggle( "slow")
     });
 
     $( ".btn--material" ).click(function() {
-        $( ".creations__filters-box--material" ).slideToggle( "slow", function() {
-        
-        });
+        $( ".creations__filters-box--material" ).slideToggle( "slow")
     });
 
     $( ".btn--color" ).click(function() {
-        $( ".creations__filters-box--color" ).slideToggle( "slow", function() {
-        
-        });
+        $( ".creations__filters-box--color" ).slideToggle( "slow")
     });
 
     const cards = document.querySelectorAll('.creations .creations__wrapper');
@@ -244,15 +232,59 @@ $(function() {
     
     tab();
 
+    $( ".btn--sale" ).click(function() {
+        $( ".list-items--sale" ).slideToggle( "slow")
+    });
+
+    $( ".btn--buy" ).click(function() {
+        $( ".list-items--buy" ).slideToggle( "slow")
+    });
+
+    $( ".btn--services" ).click(function() {
+        $( ".list-items--services" ).slideToggle( "slow")
+    });
+
+    $( ".btn--block" ).click(function() {
+        $( ".list-items--block" ).slideToggle( "slow")
+    });
+
+    $( ".btn--reviews" ).click(function() {
+        $( ".list-items--reviews" ).slideToggle( "slow")
+    });
+
+    $( ".btn--register" ).click(function() {
+        $( ".list-items--register" ).slideToggle( "slow")
+    });
+
+    $( ".btn--create" ).click(function() {
+        $( ".list-items--create" ).slideToggle( "slow")
+    });
+
+    $( ".btn--auction" ).click(function() {
+        $( ".list-items--auction" ).slideToggle( "slow")
+    });
+
+    $( ".btn--favorite" ).click(function() {
+        $( ".list-items--favorite" ).slideToggle( "slow")
+    });
+
+    $( ".btn--painting" ).click(function() {
+        $( ".list-items--painting" ).slideToggle( "slow")
+    });
+
+    $( ".btn--notcomesms" ).click(function() {
+        $( ".list-items--notcomesms" ).slideToggle("slow") 
+    });
+
     mixer = mixitup('.gallery__content, .creations-details__tabs');
 });
 
-window.increment = function(event) {
-    var btn = event.target;
-    btn.clicks = ((btn.clicks || 0) + 1) % 2;
-    window.clicks = (window.clicks || 0) + btn.clicks * 2 - 1;
-    document.getElementById("clicks").innerText = window.clicks;
-}
+const cards = document.querySelectorAll('.faq .faq__questions');
+cards.forEach((card)=>{
+        card.querySelector('.faq__btn').addEventListener('click', () => {
+        card.querySelector('.faq__btn').classList.toggle('active');
+    });
+})
 
 let header = document.querySelector('.header');
     enterBtn = document.querySelector('.menu__enter-btn');
@@ -351,4 +383,11 @@ function ESCclose(evt) {
         menuForm.classList.remove('active')
         menuSearch.classList.remove('active')
     }
+}
+
+window.increment = function(event) {
+    var btn = event.target;
+    btn.clicks = ((btn.clicks || 0) + 1) % 2;
+    window.clicks = (window.clicks || 0) + btn.clicks * 2 - 1;
+    document.getElementById("clicks").innerText = window.clicks;
 }
