@@ -87,10 +87,6 @@ $(function() {
         readOnly: true,
     });
 
-    $('.btn--item').on('click', function() {
-        $('.btn--item').toggleClass('active')
-    })
-
     $('.btn--style').on('click', function() {
         $('.btn--style').toggleClass('active')
     })
