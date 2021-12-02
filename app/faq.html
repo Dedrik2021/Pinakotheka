@@ -13,7 +13,11 @@
                 arr: [{title: 'FAQ'}]
             })
 
-            @@include('./parts/components/_faq.html')
+            @@include('./parts/components/_faq.html', {
+                "page": false,
+                "faq": true,
+            })
+
         </div>
         
         

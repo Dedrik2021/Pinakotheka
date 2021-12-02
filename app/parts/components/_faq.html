@@ -1,5 +1,13 @@
 <section class="faq">
-    <h2 class="faq__title title">Faq</h2>
+    
+    @@if(faq === true) {
+        <h1 class="faq__title title">Faq</h1>
+    }
+
+    @@if(page === true) {
+        <h2 class="faq__title title">Faq</h2>
+    }
+
     <div class="faq__inner">
         <div class="faq__inner-left">
             <div class="faq__questions">
@@ -11,6 +19,8 @@
                         {title: 'Alter unter 18'},
                         {title: 'Der Betrug'},
                         {title: 'Verstoß gegen die Kommunikationsregeln'},
+                        {title: 'Mehrere Konten verwenden'},
+                        {title: 'Künstlicher Einfluss auf Bewertungen und Rezensionen'},
                         {title: 'Mehrere Konten verwenden'},
                         {title: 'Künstlicher Einfluss auf Bewertungen und Rezensionen'},
                         {title: 'Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen'}]
@@ -26,8 +36,6 @@
                         {title: 'Alter unter 18'},
                         {title: 'Der Betrug'},
                         {title: 'Verstoß gegen die Kommunikationsregeln'},
-                        {title: 'Mehrere Konten verwenden'},
-                        {title: 'Künstlicher Einfluss auf Bewertungen und Rezensionen'},
                         {title: 'Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen'}]
                 })
 
@@ -40,6 +48,10 @@
                     arr: [{title: 'Jede Aktion, die gegen DE-Gesetze verstößt'},
                         {title: 'Alter unter 18'},
                         {title: 'Der Betrug'},
+                        {title: 'Alter unter 18'},
+                        {title: 'Der Betrug'},
+                        {title: 'Verstoß gegen die Kommunikationsregeln'},
+                        {title: 'Mehrere Konten verwenden'},
                         {title: 'Verstoß gegen die Kommunikationsregeln'},
                         {title: 'Mehrere Konten verwenden'},
                         {title: 'Künstlicher Einfluss auf Bewertungen und Rezensionen'},
@@ -54,10 +66,6 @@
                     "class": "list-items--block",
                     arr: [{title: 'Jede Aktion, die gegen DE-Gesetze verstößt'},
                         {title: 'Alter unter 18'},
-                        {title: 'Der Betrug'},
-                        {title: 'Verstoß gegen die Kommunikationsregeln'},
-                        {title: 'Mehrere Konten verwenden'},
-                        {title: 'Künstlicher Einfluss auf Bewertungen und Rezensionen'},
                         {title: 'Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen'}]
                 })
 
@@ -68,6 +76,14 @@
                 @@include('../../parts/components/_list-items.html', {
                     "class": "list-items--reviews",
                     arr: [{title: 'Jede Aktion, die gegen DE-Gesetze verstößt'},
+                        {title: 'Alter unter 18'},
+                        {title: 'Der Betrug'},
+                        {title: 'Verstoß gegen die Kommunikationsregeln'},
+                        {title: 'Mehrere Konten verwenden'},
+                        {title: 'Alter unter 18'},
+                        {title: 'Der Betrug'},
+                        {title: 'Verstoß gegen die Kommunikationsregeln'},
+                        {title: 'Mehrere Konten verwenden'},
                         {title: 'Alter unter 18'},
                         {title: 'Der Betrug'},
                         {title: 'Verstoß gegen die Kommunikationsregeln'},
@@ -85,8 +101,6 @@
                     arr: [{title: 'Jede Aktion, die gegen DE-Gesetze verstößt'},
                         {title: 'Alter unter 18'},
                         {title: 'Der Betrug'},
-                        {title: 'Verstoß gegen die Kommunikationsregeln'},
-                        {title: 'Mehrere Konten verwenden'},
                         {title: 'Künstlicher Einfluss auf Bewertungen und Rezensionen'},
                         {title: 'Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen'}]
                 })
@@ -105,6 +119,11 @@
                         {title: 'Verstoß gegen die Kommunikationsregeln'},
                         {title: 'Mehrere Konten verwenden'},
                         {title: 'Künstlicher Einfluss auf Bewertungen und Rezensionen'},
+                        {title: 'Alter unter 18'},
+                        {title: 'Der Betrug'},
+                        {title: 'Verstoß gegen die Kommunikationsregeln'},
+                        {title: 'Mehrere Konten verwenden'},
+                        {title: 'Künstlicher Einfluss auf Bewertungen und Rezensionen'},
                         {title: 'Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen'}]
                 })
 
@@ -115,10 +134,6 @@
                 @@include('../../parts/components/_list-items.html', {
                     "class": "list-items--auction",
                     arr: [{title: 'Jede Aktion, die gegen DE-Gesetze verstößt'},
-                        {title: 'Alter unter 18'},
-                        {title: 'Der Betrug'},
-                        {title: 'Verstoß gegen die Kommunikationsregeln'},
-                        {title: 'Mehrere Konten verwenden'},
                         {title: 'Künstlicher Einfluss auf Bewertungen und Rezensionen'},
                         {title: 'Verweigerung eines Loskaufs unter der Bedingung, die Auktion zu gewinnen'}]
                 })
@@ -130,6 +145,16 @@
                 @@include('../../parts/components/_list-items.html', {
                     "class": "list-items--favorite",
                     arr: [{title: 'Jede Aktion, die gegen DE-Gesetze verstößt'},
+                        {title: 'Alter unter 18'},
+                        {title: 'Der Betrug'},
+                        {title: 'Verstoß gegen die Kommunikationsregeln'},
+                        {title: 'Mehrere Konten verwenden'},
+                        {title: 'Künstlicher Einfluss auf Bewertungen und Rezensionen'},
+                        {title: 'Alter unter 18'},
+                        {title: 'Der Betrug'},
+                        {title: 'Verstoß gegen die Kommunikationsregeln'},
+                        {title: 'Mehrere Konten verwenden'},
+                        {title: 'Künstlicher Einfluss auf Bewertungen und Rezensionen'},
                         {title: 'Alter unter 18'},
                         {title: 'Der Betrug'},
                         {title: 'Verstoß gegen die Kommunikationsregeln'},
