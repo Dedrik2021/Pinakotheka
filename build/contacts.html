@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garantien</title>
+    <title>Kontakte</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../images/content/favicon.ico">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -295,7 +295,7 @@
     
         <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="undefined.html">
-                Garantien
+                Kontakte
             </a>
         </li>
     
@@ -303,58 +303,84 @@
 </ul>
 
 
-            <section class="guarantees">
-                <h1 class="guarantees__title title">Garantien</h1>
-                <ul class="guarantees__list">
-                    <li class="guarantees__item">
-                        <div class="guarantees__img">
-                            <span class="guarantees__num">1</span>
-                        </div>
+            <section class="contacts">
+                <div class="contacts__inner">
+                    <h1 class="contacts__title title">Kontakte</h1>
+                    <address class="contacts__list">
+                        <a class="contacts__link contacts__link--address" href="https://g.page/alte-pinakothek?share">
+                            Barer Str. 27, 80333 München
+                        </a>
+                        <a class="contacts__link contacts__link--phone" href="tel:+498924214970">+4 98 924 214 975</a>
+                        <a class="contacts__link contacts__link--email" href="mailto:info@pinakoteka.de">info@pinakoteka.de</a>
+                    </address>
+                    <span class="contacts__social">Wir sind in sozialen Netzwerken</span>
+
+                    <ul class="social">
+    <li class="social__item social__item--google">
+        <a class="social__link social__link--google" target="_blank" href="https://www.google.de/">
+            <span class="sr-only">Google</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--facebook" target="_blank" href="https://www.facebook.com/">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#facebook-icon"></use>
+            </svg>
+            <span class="sr-only">Facebook</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/tweeter">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#twitter-icon"></use>
+            </svg>
+            <span class="sr-only">Twitter</span>
+        </a>
+    </li>
+    <li class="social__item">
+        <a class="social__link social__link--instagram" target="_blank" href="https://www.instagram.com/?hl=de">
+            <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#instagram-icon"></use>
+            </svg>
+            <span class="sr-only">instagram</span>
+        </a>
+    </li>
+</ul>
+
+                    <span class="contacts__requisites">Voraussetzungen</span>
+                    <div>
                         <p>
-                            Garantienummer einer
+                            OJSC "Pinakoteka"<br>
+                            3013000003848 in OJSC "Deutsche Bank"
+                            PNP: 590689365
                         </p>
-                    </li>
-                    <li class="guarantees__item">
-                        <div class="guarantees__img">
-                            <span class="guarantees__num">2</span>
-                        </div>
-                        <p>
-                            Garantienummer zwei
-                        </p>
-                    </li>
-                    <li class="guarantees__item">
-                        <div class="guarantees__img">
-                            <span class="guarantees__num">3</span>
-                        </div>
-                        <p>
-                            Garantienummer drei
-                        </p>
-                    </li>
-                    <li class="guarantees__item">
-                        <div class="guarantees__img">
-                            <span class="guarantees__num">4</span>
-                        </div>
-                        <p>
-                            Garantienummer vier
-                        </p>
-                    </li>
-                    <li class="guarantees__item">
-                        <div class="guarantees__img">
-                            <span class="guarantees__num">5</span>
-                        </div>
-                        <p>
-                            Garantienummer fünf
-                        </p>
-                    </li>
-                    <li class="guarantees__item">
-                        <div class="guarantees__img">
-                            <span class="guarantees__num">6</span>
-                        </div>
-                        <p>
-                            Garantienummer sechs
-                        </p>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.0264727112553!2d11.567796015372847!3d48.14829485839385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75ee8cc069d7%3A0x8158244f94d1c0b7!2z0KHRgtCw0YDQsNGPINC_0LjQvdCw0LrQvtGC0LXQutCw!5e0!3m2!1sru!2scz!4v1638539221228!5m2!1sru!2scz" width="685" height="540" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="contacts__content">
+                    <span class="contacts__title title">
+                        haben Sie fragen?
+                        <span class="contacts__help">Wir antworten Ihnen gerne</span>
+                    </span>
+                    <form class="contacts-form">
+                        <label for="contacts-login">
+                            <span class="sr-only">Login</span>
+                        </label>
+                        <input class="contacts-form__input" type="text" placeholder="Login" name="[question]login" id="modal-login" required>
+
+                        <label for="contacts-email">
+                            <span class="sr-only">Email</span>
+                        </label>
+                        <input class="contacts-form__input" type="email" placeholder="Email" name="[question]email" id="contacts-email" required>
+
+                        <label for="contacts-question">
+                            <span class="sr-only">Frage</span>
+                        </label>
+                        <textarea class="contacts-form__textarea" placeholder="Schreiben Sie Ihre Frage ..." id="contacts-question" name="[question]text" required></textarea>
+
+                        <button class="contacts-form__btn btn btn--red-hover" type="submit">Eine Frage stellen</button>
+                    </form>
+                </div>
             </section>
         </div>
     </main>

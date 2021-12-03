@@ -3,16 +3,7 @@
     height: calc(100vh - 245px);
 
     @include r($mobile-lg) {
-        min-height: 600px;
-    }
-
-    @include r($mobile-md) {
-        min-height: 800px;
-        ;
-    }
-
-    @include r($mobile-sm) {
-        min-height: 1450px;
+        height: 100%;
     }
 
     &__title {
