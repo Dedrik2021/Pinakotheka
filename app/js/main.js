@@ -87,33 +87,6 @@ $(function() {
         readOnly: true,
     });
 
-    // $('.btn--style').on('click', function() {
-    //     $('.btn--style').toggleClass('active')
-    // })
-
-    // $('.btn--material').on('click', function() {
-    //     $('.btn--material').toggleClass('active')
-    // })
-
-    // $('.btn--color').on('click', function() {
-    //     $('.btn--color').toggleClass('active')
-    // })
-
-    // $('.btn--price').on('click', function() {
-    //     $('.btn--price').toggleClass('active')
-    // })
-
-    // $('.btn--size').on('click', function() {
-    //     $('.btn--size').toggleClass('active')
-    // })
-
-    // const cards = document.querySelectorAll('.creations .creations__wrapper');
-    // cards.forEach((card)=>{
-    //         card.querySelector('.creations__label').addEventListener('click', () => {
-    //         card.querySelector('.creations__label').classList.toggle('active');
-    //     });
-    // })
-
     $('.filters-items').styler();
 
     $('.filters-view__btn').on('click', function() {
