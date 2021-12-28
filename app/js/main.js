@@ -87,56 +87,32 @@ $(function() {
         readOnly: true,
     });
 
-    $('.btn--style').on('click', function() {
-        $('.btn--style').toggleClass('active')
-    })
+    // $('.btn--style').on('click', function() {
+    //     $('.btn--style').toggleClass('active')
+    // })
 
-    $('.btn--material').on('click', function() {
-        $('.btn--material').toggleClass('active')
-    })
+    // $('.btn--material').on('click', function() {
+    //     $('.btn--material').toggleClass('active')
+    // })
 
-    $('.btn--color').on('click', function() {
-        $('.btn--color').toggleClass('active')
-    })
+    // $('.btn--color').on('click', function() {
+    //     $('.btn--color').toggleClass('active')
+    // })
 
-    $('.btn--price').on('click', function() {
-        $('.btn--price').toggleClass('active')
-    })
+    // $('.btn--price').on('click', function() {
+    //     $('.btn--price').toggleClass('active')
+    // })
 
-    $('.btn--size').on('click', function() {
-        $('.btn--size').toggleClass('active')
-    })
+    // $('.btn--size').on('click', function() {
+    //     $('.btn--size').toggleClass('active')
+    // })
 
-    $( ".btn--style" ).click(function() {
-        $( ".creations__filters-box--style" ).slideToggle( "slow")
-    });
-
-    $( ".btn--size" ).click(function() {
-        $( ".creations__filters-box--size" ).slideToggle( "slow")
-    });
-
-    $( ".btn--price" ).click(function() {
-        $( ".creations__filters-box--price" ).slideToggle( "slow")
-    });
-
-    $( ".btn--item" ).click(function() {
-        $( ".creations__filters-box--item" ).slideToggle( "slow")
-    });
-
-    $( ".btn--material" ).click(function() {
-        $( ".creations__filters-box--material" ).slideToggle( "slow")
-    });
-
-    $( ".btn--color" ).click(function() {
-        $( ".creations__filters-box--color" ).slideToggle( "slow")
-    });
-
-    const cards = document.querySelectorAll('.creations .creations__wrapper');
-    cards.forEach((card)=>{
-            card.querySelector('.creations__label').addEventListener('click', () => {
-            card.querySelector('.creations__label').classList.toggle('active');
-        });
-    })
+    // const cards = document.querySelectorAll('.creations .creations__wrapper');
+    // cards.forEach((card)=>{
+    //         card.querySelector('.creations__label').addEventListener('click', () => {
+    //         card.querySelector('.creations__label').classList.toggle('active');
+    //     });
+    // })
 
     $('.filters-items').styler();
 
@@ -282,21 +258,23 @@ cards.forEach((card)=>{
     });
 })
 
-let header = document.querySelector('.header');
-    enterBtn = document.querySelector('.menu__enter-btn');
-    modalEl = document.querySelector('.modal');
-    btnClose = document.querySelector('.btn--close');
-    bodyLock = document.getElementById('body');
-    menuBtn = document.querySelector('.menu__btn');
-    menuForm = document.querySelector('.menu__form');
-    menuSearch = document.querySelector('.menu__search');
-    menuBurger = document.querySelector('.menu__burger');
-    menuBlock = document.querySelector('.menu__inner');
-    menuBox = document.querySelector('.menu__box');
-    menuCursour = document.querySelector('.menu__item--dropdown');
-    filtersBtn = document.querySelector('.modern__filters-btn')
-    filters = document.querySelector('.creations__filters')
-    filtersCloseBtn = document.querySelector('.creations__close-btn')
+const header = document.querySelector('.header');
+const enterBtn = document.querySelector('.menu__enter-btn');
+const modalEl = document.querySelector('.modal');
+const btnClose = document.querySelector('.btn--close');
+const bodyLock = document.getElementById('body');
+const menuBtn = document.querySelector('.menu__btn');
+const menuForm = document.querySelector('.menu__form');
+const menuSearch = document.querySelector('.menu__search');
+const menuBurger = document.querySelector('.menu__burger');
+const menuBlock = document.querySelector('.menu__inner');
+const menuBox = document.querySelector('.menu__box');
+const menuCursour = document.querySelector('.menu__item--dropdown');
+const filtersBtn = document.querySelector('.modern__filters-btn')
+const filters = document.querySelector('.creations__filters')
+const filtersCloseBtn = document.querySelector('.creations__close-btn')
+const creationsLabel = document.querySelectorAll('[data-action]')
+const creationsCounter = document.querySelector('#clicks')
     
 window.addEventListener('scroll', checkScroll);
 document.addEventListener('DOMContentLoaded', checkScroll);
@@ -381,9 +359,51 @@ function ESCclose(evt) {
     }
 }
 
-window.increment = function(event) {
-    var btn = event.target;
-    btn.clicks = ((btn.clicks || 0) + 1) % 2;
-    window.clicks = (window.clicks || 0) + btn.clicks * 2 - 1;
-    document.getElementById("clicks").innerText = window.clicks;
-}
+// window.increment = function(event) {
+//     var btn = event.target;
+//     btn.clicks = ((btn.clicks || 0) + 1) % 2;
+//     window.clicks = (window.clicks || 0) + btn.clicks * 2 - 1;
+//     document.getElementById("clicks").innerText = window.clicks;
+// }
+
+document.querySelectorAll('button.creations__btn, [type="button"]').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+        e.target.classList.toggle('active')
+        const creationsBlock = e.target.closest('.creations__block');
+        const filtersBox = creationsBlock.querySelector('.creations__filters-box')
+
+        if(e.target.classList.contains('active')) {
+            $( filtersBox ).slideToggle( "slow")
+        } else {
+            $( filtersBox ).slideToggle( "slow")
+        }
+    })
+})
+
+creationsLabel.forEach(function(el) {
+    el.addEventListener('click', function() {
+        this.classList.toggle('active')
+
+        this.classList.contains('active') ?
+        creationsCounter.innerText = ++creationsCounter.innerText :
+        creationsCounter.innerText = --creationsCounter.innerText
+    })
+})
+
+document.querySelector('[data-reset]').addEventListener('click', function() {
+    creationsCounter.innerText = 0
+    
+    creationsLabel.forEach(function(el) {
+        if(el.classList.contains('active')) {
+            el.classList.remove('active')
+
+            let creationsWrapper = el.closest('[data-content="creations-wrapper"]');
+            let creationCheckbox = creationsWrapper.querySelector('[data-creation]')
+            
+            if(creationCheckbox.classList.contains('active') && creationCheckbox.checked) {
+                creationCheckbox.classList.remove('active')
+                creationCheckbox.checked = false
+            }
+        }
+    })
+})

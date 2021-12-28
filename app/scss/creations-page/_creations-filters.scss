@@ -169,16 +169,8 @@
         &.active {
             color: $red;
             font-weight: 500;
-        }
-    }
 
-    &__input-checkbox {
-        top: 12px;
-        left: 7px;
-
-        &:checked {
-
-            &+.checkbox-custom {
+            & ~ .checkbox-custom {
                 background-color: $red;
 
                 span {
@@ -186,6 +178,11 @@
                 }
             }
         }
+    }
+
+    &__input-checkbox {
+        top: 12px;
+        left: 7px;
     }
 
     &__checkbox {
