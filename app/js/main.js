@@ -177,58 +177,21 @@ $(function() {
     
     tab();
 
-    $( ".btn--sale" ).click(function() {
-        $( ".list-items--sale" ).slideToggle( "slow")
-    });
-
-    $( ".btn--buy" ).click(function() {
-        $( ".list-items--buy" ).slideToggle( "slow")
-    });
-
-    $( ".btn--services" ).click(function() {
-        $( ".list-items--services" ).slideToggle( "slow")
-    });
-
-    $( ".btn--block" ).click(function() {
-        $( ".list-items--block" ).slideToggle( "slow")
-    });
-
-    $( ".btn--reviews" ).click(function() {
-        $( ".list-items--reviews" ).slideToggle( "slow")
-    });
-
-    $( ".btn--register" ).click(function() {
-        $( ".list-items--register" ).slideToggle( "slow")
-    });
-
-    $( ".btn--create" ).click(function() {
-        $( ".list-items--create" ).slideToggle( "slow")
-    });
-
-    $( ".btn--auction" ).click(function() {
-        $( ".list-items--auction" ).slideToggle( "slow")
-    });
-
-    $( ".btn--favorite" ).click(function() {
-        $( ".list-items--favorite" ).slideToggle( "slow")
-    });
-
-    $( ".btn--painting" ).click(function() {
-        $( ".list-items--painting" ).slideToggle( "slow")
-    });
-
-    $( ".btn--notcomesms" ).click(function() {
-        $( ".list-items--notcomesms" ).slideToggle("slow") 
-    });
-
     mixer = mixitup('.gallery__content, .creations-details__tabs');
 });
 
-const cards = document.querySelectorAll('.faq .faq__questions');
-cards.forEach((card)=>{
-        card.querySelector('.faq__btn').addEventListener('click', () => {
-        card.querySelector('.faq__btn').classList.toggle('active');
-    });
+document.querySelectorAll('[data-btn="faq"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+        el.classList.toggle('active')
+        const faqQuestions = el.closest('[data-questions]');
+        const listItems = faqQuestions.querySelector('.list-items')
+        
+        if(el.classList.contains('active')) {
+            $( listItems ).slideDown( "slow")
+        } else {
+            $( listItems ).slideUp( "slow")
+        }
+    })
 })
 
 const header = document.querySelector('.header');
@@ -332,13 +295,6 @@ function ESCclose(evt) {
     }
 }
 
-// window.increment = function(event) {
-//     var btn = event.target;
-//     btn.clicks = ((btn.clicks || 0) + 1) % 2;
-//     window.clicks = (window.clicks || 0) + btn.clicks * 2 - 1;
-//     document.getElementById("clicks").innerText = window.clicks;
-// }
-
 document.querySelectorAll('button.creations__btn, [type="button"]').forEach(function(el) {
     el.addEventListener('click', function(e) {
         e.target.classList.toggle('active')
@@ -346,9 +302,9 @@ document.querySelectorAll('button.creations__btn, [type="button"]').forEach(func
         const filtersBox = creationsBlock.querySelector('.creations__filters-box')
 
         if(e.target.classList.contains('active')) {
-            $( filtersBox ).slideToggle( "slow")
+            $( filtersBox ).slideDown( "slow")
         } else {
-            $( filtersBox ).slideToggle( "slow")
+            $( filtersBox ).slideUp( "slow")
         }
     })
 })
@@ -358,8 +314,7 @@ creationsLabel.forEach(function(el) {
         this.classList.toggle('active')
 
         this.classList.contains('active') ?
-        creationsCounter.innerText = ++creationsCounter.innerText :
-        creationsCounter.innerText = --creationsCounter.innerText
+        ++creationsCounter.innerText : --creationsCounter.innerText
     })
 })
 
@@ -369,13 +324,11 @@ document.querySelector('[data-reset]').addEventListener('click', function() {
     creationsLabel.forEach(function(el) {
         if(el.classList.contains('active')) {
             el.classList.remove('active')
-
             let creationsWrapper = el.closest('[data-content="creations-wrapper"]');
             let creationCheckbox = creationsWrapper.querySelector('[data-creation]')
             
             if(creationCheckbox.classList.contains('active') && creationCheckbox.checked) {
                 creationCheckbox.classList.remove('active')
-                creationCheckbox.checked = false
             }
         }
     })
