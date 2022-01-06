@@ -180,20 +180,6 @@ $(function() {
     mixer = mixitup('.gallery__content, .creations-details__tabs');
 });
 
-document.querySelectorAll('[data-btn="faq"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-        el.classList.toggle('active')
-        const faqQuestions = el.closest('[data-questions]');
-        const listItems = faqQuestions.querySelector('.list-items')
-        
-        if(el.classList.contains('active')) {
-            $( listItems ).slideDown( "slow")
-        } else {
-            $( listItems ).slideUp( "slow")
-        }
-    })
-})
-
 const header = document.querySelector('.header');
 const enterBtn = document.querySelector('.menu__enter-btn');
 const modalEl = document.querySelector('.modal');
@@ -209,8 +195,23 @@ const menuCursour = document.querySelector('.menu__item--dropdown');
 const filtersBtn = document.querySelector('.modern__filters-btn')
 const filters = document.querySelector('.creations__filters')
 const filtersCloseBtn = document.querySelector('.creations__close-btn')
-const creationsLabel = document.querySelectorAll('[data-action]')
+const creationsLabel = document.querySelectorAll('[data-action="creations-label"]')
 const creationsCounter = document.querySelector('#clicks')
+const slideBtn = document.querySelectorAll('[data-action="slide-btn"]')
+
+Array.from(slideBtn).forEach(function(el) {
+    el.addEventListener('click', function(e) {
+        e.target.classList.toggle('active')
+        const slideBlock = e.target.closest('[data-action="slide-block"]');
+        const slideBox = slideBlock.querySelector('[data-action="slide-box"]')
+
+        if(e.target.classList.contains('active')) {
+            $( slideBox ).slideToggle( "slow")
+        } else {
+            $( slideBox ).slideToggle( "slow")
+        }
+    })
+})
     
 window.addEventListener('scroll', checkScroll);
 document.addEventListener('DOMContentLoaded', checkScroll);
@@ -295,24 +296,10 @@ function ESCclose(evt) {
     }
 }
 
-document.querySelectorAll('button.creations__btn, [type="button"]').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-        e.target.classList.toggle('active')
-        const creationsBlock = e.target.closest('.creations__block');
-        const filtersBox = creationsBlock.querySelector('.creations__filters-box')
-
-        if(e.target.classList.contains('active')) {
-            $( filtersBox ).slideDown( "slow")
-        } else {
-            $( filtersBox ).slideUp( "slow")
-        }
-    })
-})
-
 creationsLabel.forEach(function(el) {
     el.addEventListener('click', function() {
         this.classList.toggle('active')
-
+        
         this.classList.contains('active') ?
         ++creationsCounter.innerText : --creationsCounter.innerText
     })
